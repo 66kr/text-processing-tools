@@ -14,4 +14,19 @@
   <dependencies>
     <dependency>
       <groupId>edu.stanford.nlp</groupId>
-      <a
+      <artifactId>stanford-corenlp</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>commons</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>ner</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+  </dependencies>
+</project>
