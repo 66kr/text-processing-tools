@@ -31,4 +31,15 @@ public class AsurAnnotations {
 
   public static class PhraseAnnotation implements CoreAnnotation<List<CoreMap>> {
 
-    public Class
+    public Class<List<CoreMap>> getType() {
+      return ErasureUtils.uncheckedCast(List.class);
+    }
+  }
+
+  public static class Synonyms implements CoreAnnotation<List<String>> {
+
+    public Class<List<String>> getType() {
+      return ErasureUtils.uncheckedCast(List.class);
+    }
+  }
+}
