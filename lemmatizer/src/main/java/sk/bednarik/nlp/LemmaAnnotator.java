@@ -28,4 +28,16 @@ public class LemmaAnnotator implements Annotator {
 
   public LemmaAnnotator(String name, Properties properties) {
     String fstLoc = properties.getProperty(name + ".data");
-    this.keepOriginal = Boolean.valueOf(properties.getProperty("keepO
+    this.keepOriginal = Boolean.valueOf(properties.getProperty("keepOriginal", "true"));
+    assert fstLoc != null;
+
+    try (InputStream inputStream = new DataInputStream(IOUtils.getInputStreamFromURLOrClasspathOrFileSystem(fstLoc))) {
+      fst = fstFromInputStream(inputStream);
+    } catch (IOException e) {
+      throw new RuntimeIOException("Error while loading a lemma data (probably missing data file)", e);
+    }
+  }
+
+  public LemmaAnnotator(InputStream inputStream, Properties properties) throws IOException {
+    fst = fstFromInputStream(inputStream);
+    this.keepOriginal = Boolean.valueOf(properties.getProperty("keepOriginal", "true")
