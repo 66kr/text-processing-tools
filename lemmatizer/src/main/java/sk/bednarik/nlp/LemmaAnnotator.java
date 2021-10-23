@@ -40,4 +40,18 @@ public class LemmaAnnotator implements Annotator {
 
   public LemmaAnnotator(InputStream inputStream, Properties properties) throws IOException {
     fst = fstFromInputStream(inputStream);
-    this.keepOriginal = Boolean.valueOf(properties.getProperty("keepOriginal", "true")
+    this.keepOriginal = Boolean.valueOf(properties.getProperty("keepOriginal", "true"));
+  }
+
+  private FST<CharsRef> fstFromInputStream(InputStream inputStream) throws IOException {
+    return new FST<>(new InputStreamDataInput(new BufferedInputStream(inputStream)),
+        CharSequenceOutputs.getSingleton());
+  }
+
+  public LemmaAnnotator(File file, Properties properties) throws IOException {
+    fst = FST.read(file.toPath(), CharSequenceOutputs.getSingleton());
+    this.keepOriginal = Boolean.valueOf(properties.getProperty("keepOriginal", "true"));
+  }
+
+  public void annotate(Annotation annotation) {
+    if (annotation.containsK
