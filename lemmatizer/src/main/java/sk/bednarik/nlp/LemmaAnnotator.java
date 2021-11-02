@@ -54,4 +54,13 @@ public class LemmaAnnotator implements Annotator {
   }
 
   public void annotate(Annotation annotation) {
-    if (annotation.containsK
+    if (annotation.containsKey(CoreAnnotations.SentencesAnnotation.class)) {
+      annotation.get(CoreAnnotations.SentencesAnnotation.class)
+          .forEach(sentence -> sentence.get(CoreAnnotations.TokensAnnotation.class)
+              .forEach(token -> {
+                String text = token.get(CoreAnnotations.TextAnnotation.class);
+                token.set(CoreAnnotations.LemmaAnnotation.class,
+                    lemmatize(text)
+                        .orElse(lemmatizeLowerCase(text)
+                            .orElse(lemmatizeProperCase(text)
+                                .orE
