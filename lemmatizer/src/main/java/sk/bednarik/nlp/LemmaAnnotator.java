@@ -63,4 +63,27 @@ public class LemmaAnnotator implements Annotator {
                     lemmatize(text)
                         .orElse(lemmatizeLowerCase(text)
                             .orElse(lemmatizeProperCase(text)
-                                .orE
+                                .orElse(originalWord(text)
+                                    .orElse(null)))));
+              }));
+    } else {
+      throw new RuntimeException("Unable to find words/tokens in: " +
+          annotation);
+    }
+  }
+
+  private FST<CharsRef> fst;
+
+  public Optional<String> getLemma(String text) {
+    try {
+      return Optional.of(Util.get(fst, new BytesRef(text)).toString().split("\\|")[0]);
+    } catch (Exception exception) {
+      return Optional.empty();
+    }
+  }
+
+  private Optional<String> lemmatize(String text) {
+    return getLemma(text);
+  }
+
+  pr
