@@ -86,4 +86,20 @@ public class LemmaAnnotator implements Annotator {
     return getLemma(text);
   }
 
-  pr
+  private Optional<String> lemmatizeLowerCase(String text) {
+    return getLemma(text.toLowerCase());
+  }
+
+  private Optional<String> lemmatizeProperCase(String text) {
+    return getLemma(WordUtils.capitalizeFully(text));
+  }
+
+  private Optional<String> originalWord(String text) {
+    return this.keepOriginal ? Optional.of(text) : Optional.empty();
+  }
+
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
