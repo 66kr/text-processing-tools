@@ -26,3 +26,19 @@ public class POSLemmaAnnotator implements Annotator {
 
   public POSLemmaAnnotator(InputStream file) {
     this(file, new Properties());
+  }
+
+  public POSLemmaAnnotator(InputStream file, Properties properties) {
+    lemmaMap = new HashMap<>();
+    try (BufferedReader br = new BufferedReader(new InputStreamReader(file, "UTF-8"))) {
+      br.lines()
+          .map(line -> line.split("\t"))
+          .forEach(parts -> lemmaMap.computeIfAbsent((parts[1] + "_" + parts[2]).toLowerCase(), key -> parts[0]));
+    } catch (IOException e) {
+      log.error(e);
+    }
+    this.keepOriginal = Boolean.valueOf(properties.getProperty("keepOriginal", "true"));
+  }
+
+  public void annotate(Annotation annotation) {
+    if (annotation.c
