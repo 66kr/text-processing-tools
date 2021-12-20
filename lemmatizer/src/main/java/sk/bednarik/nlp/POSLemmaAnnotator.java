@@ -41,4 +41,17 @@ public class POSLemmaAnnotator implements Annotator {
   }
 
   public void annotate(Annotation annotation) {
-    if (annotation.c
+    if (annotation.containsKey(CoreAnnotations.SentencesAnnotation.class)) {
+      annotation.get(CoreAnnotations.SentencesAnnotation.class)
+          .forEach(sentence -> sentence.get(CoreAnnotations.TokensAnnotation.class)
+              .forEach(token -> token.set(CoreAnnotations.LemmaAnnotation.class,
+                  getLemma(token.get(CoreAnnotations.TextAnnotation.class),
+                      token.get(CoreAnnotations.PartOfSpeechAnnotation.class)))));
+    } else {
+      throw new RuntimeException("Unable to find words/tokens in: " +
+          annotation);
+    }
+  }
+
+  private String getLemma(String text, String posTag) {
+    return
