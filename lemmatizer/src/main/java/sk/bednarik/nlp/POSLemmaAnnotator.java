@@ -54,4 +54,21 @@ public class POSLemmaAnnotator implements Annotator {
   }
 
   private String getLemma(String text, String posTag) {
-    return
+    return Optional.ofNullable(lemmaMap.get((text + "_" + posTag).toLowerCase()))
+        .orElse(originalWord(text).orElse(null));
+  }
+
+  private Optional<String> originalWord(String text) {
+    return this.keepOriginal ? Optional.of(text) : Optional.empty();
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
+        CoreAnnotations.TokensAnnotation.class,
+        CoreAnnotations.SentencesAnnotation.class,
+        CoreAnnotations.PartOfSpeechAnnotation.class
+    )));
+  }
+
