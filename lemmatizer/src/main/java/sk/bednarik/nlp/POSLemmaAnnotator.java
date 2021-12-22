@@ -72,3 +72,11 @@ public class POSLemmaAnnotator implements Annotator {
     )));
   }
 
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return Collections.singleton(CoreAnnotations.LemmaAnnotation.class);
+  }
+}
+
+
+
