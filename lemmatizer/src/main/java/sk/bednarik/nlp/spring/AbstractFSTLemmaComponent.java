@@ -14,4 +14,18 @@ import sk.bednarik.nlp.commons.AnnComponent;
 public abstract class AbstractFSTLemmaComponent extends AnnComponent {
 
   /**
-   * @param keepOriginal if l
+   * @param keepOriginal if lemma is not found keep original word
+   */
+  protected Annotator prepareAnnotator(boolean keepOriginal) {
+    try (InputStream inputStream = FSTLemmaComponent.class.getClassLoader()
+        .getResourceAsStream("sk.essentialdata.nlp/lemma/sk-lemma-data.fst")) {
+      Properties properties = new Properties();
+      properties.setProperty("keepOriginal", String.valueOf(keepOriginal));
+      return new LemmaAnnotator(inputStream, properties);
+    } catch (IOException e) {
+      //TODO:Handle exception
+      e.printStackTrace();
+    }
+    return null;
+  }
+}
