@@ -10,4 +10,13 @@ public class POSLemmaComponent extends AnnComponent {
 
   @Override
   protected Annotator prepareAnnotator() {
-    try (InputStream inputStream = POSLemmaComponent.class.getClassLoader().getR
+    try (InputStream inputStream = POSLemmaComponent.class.getClassLoader().getResourceAsStream(
+        "sk.essentialdata.nlp/morphology/slovnik.txt")) {
+      return new POSLemmaAnnotator(inputStream);
+    } catch (IOException e) {
+      //TODO: Handle exception
+      e.printStackTrace();
+    }
+    return null;
+  }
+}
