@@ -8,4 +8,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
  * @since 15. 3. 2019
  */
 @Qualifier("keepNotLemmatized")
-public class FSTLemmaKeepNotLemmatizedComp
+public class FSTLemmaKeepNotLemmatizedComponent extends AbstractFSTLemmaComponent {
+
+  @Override
+  protected Annotator prepareAnnotator() {
+    return prepareAnnotator(false);
+  }
+}
