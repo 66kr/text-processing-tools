@@ -22,4 +22,22 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class SimpleNERAnnotator impl
+public class SimpleNERAnnotator implements Annotator {
+
+  private int maxTokens = 0;
+  private HashMap<String, String> annotations = new HashMap<>();
+  private HashSet<String> addable;
+
+  public SimpleNERAnnotator(File sourceFile, String... addable) throws IOException {
+    this(new FileReader(sourceFile), Sets.newHashSet(addable));
+  }
+
+  public SimpleNERAnnotator(InputStream sourceFile, String... addable) throws IOException {
+    this(sourceFile, Sets.newHashSet(addable));
+  }
+
+  public SimpleNERAnnotator(InputStream inputStream, HashSet<String> addable) throws IOException {
+    this(new InputStreamReader(inputStream), addable);
+  }
+
+  publi
