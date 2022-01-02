@@ -3,4 +3,23 @@ package sk.bednarik.nlp.ner;
 import com.google.common.collect.Sets;
 import edu.stanford.nlp.ling.CoreAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.sta
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.Annotator;
+import edu.stanford.nlp.pipeline.TokenizerAnnotator;
+import edu.stanford.nlp.util.ArraySet;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class SimpleNERAnnotator impl
