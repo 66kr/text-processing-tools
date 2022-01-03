@@ -64,4 +64,15 @@ public class SimpleNERAnnotator implements Annotator {
     String originalText = annotation.get(CoreAnnotations.TextAnnotation.class);
     int tokenNumber = 0;
     // For each token
-    for (CoreLabel token : tokens
+    for (CoreLabel token : tokens) {
+      // Peek each token but maximum of maxTokens forward
+      for (int i = 0; i < maxTokens; i++) {
+        // Check for overflow for peek
+        if ((tokenNumber + i) < tokens.size()) {
+          // Extract the full string from original text from start of current token
+          // to the end of the peeked token
+          String key = originalText
+              .substring(token.beginPosition(), tokens.get(tokenNumber + i).endPosition());
+          // Check if annotations map contains the full string
+          if (annotations.containsKey(key)) {
+          
