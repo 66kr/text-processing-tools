@@ -49,4 +49,19 @@ public class SimpleNERAnnotator implements Annotator {
             Annotation annotation = new Annotation(stringAndClass[0]);
             new TokenizerAnnotator()
                 .annotate(annotation); //TODO: must use the same tokenizer as pipeline!!!
-            List<CoreLabel> tokens = annotation.get(CoreAnnotations.TokensAnnotat
+            List<CoreLabel> tokens = annotation.get(CoreAnnotations.TokensAnnotation.class);
+            //Find line with the largest amount of tokens
+            if (maxTokens < tokens.size()) {
+              maxTokens = tokens.size();
+            }
+            annotations.put(stringAndClass[0], stringAndClass[1]);
+          });
+    }
+  }
+
+  public void annotate(Annotation annotation) {
+    List<CoreLabel> tokens = annotation.get(CoreAnnotations.TokensAnnotation.class);
+    String originalText = annotation.get(CoreAnnotations.TextAnnotation.class);
+    int tokenNumber = 0;
+    // For each token
+    for (CoreLabel token : tokens
