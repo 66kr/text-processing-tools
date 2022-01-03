@@ -40,4 +40,13 @@ public class SimpleNERAnnotator implements Annotator {
     this(new InputStreamReader(inputStream), addable);
   }
 
-  publi
+  public SimpleNERAnnotator(Reader sourceFileReader, HashSet<String> addable) throws IOException {
+    this.addable = addable;
+    try (BufferedReader br = new BufferedReader(sourceFileReader)) {
+      br.lines()
+          .map(line -> line.split("\t"))
+          .forEach(stringAndClass -> {
+            Annotation annotation = new Annotation(stringAndClass[0]);
+            new TokenizerAnnotator()
+                .annotate(annotation); //TODO: must use the same tokenizer as pipeline!!!
+            List<CoreLabel> tokens = annotation.get(CoreAnnotations.TokensAnnotat
