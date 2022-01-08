@@ -105,4 +105,12 @@ public class SimpleNERAnnotator implements Annotator {
         CoreAnnotations.TextAnnotation.class,
         CoreAnnotations.TokensAnnotation.class,
         CoreAnnotations.CharacterOffsetBeginAnnotation.class,
-        CoreAnnotations.CharacterOff
+        CoreAnnotations.CharacterOffsetEndAnnotation.class
+    )));
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return Collections.emptySet();
+  }
+}
