@@ -87,4 +87,22 @@ public class SimpleNERAnnotator implements Annotator {
               }
             }
           }
-    
+        }
+      }
+      // Increment the number of current token
+      tokenNumber++;
+    }
+
+    //TODO: think how to do things with CoreNLP immutable way
+    tokens.stream()
+        .filter(token -> token.ner() == null)
+        .forEach(token -> token.setNER("O"));
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
+        CoreAnnotations.TokensAnnotation.class,
+        CoreAnnotations.CharacterOffsetBeginAnnotation.class,
+        CoreAnnotations.CharacterOff
