@@ -75,4 +75,16 @@ public class SimpleNERAnnotator implements Annotator {
               .substring(token.beginPosition(), tokens.get(tokenNumber + i).endPosition());
           // Check if annotations map contains the full string
           if (annotations.containsKey(key)) {
-          
+            // Go from first token to the last token in peek
+            for (int j = 0; j <= i; j++) {
+              CoreLabel token1 = tokens.get(tokenNumber + j);
+              // Annotate the NER class based on map
+              if (token1.ner() == null || token1.ner().equals("O")) {
+                token1.setNER(annotations.get(key));
+                // If the NER classes are concatenable do concat
+              } else if (addable.contains(token1.ner())) {
+                token1.setNER(token1.ner() + "," + annotations.get(key));
+              }
+            }
+          }
+    
