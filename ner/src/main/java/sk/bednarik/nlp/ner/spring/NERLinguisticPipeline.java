@@ -5,3 +5,20 @@ import org.springframework.context.annotation.Import;
 import sk.bednarik.nlp.commons.AnnComponent;
 import sk.bednarik.nlp.commons.AnnUtils;
 
+@Import({TitulPredAnnComponent.class,
+    TitulZaAnnComponent.class,
+    MenoAnnComponent.class,
+    PriezviskoAnnComponent.class,
+    OsobaRulesAnnComponent.class,
+    UlicaAnnComponent.class,
+    AdresaRulesAnnComponent.class,
+    MiscRulesAnnComponent.class,
+    ZakonRulesAnnComponent.class,
+    LegislativaRulesAnnComponent.class
+})
+public class NERLinguisticPipeline extends AnnComponent {
+
+  public NERLinguisticPipeline(TitulPredAnnComponent titulPredAnnotatorComponent,
+      TitulZaAnnComponent titulZaAnnotatorComponent,
+      MenoAnnComponent menoAnnotatorComponent,
+      PriezviskoAnnComponent priezviskoAn
