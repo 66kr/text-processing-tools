@@ -12,3 +12,16 @@ public class NERHybridPipeline extends AnnComponent {
 
   public NERHybridPipeline(NERLinguisticPipeline nerLinguisticPipeline,
       StackedNERTagAnnComponent stackedNERTagAnnComponent,
+      CrfNERAnnComponent cRFNERAnnComponent,
+      MiscCrfRulesAnnComponent miscCrfRulesAnnComponent) {
+    super(nerLinguisticPipeline,
+        stackedNERTagAnnComponent,
+        cRFNERAnnComponent,
+        miscCrfRulesAnnComponent);
+  }
+
+  @Override
+  protected Annotator prepareAnnotator() {
+    throw new UnsupportedOperationException();
+  }
+}
