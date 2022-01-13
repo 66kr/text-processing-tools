@@ -7,4 +7,6 @@ public class UlicaAnnComponent extends SimpleNERAnnComponent {
 
   @Override
   protected Pair<String, String[]> configure() {
-    return new ImmutablePair<>("sk.essentialdata.nlp/ner/gaz
+    return new ImmutablePair<>("sk.essentialdata.nlp/ner/gazzette/ulica.txt", new String[]{"MENO", "PRIEZVISKO", "ULICA"});
+  }
+}
