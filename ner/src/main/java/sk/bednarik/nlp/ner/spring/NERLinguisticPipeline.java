@@ -36,4 +36,14 @@ public class NERLinguisticPipeline extends AnnComponent {
         osobaRulesAnnotatorComponent,
         ulicaAnnComponent,
         adresaRulesAnnComponent,
-        
+        miscRulesAnnComponent,
+        zakonRulesAnnComponent,
+        legislativaRulesAnnComponent
+    );
+  }
+
+  @Override
+  protected Annotator prepareAnnotator() {
+    throw new UnsupportedOperationException();
+  }
+}
