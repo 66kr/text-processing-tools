@@ -21,4 +21,19 @@ public class NERLinguisticPipeline extends AnnComponent {
   public NERLinguisticPipeline(TitulPredAnnComponent titulPredAnnotatorComponent,
       TitulZaAnnComponent titulZaAnnotatorComponent,
       MenoAnnComponent menoAnnotatorComponent,
-      PriezviskoAnnComponent priezviskoAn
+      PriezviskoAnnComponent priezviskoAnnotatorComponent,
+      OsobaRulesAnnComponent osobaRulesAnnotatorComponent,
+      UlicaAnnComponent ulicaAnnComponent,
+      AdresaRulesAnnComponent adresaRulesAnnComponent,
+      MiscRulesAnnComponent miscRulesAnnComponent,
+      ZakonRulesAnnComponent zakonRulesAnnComponent,
+      LegislativaRulesAnnComponent legislativaRulesAnnComponent) {
+    super(
+        titulPredAnnotatorComponent,
+        titulZaAnnotatorComponent,
+        menoAnnotatorComponent,
+        priezviskoAnnotatorComponent,
+        osobaRulesAnnotatorComponent,
+        ulicaAnnComponent,
+        adresaRulesAnnComponent,
+        
