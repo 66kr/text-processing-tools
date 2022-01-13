@@ -5,4 +5,5 @@
 ( [{gen:PravnickaOrganizacia}]{0,} [{ner:ANONYMOUS}]{1,} [{gen:PravnickaOrganizacia}]{0,} )	ANONYMOUS
 ( [{gen:Pravnik}]{0,} [{ner:ANONYMOUS}]{1,} [{gen:Pravnik}]{0,} )	ANONYMOUS
 ( [{stackedNer:Adresa}]{0,} [{ner:ANONYMOUS}]{1,} [{stackedNer:Adresa}]{0,} )	ANONYMOUS
-( [{stackedNer:Osoba}]{0,} [{ner:ANONYMOUS}]{1,} [{stackedNer:Osoba}]{0,} )	
+( [{stackedNer:Osoba}]{0,} [{ner:ANONYMOUS}]{1,} [{stackedNer:Osoba}]{0,} )	ANONYMOUS
+( [{stackedNer:Organizacia}]{0,} [{ner:ANONYMOUS}]{1,} [{stackedNer:Organizacia}]{0,} )	ANONYMOUS
