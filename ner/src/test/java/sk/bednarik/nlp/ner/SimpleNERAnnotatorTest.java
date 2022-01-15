@@ -33,4 +33,15 @@ public class SimpleNERAnnotatorTest {
       token.setEndPosition(position);
       tokens.add(token);
     }
-    annotation.set(CoreAnnota
+    annotation.set(CoreAnnotations.TokensAnnotation.class, tokens);
+    //Fake tokenizer END
+
+    try (InputStream inputStream = SimpleNERAnnotatorTest.class.getClassLoader()
+        .getResourceAsStream("gazetteers/simpleNerTest.txt")) {
+      SimpleNERAnnotator simpleNERAnnotator = new SimpleNERAnnotator(inputStream);
+      simpleNERAnnotator.annotate(annotation);
+
+      Assert.assertEquals(annotation.get(CoreAnnotations.TokensAnnotation.class).stream()
+              .map(token -> token.get(CoreAnnotations.NamedEntityTagAnnotation.class))
+              .collect(Collectors.toList()),
+          Arrays.asList(expectedResul
