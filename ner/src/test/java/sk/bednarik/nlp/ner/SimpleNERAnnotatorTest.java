@@ -44,4 +44,8 @@ public class SimpleNERAnnotatorTest {
       Assert.assertEquals(annotation.get(CoreAnnotations.TokensAnnotation.class).stream()
               .map(token -> token.get(CoreAnnotations.NamedEntityTagAnnotation.class))
               .collect(Collectors.toList()),
-          Arrays.asList(expectedResul
+          Arrays.asList(expectedResult)
+      );
+    }
+  }
+}
