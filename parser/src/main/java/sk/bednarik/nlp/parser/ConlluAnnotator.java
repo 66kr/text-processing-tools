@@ -24,4 +24,18 @@ public class ConlluAnnotator implements Annotator {
           sentenceGraph.edgeIterable().forEach(edge -> {
             edge.getTarget()
                 .set(CoreAnnotations.CoNLLDepParentIndexAnnotation.class, edge.getSource().index());
-            edge.getTarg
+            edge.getTarget().set(CoreAnnotations.CoNLLDepTypeAnnotation.class,
+                edge.getRelation().getShortName());
+          });
+          sentenceGraph.getRoots().forEach(word -> {
+            word.set(CoreAnnotations.CoNLLDepParentIndexAnnotation.class, 0);
+            word.set(CoreAnnotations.CoNLLDepTypeAnnotation.class, "root");
+          });
+        });
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return new HashSet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
+        CoreAnnotations
