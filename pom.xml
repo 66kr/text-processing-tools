@@ -377,3 +377,36 @@
           <targetJdk>${java.version}</targetJdk>
           <excludeRoots>
             <excludeRoot>target/generated-sources/</excludeRoot>
+          </excludeRoots>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>essentialdata-maven-all</id>
+      <url>https://repo.essential-data.sk/repository/maven-all/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+  </repositories>
+  <distributionManagement>
+    <repository>
+      <id>essentialdata-libs-release</id>
+      <name>essentialdata-libs-release</name>
+      <url>https://repo.essential-data.sk/repository/libs-release-local/</url>
+    </repository>
+    <snapshotRepository>
+      <id>essentialdata-libs-snapshot</id>
+      <name>essentialdata-libs-snapshot</name>
+      <url>https://repo.essential-data.sk/repository/libs-snapshot-local/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+</project>
