@@ -9,4 +9,8 @@ public class DependencyParserComponent extends AnnComponent {
 
   @Override
   protected Annotator prepareAnnotator() {
-    Prope
+    Properties properties = new Properties();
+    properties.setProperty("model", "sk.essentialdata.nlp/parser/nndep.slovak.model.txt.gz");
+    return new DependencyParseAnnotator(properties);
+  }
+}
