@@ -38,4 +38,18 @@ public class ConlluAnnotator implements Annotator {
   public Set<Class<? extends CoreAnnotation>> requires() {
     return new HashSet<>(Arrays.asList(
         CoreAnnotations.TextAnnotation.class,
-        CoreAnnotations
+        CoreAnnotations.IndexAnnotation.class,
+        CoreAnnotations.ValueAnnotation.class,
+        CoreAnnotations.TokensAnnotation.class,
+        CoreAnnotations.SentencesAnnotation.class,
+        CoreAnnotations.SentenceIndexAnnotation.class,
+        CoreAnnotations.PartOfSpeechAnnotation.class,
+        SemanticGraphCoreAnnotations.BasicDependenciesAnnotation.class,
+        SemanticGraphCoreAnnotations.EnhancedDependenciesAnnotation.class,
+        SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class
+    ));
+  }
+
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requirementsSati
