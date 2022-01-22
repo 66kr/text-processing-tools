@@ -52,4 +52,10 @@ public class ConlluAnnotator implements Annotator {
 
 
   @Override
-  public Set<Class<? extends CoreAnnotation>> requirementsSati
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.CoNLLDepParentIndexAnnotation.class,
+        CoreAnnotations.CoNLLDepTypeAnnotation.class
+    )));
+  }
+}
