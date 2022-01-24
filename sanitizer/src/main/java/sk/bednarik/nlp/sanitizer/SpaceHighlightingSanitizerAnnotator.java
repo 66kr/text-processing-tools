@@ -21,4 +21,15 @@ public class SpaceHighlightingSanitizerAnnotator implements Annotator {
 
   @Override
   public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
-    r
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.OriginalTextAnnotation.class
+    )));
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return Collections.unmodifiableSet(new ArraySet<>(Collections.singletonList(
+        CoreAnnotations.TextAnnotation.class
+    )));
+  }
+}
