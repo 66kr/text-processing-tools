@@ -22,4 +22,14 @@ public class OrdinalSlashToBracketSanitizerAnnotator implements Annotator {
   @Override
   public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
     return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
-        CoreAnnotations.OriginalTextAnnotation.
+        CoreAnnotations.OriginalTextAnnotation.class
+    )));
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return Collections.unmodifiableSet(new ArraySet<>(Collections.singletonList(
+        CoreAnnotations.TextAnnotation.class
+    )));
+  }
+}
