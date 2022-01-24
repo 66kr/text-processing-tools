@@ -10,4 +10,16 @@ import java.util.Collections;
 import java.util.Set;
 
 
-public class OrdinalSlashToBracketSanit
+public class OrdinalSlashToBracketSanitizerAnnotator implements Annotator {
+
+  @Override
+  public void annotate(Annotation annotation) {
+    annotation.set(CoreAnnotations.OriginalTextAnnotation.class, annotation.get(CoreAnnotations.TextAnnotation.class));
+    annotation.set(CoreAnnotations.TextAnnotation.class,
+        OrdinalSlashToBracketSanitizer.sanitize(annotation.get(CoreAnnotations.TextAnnotation.class)));
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.OriginalTextAnnotation.
