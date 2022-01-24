@@ -28,4 +28,19 @@ public class OcrTokenNormalizer {
       if (slovnik.contains(newToken)) {
         token = newToken;
       }
-      newToken = token.replace("6"
+      newToken = token.replace("6", "é");
+      if (slovnik.contains(newToken)) {
+        token = newToken;
+      }
+    }
+
+    if (token.matches("\\p{L}*5\\p{L}")) {
+      String newToken = token.replace("5", "š");
+      if (slovnik.contains(newToken)) {
+        token = newToken;
+      }
+    }
+
+    return token;
+  }
+}
