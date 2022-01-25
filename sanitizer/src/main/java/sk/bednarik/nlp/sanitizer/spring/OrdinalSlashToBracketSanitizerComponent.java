@@ -7,4 +7,8 @@ import sk.bednarik.nlp.sanitizer.OrdinalSlashToBracketSanitizerAnnotator;
 public class OrdinalSlashToBracketSanitizerComponent extends AnnComponent {
 
   @Override
-  prote
+  protected Annotator prepareAnnotator() {
+    return new OrdinalSlashToBracketSanitizerAnnotator();
+  }
+
+}
