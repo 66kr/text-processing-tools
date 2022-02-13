@@ -36,3 +36,11 @@ public class SpaceHighlightingSanitizerTest {
         +
         "\n" +
         "        Pri príprave dokumentácie stavby k stavebnému konaniu a v procese konania o povolení  činnosti podľa osobitných predpisov je potrebné zohľadniť v plnej miere  rešpektovať pripomienky, ktoré vyplynuli zo stanovísk doručených k zámeru a z opatrení navrhnutých v zámere: \n"
+        +
+        "\n" +
+        "1. Dodržať a realizovať  opatrenia na zmiernenie nepriaznivých vplyvov navrhovanej činnosti na životné prostredie   počas prevádzky  navrhnuté v kapitole   10. Zámeru.\n"
+        +
+        "\n" +
+        "2. V žiadosti o vydanie súhlasu povoľujúcim orgánom stanoviť kapacitu zariadenia a     vymedziť  jednotlivé druhy odpadov podľa katalógových čísiel s ktorými bude nakladané  v navrhovanom zariadení v zmysle platných právnych predpisov.  \n"
+        +
+        "3. Prevádzkou činnosti  nesmú byť prekročené prípustné hodnoty určujúcich veličín h
