@@ -93,4 +93,13 @@ public class SpaceHighlightingSanitizerTest {
         "\n" +
         "      Žiar nad Hronom \n" +
         "9.  Okresný úrad Žiar nad Hronom, pozemkový a lesný odbor, Nám. M. Slovenskej č.8,\n" +
-   
+        "\n" +
+        "       965 01 Žiar nad Hronom\n" +
+        "\n" +
+        "10. Okresný  úrad Žiar nad Hronom, odbor starostlivosti o životné prostredie - štátna vodná \n" +
+        "       správa, štátna správa ochrany prírody a krajiny, štátna správa odpadového hospodárstva, \n" +
+        "       štátna správa ochrany ovzdušia \n" +
+        "11.  Združenie domových samospráv, P.O.BOX 218, 850 00 Bratislava - Petržalka\n" +
+        "\n"));
+  }
+}
