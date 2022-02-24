@@ -15,4 +15,8 @@
     </server>
     <server>
       <id>essentialdata-libs-snapshot</id>
-      <username>${env.MAVEN_REPO_USER
+      <username>${env.MAVEN_REPO_USER}</username>
+      <password>${env.MAVEN_REPO_PASS}</password>
+    </server>
+  </servers>
+</settings>
