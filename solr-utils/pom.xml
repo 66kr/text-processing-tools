@@ -11,4 +11,24 @@
 
   <artifactId>solr-utils</artifactId>
 
-  <depe
+  <dependencies>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>stemmer</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>edu.stanford.nlp</groupId>
+          <artifactId>stanford-corenlp</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.lucene</groupId>
+          <artifactId>lucene-analyzers-common</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>lemmatizer</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>edu.s
