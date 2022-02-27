@@ -29,4 +29,16 @@ import sk.bednarik.nlp.stemmer.SlovakStemmer;
  * A {@link TokenFilter} that applies {@link org.apache.lucene.analysis.cz.CzechStemmer} to stem Slovak words.
  * <p>
  * To prevent terms from being stemmed use an instance of
- * {@link SetKeywordMarkerFilter} or a 
+ * {@link SetKeywordMarkerFilter} or a custom {@link TokenFilter} that sets
+ * the {@link KeywordAttribute} before this {@link TokenStream}.
+ * </p>
+ * <p><b>NOTE</b>: Input is expected to be in lowercase, 
+ * but with diacritical marks</p>
+ * @see SetKeywordMarkerFilter
+ */
+public final class SlovakStemFilter extends TokenFilter {
+  private final SlovakStemmer stemmer = new SlovakStemmer();
+  private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
+  private final KeywordAttribute keywordAttr = addAttribute(KeywordAttribute.class);
+  
+  public SlovakStemFilter(TokenStream input)
