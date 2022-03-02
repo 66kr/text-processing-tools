@@ -34,4 +34,19 @@ public class WordRootTokenFilterFactory extends TokenFilterFactory implements Re
         } catch (IOException e) {
             RuntimeException runtimeException = new RuntimeException(e.getMessage(), e);
             runtimeException.setStackTrace(e.getStackTrace());
-            throw runtimeEx
+            throw runtimeException;
+        }
+    }
+
+    @Override
+    public void inform(ResourceLoader loader) throws IOException {
+        String dictionaryArg = getOriginalArgs().get(PARAM_DICTIONARY);
+        if (dictionaryArg == null) {
+            throw new IllegalArgumentException("Parameter " + PARAM_DICTIONARY + " is mandatory.");
+        }
+        InputStream is = loader.openResource(dictionaryArg);
+        Throwable var3 = null;
+        try {
+            fst = new FST(new InputStreamDataInput(new BufferedInputStream(is)), CharSequenceOutputs.getSingleton());
+        } catch (Throwable var13) {
+    
