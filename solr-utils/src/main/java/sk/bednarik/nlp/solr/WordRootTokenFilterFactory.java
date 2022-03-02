@@ -18,4 +18,20 @@ public class WordRootTokenFilterFactory extends TokenFilterFactory implements Re
     private FST<CharsRef> fst;
 
     public static final String PARAM_DICTIONARY = "fst";
-    public static final String PA
+    public static final String PARAM_STEMMER = "useStemmer";
+
+    /**
+     * Initialize this factory via a set of key-value pairs.
+     */
+    public WordRootTokenFilterFactory(Map<String, String> args) {
+        super(args);
+    }
+
+    @Override
+    public TokenStream create(TokenStream tokenStream) {
+        try {
+            return new WordRootTokenFilter(tokenStream, fst, useStemmer);
+        } catch (IOException e) {
+            RuntimeException runtimeException = new RuntimeException(e.getMessage(), e);
+            runtimeException.setStackTrace(e.getStackTrace());
+            throw runtimeEx
