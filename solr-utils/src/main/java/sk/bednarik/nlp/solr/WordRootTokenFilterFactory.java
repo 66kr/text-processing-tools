@@ -49,4 +49,23 @@ public class WordRootTokenFilterFactory extends TokenFilterFactory implements Re
         try {
             fst = new FST(new InputStreamDataInput(new BufferedInputStream(is)), CharSequenceOutputs.getSingleton());
         } catch (Throwable var13) {
-    
+            var3 = var13;
+            throw var13;
+        } finally {
+            if (is != null) {
+                if (var3 != null) {
+                    try {
+                        is.close();
+                    } catch (Throwable var12) {
+                        var3.addSuppressed(var12);
+                    }
+                } else {
+                    is.close();
+                }
+            }
+
+        }
+        useStemmer = ((getOriginalArgs().get(PARAM_STEMMER) != null) && (getOriginalArgs().get(PARAM_STEMMER).equals("true")));
+    }
+
+}
