@@ -20,4 +20,18 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import one.util.streamex.StreamEx;
-import opennlp.tools.sentdetect.S
+import opennlp.tools.sentdetect.SentenceDetectorME;
+import opennlp.tools.sentdetect.SentenceModel;
+import opennlp.tools.util.Span;
+
+/**
+ * This class assumes that there is a {@code List<CoreLabel>} under the {@code TokensAnnotation} field, and runs it
+ * through {@link opennlp.tools.sentdetect.SentenceDetectorME} and puts the new {@code List<Annotation>} under the
+ * {@code SentencesAnnotation} field.
+ */
+public class OpenNLPSentenceSplitterAnnotator implements Annotator {
+
+  /**
+   * A logger for this class
+   */
+  private static Redwood.RedwoodChannels log = Redwood.channels(OpenNLPSentenceSplitterAnnotator.
