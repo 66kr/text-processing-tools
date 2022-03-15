@@ -67,4 +67,18 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
       log.info("Sentence splitting ...");
     }
     if (!annotation.containsKey(CoreAnnotations.TokensAnnotation.class)) {
-      throw new IllegalArgumentException("WordsToSentencesAnnotat
+      throw new IllegalArgumentException("WordsToSentencesAnnotator: unable to find words/tokens in: " + annotation);
+    }
+
+    // get text and tokens from the document
+    String text = annotation.get(CoreAnnotations.TextAnnotation.class);
+    List<CoreLabel> tokens = annotation.get(CoreAnnotations.TokensAnnotation.class);
+    String docID = annotation.get(CoreAnnotations.DocIDAnnotation.class);
+    // log.info("Tokens are: " + tokens);
+
+    // assemble the sentence annotations
+    int tokenOffset = 0;
+    int lineNumber = 0;
+    // section annotations to mark sentences with
+    CoreMap sectionAnnotations = null;
+    List<CoreMap> sentences = new ArrayLis
