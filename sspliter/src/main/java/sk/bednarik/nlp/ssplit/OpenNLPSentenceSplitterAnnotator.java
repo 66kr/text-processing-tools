@@ -34,4 +34,21 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
   /**
    * A logger for this class
    */
-  private static Redwood.RedwoodChannels log = Redwood.channels(OpenNLPSentenceSplitterAnnotator.
+  private static Redwood.RedwoodChannels log = Redwood.channels(OpenNLPSentenceSplitterAnnotator.class);
+
+  private final boolean VERBOSE;
+
+  private final boolean countLineNumbers;
+
+  private SentenceDetectorME sentenceDetector;
+
+  public OpenNLPSentenceSplitterAnnotator(boolean verbose, boolean countLineNumbers,
+      InputStream modelFile) throws IOException {
+    VERBOSE = verbose;
+    this.countLineNumbers = countLineNumbers;
+    SentenceModel model = new SentenceModel(modelFile);
+    sentenceDetector = new SentenceDetectorME(model);
+  }
+
+  public OpenNLPSentenceSplitterAnnotator(boolean verbose, boolean countLineNumbers,
+      String modelFile) throws I
