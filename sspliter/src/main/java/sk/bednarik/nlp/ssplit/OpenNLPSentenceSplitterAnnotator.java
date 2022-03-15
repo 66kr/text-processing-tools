@@ -51,4 +51,20 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
   }
 
   public OpenNLPSentenceSplitterAnnotator(boolean verbose, boolean countLineNumbers,
-      String modelFile) throws I
+      String modelFile) throws IOException {
+    this(verbose, countLineNumbers, new FileInputStream(modelFile));
+  }
+
+
+  /**
+   * If setCountLineNumbers is set to true, we count line numbers by telling the underlying splitter to return empty
+   * lists of tokens and then treating those empty lists as empty lines.  We don't actually include empty sentences in
+   * the annotation, though.
+   **/
+  @Override
+  public void annotate(Annotation annotation) {
+    if (VERBOSE) {
+      log.info("Sentence splitting ...");
+    }
+    if (!annotation.containsKey(CoreAnnotations.TokensAnnotation.class)) {
+      throw new IllegalArgumentException("WordsToSentencesAnnotat
