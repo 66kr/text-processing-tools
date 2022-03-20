@@ -134,4 +134,28 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
       }
 
       if (docID != null) {
-        sentence.set(CoreAnnotations.DocIDAnnotation.class, docI
+        sentence.set(CoreAnnotations.DocIDAnnotation.class, docID);
+      }
+
+      int index = 1;
+      for (CoreLabel token : sentenceTokens) {
+        token.setIndex(index++);
+        token.setSentIndex(sentences.size());
+        if (docID != null) {
+          token.setDocID(docID);
+        }
+      }
+
+      // add the sentence to the list
+      sentences.add(sentence);
+      i++;
+    }
+    // the condition below is possible if sentenceBoundaryToDiscard is initialized!
+      /*
+      if (tokenOffset != tokens.size()) {
+        throw new RuntimeException(String.format(
+            "expected %d tokens, found %d", tokens.size(), tokenOffset));
+      }
+      */
+
+    // add the senten
