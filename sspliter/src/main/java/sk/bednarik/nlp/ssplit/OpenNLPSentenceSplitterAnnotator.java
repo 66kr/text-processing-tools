@@ -175,4 +175,10 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
 
   @Override
   public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
-    return new HashSet<>(Ar
+    return new HashSet<>(Arrays.asList(
+        CoreAnnotations.SentencesAnnotation.class,
+        CoreAnnotations.SentenceIndexAnnotation.class
+    ));
+  }
+
+}
