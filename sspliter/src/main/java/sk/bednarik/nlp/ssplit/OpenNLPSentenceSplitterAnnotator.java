@@ -81,4 +81,21 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
     int lineNumber = 0;
     // section annotations to mark sentences with
     CoreMap sectionAnnotations = null;
-    List<CoreMap> sentences = new ArrayLis
+    List<CoreMap> sentences = new ArrayList<>();
+    int i = 0;
+    int startToken = 0;
+    for (Span sentenceSpans : sentenceDetector.sentPosDetect(text)) {
+      if (countLineNumbers) {
+        ++lineNumber;
+      }
+
+      // get the sentence text from the first and last character offsets
+      int begin = sentenceSpans.getStart();
+      int end = sentenceSpans.getEnd();
+      String sentenceText = text.substring(begin, end);
+
+      List<CoreLabel> sentenceTokens = StreamEx.of(tokens.stream())
+          .skip(startToken)
+          .takeWhile(token -> token.endPosition() <= end)
+          .collect(Collectors.toList());
+      startTok
