@@ -98,4 +98,13 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
           .skip(startToken)
           .takeWhile(token -> token.endPosition() <= end)
           .collect(Collectors.toList());
-      startTok
+      startToken = startToken + sentenceTokens.size();
+
+      // create a sentence annotation with text and token offsets
+      Annotation sentence = new Annotation(sentenceText);
+      sentence.set(CoreAnnotations.CharacterOffsetBeginAnnotation.class, begin);
+      sentence.set(CoreAnnotations.CharacterOffsetEndAnnotation.class, end);
+      sentence.set(CoreAnnotations.TokensAnnotation.class, sentenceTokens);
+      sentence.set(CoreAnnotations.TokenBeginAnnotation.class, tokenOffset);
+      tokenOffset += sentenceTokens.size();
+      sentence.set(CoreAnnotations.TokenEndAnnotation.class, to
