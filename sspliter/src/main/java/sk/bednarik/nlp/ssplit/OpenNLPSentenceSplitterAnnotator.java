@@ -158,4 +158,21 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
       }
       */
 
-    // add the senten
+    // add the sentences annotations to the document
+    annotation.set(CoreAnnotations.SentencesAnnotation.class, sentences);
+  }
+
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
+        CoreAnnotations.TokensAnnotation.class,
+        CoreAnnotations.CharacterOffsetBeginAnnotation.class,
+        CoreAnnotations.CharacterOffsetEndAnnotation.class
+    )));
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return new HashSet<>(Ar
