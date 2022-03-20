@@ -107,4 +107,16 @@ public class OpenNLPSentenceSplitterAnnotator implements Annotator {
       sentence.set(CoreAnnotations.TokensAnnotation.class, sentenceTokens);
       sentence.set(CoreAnnotations.TokenBeginAnnotation.class, tokenOffset);
       tokenOffset += sentenceTokens.size();
-      sentence.set(CoreAnnotations.TokenEndAnnotation.class, to
+      sentence.set(CoreAnnotations.TokenEndAnnotation.class, tokenOffset);
+      sentence.set(CoreAnnotations.SentenceIndexAnnotation.class, sentences.size());
+
+      if (countLineNumbers) {
+        sentence.set(CoreAnnotations.LineNumberAnnotation.class, lineNumber);
+      }
+
+      // Annotate sentence with section information.
+      // Assume section start and end appear as first and last tokens of sentence
+      CoreLabel sentenceStartToken = sentenceTokens.get(0);
+      CoreLabel sentenceEndToken = sentenceTokens.get(sentenceTokens.size() - 1);
+
+      CoreMap sectionStart = sentenceStartToken.get(CoreAnnotations.SectionStar
