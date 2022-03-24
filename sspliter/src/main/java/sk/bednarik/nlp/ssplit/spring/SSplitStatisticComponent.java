@@ -15,4 +15,8 @@ public class SSplitStatisticComponent extends AnnComponent {
       return new OpenNLPSentenceSplitterAnnotator(false, false, inputStream);
     } catch (IOException e) {
       //TODO: Handle Exception
-      e.printStackTrace()
+      e.printStackTrace();
+    }
+    return null;
+  }
+}
