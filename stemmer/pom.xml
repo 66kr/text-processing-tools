@@ -13,4 +13,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.ap
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-analyzers-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>commons</artifactId>
+    </dependency>
+  </dependencies>
+</project>
