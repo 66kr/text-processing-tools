@@ -35,4 +35,22 @@ public class StemAnnotator implements Annotator {
 
   private SlovakStemmer slovakStemmer;
 
-  public String ste
+  public String stem(String token) {
+    char[] wordCharArray = token.toCharArray();
+    int size = slovakStemmer.stem(wordCharArray, wordCharArray.length);
+    return new String(wordCharArray, 0, size);
+  }
+
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
+        CoreAnnotations.TokensAnnotation.class,
+        CoreAnnotations.SentencesAnnotation.class,
+        CoreAnnotations.PartOfSpeechAnnotation.class
+    )));
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requirementsSati
