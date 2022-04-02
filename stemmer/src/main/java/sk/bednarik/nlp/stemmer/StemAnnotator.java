@@ -53,4 +53,10 @@ public class StemAnnotator implements Annotator {
   }
 
   @Override
-  public Set<Class<? extends CoreAnnotation>> requirementsSati
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return Collections.singleton(CoreAnnotations.LemmaAnnotation.class);
+  }
+}
+
+
+
