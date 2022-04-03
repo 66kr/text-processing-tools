@@ -14,4 +14,6 @@ public class StemmerComponent extends AnnComponent {
     } catch (IOException ex) {
       ex.printStackTrace();
     }
-    return nu
+    return null;
+  }
+}
