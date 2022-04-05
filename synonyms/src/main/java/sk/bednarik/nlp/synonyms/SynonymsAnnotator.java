@@ -35,4 +35,24 @@ public class SynonymsAnnotator implements Annotator {
 
   private HashMap<String, String[]> interchangeableWords = new HashMap<String, String[]>() {{
     put("sa", new String[]{"si"});
-    put("si", new Str
+    put("si", new String[]{"sa"});
+  }};
+
+  private static Redwood.RedwoodChannels log = Redwood.channels(SynonymsAnnotator.class);
+
+  //TODO: Improve performance
+  public SynonymsAnnotator(InputStream synonymsFile, InputStream stopWordsFile) {
+    prepareStopWords(stopWordsFile);
+    prepareSynonyms(synonymsFile);
+  }
+
+  private void prepareStopWords(InputStream stopWordsFile) {
+    try (BufferedReader br = new BufferedReader(new InputStreamReader(stopWordsFile, "UTF-8"))) {
+      br.lines()
+          .forEach(word -> stopWords.add(word));
+    } catch (IOException e) {
+      log.error(e);
+    }
+  }
+
+  private void prepareSynonyms(InputStream s
