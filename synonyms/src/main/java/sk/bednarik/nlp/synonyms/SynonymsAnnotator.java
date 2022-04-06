@@ -55,4 +55,17 @@ public class SynonymsAnnotator implements Annotator {
     }
   }
 
-  private void prepareSynonyms(InputStream s
+  private void prepareSynonyms(InputStream synonymsFile) {
+    try (BufferedReader br = new BufferedReader(new InputStreamReader(synonymsFile, "UTF-8"))) {
+      br.lines()
+          .map(line -> line.split(", "))
+          .forEach(phrases -> Stream.of(phrases)
+              .peek(phrase -> {
+                String[] words = phrase.split(" ");
+                for (String word : words) {
+                  if (!stopWords.contains(word)) {
+                    index.compute(word, (key, value) -> {
+                      if (value == null) {
+                        value = new HashSet<>();
+                      }
+                  
