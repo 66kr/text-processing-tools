@@ -108,4 +108,19 @@ public class SynonymsAnnotator implements Annotator {
           childrenLemmas.put(token.originalText().toLowerCase(), tokenWord);
 
           Set<String> phrasesStrings = index.getOrDefault(token.lemma().toLowerCase(), new HashSet<>());
-          phrasesStrings.addAll(inde
+          phrasesStrings.addAll(index.getOrDefault(token.originalText().toLowerCase(), new HashSet<>()));
+
+          for (String phraseString : phrasesStrings) {
+            String[] words = phraseString.split(" ");
+            boolean finished = true;
+            List<CoreLabel> phraseWords = new ArrayList<>();
+            for (String word : words) {
+              if (!childrenLemmas.containsKey(word)) {
+                finished = false;
+                break;
+              } else {
+                phraseWords.add(childrenLemmas.get(word).backingLabel());
+              }
+            }
+            if (finished) {
+              
