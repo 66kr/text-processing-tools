@@ -68,4 +68,24 @@ public class SynonymsAnnotator implements Annotator {
                       if (value == null) {
                         value = new HashSet<>();
                       }
-                  
+                      value.add(phrase);
+                      return value;
+                    });
+                  }
+                }
+              })
+              .forEach(phrase -> slovnik.compute(phrase, (key, value) -> {
+                if (value == null) {
+                  value = new ArrayList<>();
+                }
+                value.add(Arrays.asList(phrases));
+                return value;
+              })));
+    } catch (IOException e) {
+      log.error(e);
+    }
+  }
+
+  @Override
+  public void annotate(Annotation annotation) {
+    List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class)
