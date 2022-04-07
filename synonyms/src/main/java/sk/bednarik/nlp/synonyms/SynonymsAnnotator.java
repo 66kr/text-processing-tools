@@ -142,4 +142,20 @@ public class SynonymsAnnotator implements Annotator {
   }
 
   @Override
-  public Set<Class<? ex
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return Collections.unmodifiableSet(new ArraySet<>(Arrays.asList(
+        AsurAnnotations.PhraseAnnotation.class,
+        AsurAnnotations.Synonyms.class
+    )));
+  }
+
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    return new HashSet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
+        CoreAnnotations.IndexAnnotation.class,
+        CoreAnnotations.ValueAnnotation.class,
+        CoreAnnotations.TokensAnnotation.class,
+        CoreAnnotations.LemmaAnnotation.class,
+        CoreAnnotati
