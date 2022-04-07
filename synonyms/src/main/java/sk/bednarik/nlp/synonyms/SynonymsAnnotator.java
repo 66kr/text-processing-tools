@@ -123,4 +123,23 @@ public class SynonymsAnnotator implements Annotator {
               }
             }
             if (finished) {
-              
+              List<List<String>> synonyms = slovnik.get(phraseString);
+              List<String> flatSynonyms =
+                  synonyms.stream()
+                      .flatMap(List::stream)
+                      .collect(Collectors.toList());
+              CoreMap phrase = new ArrayCoreMap();
+              phrase.set(AsurAnnotations.Synonyms.class, flatSynonyms);
+              phrase.set(CoreAnnotations.TokensAnnotation.class, phraseWords);
+              phrases.add(phrase);
+            }
+          }
+        }
+
+      }
+      sentence.set(AsurAnnotations.PhraseAnnotation.class, phrases);
+    }
+  }
+
+  @Override
+  public Set<Class<? ex
