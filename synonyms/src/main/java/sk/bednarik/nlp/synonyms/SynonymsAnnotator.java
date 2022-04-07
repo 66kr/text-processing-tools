@@ -88,4 +88,14 @@ public class SynonymsAnnotator implements Annotator {
 
   @Override
   public void annotate(Annotation annotation) {
-    List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class)
+    List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
+    for (CoreMap sentence : sentences) {
+      List<CoreMap> phrases = new ArrayList<>();
+      SemanticGraph sg = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
+      for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
+        if (!stopWords.contains(token.lemma().toLowerCase())) {
+          IndexedWord tokenWord = new IndexedWord(token);
+          Set<IndexedWord> children = sg.getChildren(tokenWord);
+          HashMap<String, IndexedWord> childrenLemmas = new HashMap<>();
+          for (IndexedWord word : children) {
+            childrenLemmas.put(word.lem
