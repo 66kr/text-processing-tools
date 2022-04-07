@@ -158,4 +158,12 @@ public class SynonymsAnnotator implements Annotator {
         CoreAnnotations.ValueAnnotation.class,
         CoreAnnotations.TokensAnnotation.class,
         CoreAnnotations.LemmaAnnotation.class,
-        CoreAnnotati
+        CoreAnnotations.SentencesAnnotation.class,
+        CoreAnnotations.SentenceIndexAnnotation.class,
+        CoreAnnotations.PartOfSpeechAnnotation.class,
+        SemanticGraphCoreAnnotations.BasicDependenciesAnnotation.class,
+        SemanticGraphCoreAnnotations.EnhancedDependenciesAnnotation.class,
+        SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class
+    ));
+  }
+}
