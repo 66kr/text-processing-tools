@@ -98,4 +98,14 @@ public class SynonymsAnnotator implements Annotator {
           Set<IndexedWord> children = sg.getChildren(tokenWord);
           HashMap<String, IndexedWord> childrenLemmas = new HashMap<>();
           for (IndexedWord word : children) {
-            childrenLemmas.put(word.lem
+            childrenLemmas.put(word.lemma().toLowerCase(), word);
+            childrenLemmas.put(word.originalText().toLowerCase(), word);
+            for (String interchange : interchangeableWords.getOrDefault(word.originalText(), new String[0])) {
+              childrenLemmas.put(interchange, word);
+            }
+          }
+          childrenLemmas.put(token.lemma().toLowerCase(), tokenWord);
+          childrenLemmas.put(token.originalText().toLowerCase(), tokenWord);
+
+          Set<String> phrasesStrings = index.getOrDefault(token.lemma().toLowerCase(), new HashSet<>());
+          phrasesStrings.addAll(inde
