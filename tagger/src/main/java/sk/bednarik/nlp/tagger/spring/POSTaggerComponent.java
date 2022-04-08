@@ -11,4 +11,13 @@ public class POSTaggerComponent extends AnnComponent {
   @Override
   protected Annotator prepareAnnotator() {
     try {
-      InputStream inputS
+      InputStream inputStream = POSTaggerComponent.class.getClassLoader().getResourceAsStream(
+          "sk.essentialdata.nlp/morphology/sk-pos-model.bin");
+      return new OpenNLPPOSTaggerAnnotator(inputStream, false);
+    } catch (IOException ex) {
+      // TODO handle exception
+      ex.printStackTrace();
+    }
+    return null;
+  }
+}
