@@ -1,0 +1,3 @@
+  ENV.defaults["stage.limitIters"] = 50
+
+  tokens = { type: "CLASS", value
