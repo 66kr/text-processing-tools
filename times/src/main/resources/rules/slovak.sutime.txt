@@ -1,3 +1,9 @@
   ENV.defaults["stage.limitIters"] = 50
 
-  tokens = { type: "CLASS", value
+  tokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$TokensAnnotation" }
+  numtokens = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NumerizedTokensAnnotation" }
+
+  $TIMEOFDAY = "/ráno|popoludnie|večer|noc|poludnie|polnoc|olovrant|obed|večera|desiata|poobedie|dopoludnie|súmrak/|[{lemma:\"ráno\"}]|[{lemma:\"popoludnie\"}]|[{lemma:\"večer\"}]|[{lemma:\"noc\"}]|[{lemma:\"poludnie\"}]|[{lemma:\"polnoc\"}]|[{lemma:\"olovrant\"}]|[{lemma:\"obed\"}]|[{lemma:\"večera\"}]|[{lemma:\"desiata\"}]|[{lemma:\"poobedie\"}]|[{lemma:\"dopoludnie\"}]|[{lemma:\"súmrak\"}]";
+
+  $NUM = ( [ { numcomptype:NUMBER } ] );
+  $INT =
