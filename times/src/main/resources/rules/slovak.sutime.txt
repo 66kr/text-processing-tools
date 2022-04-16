@@ -6,4 +6,11 @@
   $TIMEOFDAY = "/ráno|popoludnie|večer|noc|poludnie|polnoc|olovrant|obed|večera|desiata|poobedie|dopoludnie|súmrak/|[{lemma:\"ráno\"}]|[{lemma:\"popoludnie\"}]|[{lemma:\"večer\"}]|[{lemma:\"noc\"}]|[{lemma:\"poludnie\"}]|[{lemma:\"polnoc\"}]|[{lemma:\"olovrant\"}]|[{lemma:\"obed\"}]|[{lemma:\"večera\"}]|[{lemma:\"desiata\"}]|[{lemma:\"poobedie\"}]|[{lemma:\"dopoludnie\"}]|[{lemma:\"súmrak\"}]";
 
   $NUM = ( [ { numcomptype:NUMBER } ] );
-  $INT =
+  $INT = ( [ { numcomptype:NUMBER } & !{ word:/.*\.\d+.*/} & !{ word:/.*,.*/ } ] );
+  $INTORD = ( [ ({ numcomptype:NUMBER } | { numcomptype:ORDINAL }) & !{ word:/.*\.\d+.*/} & !{ word:/.*,.*/ } ] );
+  $INT1000TO3000 = ( [ $INT & !{ word:/\+.*/} & { numcompvalue>1000 } & { numcompvalue<3000 } ] );
+  $INT1TO31 = ( [ $INTORD & !{ word:/\+.*/} & { numcompvalue>=1 } & { numcompvalue<=31 } ] );
+  $NUM_ORD = ( [ { numcomptype:ORDINAL } ] );
+
+  $INT_TIMES = ( $INT /krát/ | raz );
+  $REL_MOD = ( [{lemma:"ďaľší"}]|[{lemma:"nasledujúci"}]|[{lemma:"posledný"}]|[{lemma:"predchádzajúci"}]|[{lemma:"najbližší"}]|[{lemma:"minulý
