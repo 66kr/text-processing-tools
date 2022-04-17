@@ -13,4 +13,8 @@
   $NUM_ORD = ( [ { numcomptype:ORDINAL } ] );
 
   $INT_TIMES = ( $INT /krát/ | raz );
-  $REL_MOD = ( [{lemma:"ďaľší"}]|[{lemma:"nasledujúci"}]|[{lemma:"posledný"}]|[{lemma:"predchádzajúci"}]|[{lemma:"najbližší"}]|[{lemma:"minulý
+  $REL_MOD = ( [{lemma:"ďaľší"}]|[{lemma:"nasledujúci"}]|[{lemma:"posledný"}]|[{lemma:"predchádzajúci"}]|[{lemma:"najbližší"}]|[{lemma:"minulý"}]|/ďaľší|nasledujúci|posledný|predchádzajúci|najbližší|minulý/ );
+  $FREQ_MOD = ( [{lemma:"každý"}]|/každý/|[{lemma:"každý"}] $NUM_ORD | /každý/ $NUM_ORD | [{lemma:"každý"}] [{lemma:"druhý"}]|[{lemma:"striedajúci"}] | /každý/ /druhý|striedajúci/? );
+  $EARLY_LATE_MOD = ( [{lemma:"neskorá"}]|[{lemma:"skorý"}] | /neskorá|skorý/ | [{lemma:"začiatok"}]|[{lemma:"počiatok"}]|[{lemma:"stred"}]|[{lemma:"koniec"}] | /začiatok|počiatok|stred|koniec/ | [{lemma:"neskoro"}]|[{lemma:"skoro"}] /v/ | /neskoro|skoro/ /v/ );
+  $APPROX_MOD = ( /okolo|skoro|presne|približne/ );
+  # TODO ako 
