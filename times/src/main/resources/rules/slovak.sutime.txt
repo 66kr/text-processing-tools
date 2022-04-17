@@ -34,4 +34,28 @@
     "osemdesiate": "8X",
     "deväťdesiate": "9X"
   }
-  $
+  $Decades = CreateRegex(Keys(DECADES_MAP))
+
+  # TODO toto asi nebude fungovat ked to bude vysklonovane
+  # Durations
+  TIMEUNIT_MAP = {
+    "rok": YEAR,
+    "mesiac": MONTH,
+    "deň": DAY,
+    "hodina": HOUR,
+    "hod": HOUR,
+    "minúta": MINUTE,
+    "min": MINUTE,
+    "sekunda": SECOND,
+    "sek": SECOND,
+    "milisekunda": MILLIS,
+    "milisek": MILLIS,
+    "týždeň": WEEK,
+    "polmesiac": FORTNIGHT,
+    "štvrťrok": QUARTER,
+    "storočie": CENTURY,
+    "storočia": CENTURY,
+    "tisícročie": MILLENNIUM,
+    "milénium": MILLENNIUM
+  }
+  $TEUnits = CreateRegex(Keys(TIMEU
