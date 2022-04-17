@@ -17,4 +17,21 @@
   $FREQ_MOD = ( [{lemma:"každý"}]|/každý/|[{lemma:"každý"}] $NUM_ORD | /každý/ $NUM_ORD | [{lemma:"každý"}] [{lemma:"druhý"}]|[{lemma:"striedajúci"}] | /každý/ /druhý|striedajúci/? );
   $EARLY_LATE_MOD = ( [{lemma:"neskorá"}]|[{lemma:"skorý"}] | /neskorá|skorý/ | [{lemma:"začiatok"}]|[{lemma:"počiatok"}]|[{lemma:"stred"}]|[{lemma:"koniec"}] | /začiatok|počiatok|stred|koniec/ | [{lemma:"neskoro"}]|[{lemma:"skoro"}] /v/ | /neskoro|skoro/ /v/ );
   $APPROX_MOD = ( /okolo|skoro|presne|približne/ );
-  # TODO ako 
+  # TODO ako toto?
+  $YEAR = ( /[012]\d\d\d/ | /'\d\d/ | /'/ /\d\d/ | /\w+násť|dsať/ [ { numcompvalue<100 } & { numcompvalue>0 } & $INT ] );
+  $POSSIBLE_YEAR = ( $YEAR /a\.?d\.?|b\.?c\.?/? | $INT /a\.?d\.?|b\.?c\.?/ | $INT1000TO3000 );
+  $hasTemporal = "( { temporal::EXISTS } & {{ temporal.value != NON_TEMPORAL }} & !{{ tags[\"TIMEZONE\"] }} )"
+
+# TODO toto asi nebude fungovat ked to bude vysklonovane
+  # Decades
+  DECADES_MAP = {
+    "dvadsiate": "2X",
+    "tridsiate": "3X",
+    "štyridsiate": "4X",
+    "paťdesiate": "5X",
+    "šesťdesiate": "6X",
+    "sedemdesiate": "7X",
+    "osemdesiate": "8X",
+    "deväťdesiate": "9X"
+  }
+  $
