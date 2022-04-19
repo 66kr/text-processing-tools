@@ -88,4 +88,31 @@
     "sedemdesiat": 70,
     "osemdesiat": 80,
     "deväťdesiat": 90,
-    
+    "sto": 100
+  }
+  $BasicNumTerm = CreateRegex(Keys(BASIC_NUMBER_MAP))
+  # TODO toto asi nebude fungovat ked to bude vysklonovane
+  BASIC_ORDINAL_MAP = {
+    "prvý": 1,
+    "druhý": 2,
+    "tretí": 3,
+    "štvrtý": 4,
+    "piaty": 5,
+    "šiesty": 6,
+    "siedmy": 7,
+    "ôsmy": 8,
+    "deviaty": 9,
+    "desiaty": 10,
+    "jedenásty": 11,
+    "dvanásty": 12,
+    "trinásty": 13,
+    "štrnásty": 14,
+    "pätnásty": 15,
+    "šestnásty": 16,
+    "sedemnásty": 17,
+    "osemnásty": 18,
+    "devätnásty": 19,
+    "dvadsiaty": 20,
+    "tridsiaty": 30,
+    "štyridsiaty": 40,
+    "päťdesiaty"
