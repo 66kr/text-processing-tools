@@ -134,4 +134,25 @@
 	          Tag($0, "YEAR",
                 :case {
 				   $0 =~ ( /\w+teen|twenty/ [ $INT ] ) => Add(Multiply($0[0].numcompvalue, 100), $0[1].numcompvalue),
-				   $0 =~ ( /'/ /\d\d/ ) => Concat
+				   $0 =~ ( /'/ /\d\d/ ) => Concat("XX", $0[1].word),
+				   $0 =~ ( /'\d\d/ ) => Concat("XX", $0[0].word.substring(1)),
+				   :else => $0[0].numcompvalue
+                }
+	          ),
+			  Tag($0, "YEAR_ERA",
+			    :case {
+				   $0 =~ ( $INT /a\.?d\.?/ ) => ERA_AD,
+				   $0 =~ ( $INT /b\.?c\.?/ ) => ERA_BC,
+				   :else => ERA_UNKNOWN
+				}
+		      )
+            )
+  }
+
+  # Operators
+  { pattern: ( /tento/|/táto/ ),
+	action: Tag($0, "TemporalOp", THIS) }
+  { pattern: ( [{lemma:"ďaľší"}]|/ďaľší/ ),
+	action: Tag($0, "TemporalOp", NEXT) }
+  { pattern: ( [{lemma:"nasledujúci"}]|/nasledujúci/ ),
+	action
