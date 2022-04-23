@@ -115,4 +115,23 @@
     "dvadsiaty": 20,
     "tridsiaty": 30,
     "štyridsiaty": 40,
-    "päťdesiaty"
+    "päťdesiaty": 50,
+    "šesťdesiaty": 60,
+    "sedemdesiaty": 70,
+    "osemdestiaty": 80,
+    "deväťdesiaty": 90,
+    "stí": 100
+  }
+  $BasicOrdTerm = CreateRegex(Keys(BASIC_ORDINAL_MAP))
+
+  ########################################################################################################################
+
+  ENV.defaults["stage"] = 0
+  ENV.defaults["ruleType"] = "tokens"
+
+  { pattern: ( $POSSIBLE_YEAR ),
+    action: (
+	          Tag($0, "YEAR",
+                :case {
+				   $0 =~ ( /\w+teen|twenty/ [ $INT ] ) => Add(Multiply($0[0].numcompvalue, 100), $0[1].numcompvalue),
+				   $0 =~ ( /'/ /\d\d/ ) => Concat
