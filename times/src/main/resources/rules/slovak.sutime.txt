@@ -155,4 +155,19 @@
   { pattern: ( [{lemma:"ďaľší"}]|/ďaľší/ ),
 	action: Tag($0, "TemporalOp", NEXT) }
   { pattern: ( [{lemma:"nasledujúci"}]|/nasledujúci/ ),
-	action
+	action: Tag($0, "TemporalOp", NEXT)  }
+  { pattern: ( [{lemma:"predchádzajúci"}]|/predchádzajúci/ ),
+	action: Tag($0, "TemporalOp", PREV) }
+  { pattern: ( [{lemma:"posledný"}]|/posledný/ ),
+	action: Tag($0, "TemporalOp", PREV) }
+  { pattern: ( [{lemma:"budúci"}]|/budúci/ ),
+	action: Tag($0, "TemporalOp", NEXT_IMMEDIATE) }
+  { pattern: ( [{lemma:"minulý"}]|/minulý/ ),
+	action: Tag($0, "TemporalOp", PREV_IMMEDIATE) }
+
+  # Modifiers
+
+  # Early late modifiers
+  { pattern: ( [{lemma:"neskorý"}]|/neskorý/ | /na/ /konci/ | /koncom/  ),
+	action: Tag($0, "Modifier", "LATE") }
+  { patter
