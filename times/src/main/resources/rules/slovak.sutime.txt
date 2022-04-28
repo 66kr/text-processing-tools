@@ -180,4 +180,28 @@
     action: ( Tag($0, "PTS.quant", $0), Tag($0, "PTS.multiple", 1 ) ) }
   { pattern: ( [{lemma:"každý"}] ($NUM_ORD|$INT) |/každý/ ($NUM_ORD|$INT) ),
     action: ( Tag($0, "PTS.quant", $0), Tag($0, "PTS.multiple", $1[0].numcompvalue ) ) }
-  { pattern: ( [{lemma:"každý"}] [{lemma:"druhý"}]| /každý/ 
+  { pattern: ( [{lemma:"každý"}] [{lemma:"druhý"}]| /každý/ /druhý/ | /striedavo/ ),
+    action: ( Tag($0, "PTS.quant", $0), Tag($0, "PTS.multiple", 2 ) ) }
+
+  # Approximate modifiers
+  { pattern: ( /okolo|približne|cca|asi/ ),
+	action: Tag($0, "Modifier", "APPROX") }
+  { pattern: ( /presne|určite/ ),
+	action: Tag($0, "Modifier", "EXACT") }
+
+  MESIAC_MAP = {
+    "januára" : "1",
+    "január" : "1",
+    "jan." : "1",
+    "februára" : "2",
+    "február" : "2",
+    "feb." : "2",
+    "marca" : "3",
+    "marec" : "3",
+    "mar." : "3",
+    "apríla" : "4",
+    "apríl" : "4",
+    "apr." : "4",
+    "mája" : "5",
+    "máj" : "5",
+    "júna"
