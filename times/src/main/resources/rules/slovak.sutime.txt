@@ -170,4 +170,14 @@
   # Early late modifiers
   { pattern: ( [{lemma:"neskorý"}]|/neskorý/ | /na/ /konci/ | /koncom/  ),
 	action: Tag($0, "Modifier", "LATE") }
-  { patter
+  { pattern: ( [{lemma:"skorý"}]|/skorý/ | [{lemma:"začiatok"}] | /začiatkom/ | /na/ /začiatku/ ),
+	action: Tag($0, "Modifier", "EARLY") }
+  { pattern: ( /stredom/ | /v/ /strede/ ),
+	action: Tag($0, "Modifier", "MID") }
+
+  # Frequency modifiers
+  { pattern: ( [{lemma:"každý"}]|[{lemma:"všetky"}]| /každý/ | /všetky/ ),
+    action: ( Tag($0, "PTS.quant", $0), Tag($0, "PTS.multiple", 1 ) ) }
+  { pattern: ( [{lemma:"každý"}] ($NUM_ORD|$INT) |/každý/ ($NUM_ORD|$INT) ),
+    action: ( Tag($0, "PTS.quant", $0), Tag($0, "PTS.multiple", $1[0].numcompvalue ) ) }
+  { pattern: ( [{lemma:"každý"}] [{lemma:"druhý"}]| /každý/ 
