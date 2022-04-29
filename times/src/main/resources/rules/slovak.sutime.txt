@@ -229,4 +229,22 @@
   # Periodic Set
   PERIODIC_SET = {
     "storočne": TemporalCompose(MULTIPLY, YEARLY, 100),
-    "r
+    "ročne": YEARLY,
+    "každoročne": YEARLY,
+    "celoročne": YEARLY,
+    "hodinový": HOURLY,
+    "nočný": NIGHTLY,
+    "denný": DAILY,
+    "týždenný": WEEKLY,
+    "mesačný": MONTHLY,
+    "štvrťročný": QUARTERLY
+  }
+  $PeriodicSetRegex = CreateRegex(Keys(PERIODIC_SET))
+  { pattern: ( /.*($PeriodicSetRegex)/ ),
+    matchWithResults: TRUE,
+    action: Tag($0, "PeriodicSet", PERIODIC_SET[Lowercase($$0.matchResults[0].word.group(1))]) }
+
+  ########################################################################################################################
+
+  ENV.defaults["stage"] = 1
+ 
