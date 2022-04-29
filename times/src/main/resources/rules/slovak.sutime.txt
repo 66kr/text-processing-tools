@@ -247,4 +247,17 @@
   ########################################################################################################################
 
   ENV.defaults["stage"] = 1
- 
+  ENV.defaults["ruleType"] = "text"
+
+  # Durations: 3-months old   or   three-months old
+  { text: /(\d+) ($TEUnits)(e|y)?([-\s]starý)?/ => Duration( TIMEUNIT_MAP[Lowercase($2)], $1 ) }
+  { text: /($BasicNumTerm) ($TEUnits)(e|y)?([-\s]starý)?/ =>
+           Duration( TIMEUNIT_MAP[Lowercase($2)], BASIC_NUMBER_MAP[Lowercase($1)] ) }
+
+  # Durations
+  ENV.defaults["ruleType"] = "tokens"
+  { ([{lemma:"rok"}]|/roky?/) => YEAR }
+  { ([{lemma:"mesiac"}]|/mesiace?/) => MONTH }
+  { ([{lemma:"deň"}]|/dni|deň/) => DAY }
+  { ([{lemma:"hodina"}]|/hodiny|hodina|hod/) => HOUR }
+  { ([{lemma:"minúta
