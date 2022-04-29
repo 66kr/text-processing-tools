@@ -204,4 +204,29 @@
     "apr." : "4",
     "mája" : "5",
     "máj" : "5",
-    "júna"
+    "júna" : "6",
+    "jún" : "6",
+    "júla" : "7",
+    "júl" : "7",
+    "augusta" : "8",
+    "august" : "8",
+    "aug." : "8",
+    "septembra" : "9",
+    "september" : "9",
+    "sep." : "9",
+    "októbra" : "10",
+    "október" : "10",
+    "okt." : "10",
+    "novembra" : "11",
+    "november" : "11",
+    "nov." : "11",
+    "decembra" : "12",
+    "december" : "12",
+    "dec." : "12"
+  }
+  $mesiace = CreateRegex(Keys(MESIAC_MAP))
+  # TODO toto asi nebude fungovat ked to bude vysklonovane
+  # Periodic Set
+  PERIODIC_SET = {
+    "storočne": TemporalCompose(MULTIPLY, YEARLY, 100),
+    "r
