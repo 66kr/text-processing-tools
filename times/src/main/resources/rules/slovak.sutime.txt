@@ -312,4 +312,19 @@
   { (/št\.?/) => THURSDAY }
   { (/pia\.?/) => FRIDAY }
   { (/sob\.?/) => SATURDAY }
-  { (/ne\.?/) =>
+  { (/ne\.?/) => SUNDAY }
+
+
+  { ([{lemma:"víkend"}]|/víkendy?/) => WEEKEND }
+  { ([{lemma:"pracovný"}] [{lemma:"týždeň"}]|/pracovný/ /týždeň/) => WEEKDAY }
+
+  # Month
+  { ([{lemma:"január"}]|/januáre?/) => JANUARY }
+  { ([{lemma:"február"}]|/februáre?/) => FEBRUARY }
+  { ([{lemma:"marec"}]|/marec|marce/) => MARCH }
+  { ([{lemma:"apríl"}]|/apríle?/) => APRIL }
+  { ([{lemma:"máj"}]|/máje?/) => MAY }
+  { ([{lemma:"jún"}]|/júny?/) => JUNE }
+  { ([{lemma:"júl"}]|/júle?/) => JULY }
+  { ([{lemma:"august"}]|/augusty?/) => AUGUST }
+  { ([{lemma:"september"}]|/september|septembre
