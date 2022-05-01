@@ -327,4 +327,22 @@
   { ([{lemma:"jún"}]|/júny?/) => JUNE }
   { ([{lemma:"júl"}]|/júle?/) => JULY }
   { ([{lemma:"august"}]|/augusty?/) => AUGUST }
-  { ([{lemma:"september"}]|/september|septembre
+  { ([{lemma:"september"}]|/september|septembre/) => SEPTEMBER }
+  { ([{lemma:"október"}]|/október|októbre/) => OCTOBER }
+  { ([{lemma:"november"}]|/november|novembre/) => NOVEMBER }
+  { ([{lemma:"december"}]|/december|decembre/) => DECEMBER }
+  { (/jan\.?/) => JANUARY }
+  { (/feb\.?/) => FEBRUARY }
+  { (/mar\.?/) => MARCH }
+  { (/apr\.?/) => APRIL }
+  { (/jun\.?/) => JUNE }
+  { (/jul\.?/) => JULY }
+  { (/aug\.?/) => AUGUST }
+  { (/sept?\.?/) => SEPTEMBER }
+  { (/okt\.?/) => OCTOBER }
+  { (/nov\.?/) => NOVEMBER }
+  { (/dec\.?/) => DECEMBER }
+
+  { ruleType: "filter",
+	over: NIL,
+    pattern: ( [ { temporal::IS_TIMEX_DATE
