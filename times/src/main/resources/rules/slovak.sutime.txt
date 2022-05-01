@@ -272,3 +272,15 @@
 
   # Time of Day
   { ([{lemma:"ráno"}]|/ráno|rána/) => MORNING }
+  { ([{lemma:"popoludnie"}]|/popoludni[ae]/) => AFTERNOON }
+  { ([{lemma:"večer"}]|/večere?/) => EVENING }
+  { ([{lemma:"súmrak"}]|/súmraky?/) => DUSK }
+  { ([{lemma:"stmievanie"}]|/stmievani[ea]/) => TWILIGHT }
+  { ([{lemma:"úsvit"}]|/svitani[ea]|úsvit/) => DAWN }
+  { ([{lemma:"svitanie"}]|/svitani[ea]/) => SUNRISE }
+  { ([{lemma:"západ"}]|/západy?/) => SUNSET }
+  { ([{lemma:"poludnie"}]|/poldeň|poldne|poludni[ea]/) => NOON }
+  { ([{lemma:"polnoc"}]|/polnoci?/) => MIDNIGHT }
+  { ([{lemma:"olovrant"}]|/olovranty?/) => TEATIME }
+  { ([{lemma:"obed"}]|/obedy?/) => LUNCHTIME }
+  {
