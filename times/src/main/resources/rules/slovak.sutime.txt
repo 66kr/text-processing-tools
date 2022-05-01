@@ -345,4 +345,26 @@
 
   { ruleType: "filter",
 	over: NIL,
-    pattern: ( [ { temporal::IS_TIMEX_DATE
+    pattern: ( [ { temporal::IS_TIMEX_DATE } & {{ tokens[0].tag =~ /NN.*S/ }} ] ),
+    result: MakePeriodicTemporalSet($0[0].temporal.value)
+  }
+
+  ########################################################################################################################
+
+  ENV.defaults["ruleType"] = "tokens"
+  ENV.defaults["priority"] = 0
+  ENV.defaults["locale"] = "en"
+
+  // Military times with time zones from http://www.timeanddate.com/library/abbreviations/timezones/military/
+   MILITARY_TIME_ZONE_MAP = {
+      "A": 1,
+      "B": 2,
+      "C": 3,
+      "D": 4,
+      "E": 5,
+      "F": 6,
+      "G": 7,
+      "H": 8,
+      "I": 9,
+      "K": 10,
+    
