@@ -299,4 +299,17 @@
   { ([{lemma:"zajtra"}]|/zajtra|zajtrajšok|zajtrajšky/) => TOMORROW }
 
   # Day of Week
-  
+  { ([{lemma:"pondelok"}]|/pondelok|pondelky/) => MONDAY }
+  { ([{lemma:"utorok"}]|/utorok|utorky/) => TUESDAY }
+  { ([{lemma:"streda"}]|/stred[ay]/) => WEDNESDAY }
+  { ([{lemma:"štvrtok"}]|/štvrtok|štvrtky/) => THURSDAY }
+  { ([{lemma:"piatok"}]|/piatok|piatky/) => FRIDAY }
+  { ([{lemma:"sobota"}]|/sobot[ay]/) => SATURDAY }
+  { ([{lemma:"nedeľa"}]|/nedeľa|nedele?/) => SUNDAY }
+  { (/pon\.?/) => MONDAY }
+  { (/ut\.?/) => TUESDAY }
+  { (/str\.?/) => WEDNESDAY }
+  { (/št\.?/) => THURSDAY }
+  { (/pia\.?/) => FRIDAY }
+  { (/sob\.?/) => SATURDAY }
+  { (/ne\.?/) =>
