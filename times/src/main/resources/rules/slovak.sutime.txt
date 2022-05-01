@@ -260,4 +260,15 @@
   { ([{lemma:"mesiac"}]|/mesiace?/) => MONTH }
   { ([{lemma:"deň"}]|/dni|deň/) => DAY }
   { ([{lemma:"hodina"}]|/hodiny|hodina|hod/) => HOUR }
-  { ([{lemma:"minúta
+  { ([{lemma:"minúta"}]|/minúty|minúta|min/) => MINUTE }
+  { ([{lemma:"sekunda"}]|/sekundy|sekunda|sek/) => SECOND }
+  { ([{lemma:"milisekunda"}]|/milisekundy|milisekunda|ms/) => MILLIS }
+  { ([{lemma:"týždeň"}]|/týždne|týždeň/) => WEEK }
+  { ([{lemma:"polmesiac"}]|/polmesiace?/) => FORTNIGHT }
+  { ([{lemma:"štvrťrok"}]|/štvrťroky?/) => QUARTER }
+  { ([{lemma:"desaťročie"}]|/desaťroči[ae]/) => DECADE }
+  { ([{lemma:"storočie"}]|/storoči[ae]/) => CENTURY }
+  { ([{lemma:"tisícročie"}]|/tisícroči[ae]/) => MILLENNIUM }
+
+  # Time of Day
+  { ([{lemma:"ráno"}]|/ráno|rána/) => MORNING }
