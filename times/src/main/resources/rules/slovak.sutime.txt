@@ -283,4 +283,20 @@
   { ([{lemma:"polnoc"}]|/polnoci?/) => MIDNIGHT }
   { ([{lemma:"olovrant"}]|/olovranty?/) => TEATIME }
   { ([{lemma:"obed"}]|/obedy?/) => LUNCHTIME }
-  {
+  { ([{lemma:"večera"}]|/večer[ae]/) => DINNERTIME }
+  { ([{lemma:"deň"}]|/deň|dni/) => DAYTIME }
+  { ([{lemma:"noc"}]|/noci?/) => NIGHT }
+
+  # Seasons
+  { ([{lemma:"leto"}]|/let[oá]/) => SUMMER }
+  { ([{lemma:"zima"}]|/zim[ay]/) => WINTER }
+  { ([{lemma:"jeseň"}]|/jeseň|jesene/) => FALL }
+  { ([{lemma:"jar"}]|/jary?/) => SPRING }
+
+  # Relative times
+  { ([{lemma:"včera"}]|/včera|včerajšok|včerajšky/) => YESTERDAY }
+  { ([{lemma:"dnes"}]|/dnes|dnešok|dnešky/) => TODAY }
+  { ([{lemma:"zajtra"}]|/zajtra|zajtrajšok|zajtrajšky/) => TOMORROW }
+
+  # Day of Week
+  
