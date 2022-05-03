@@ -405,4 +405,20 @@
   { ruleType: "time", pattern: /MM?\\?\/dd?\\?\/(yyyy|yy)/ }
   { ruleType: "time", pattern: /MM?-dd?-(yyyy|yy)/ }
   { ruleType: "time", pattern: /HH?:mm(:ss)?(Z)?/ }
-  { ruleType: "time
+  { ruleType: "time", pattern: /yyyy-MM/ }
+
+  # Euro - Ambiguous pattern - interpret as dd.MM.yy(yy)
+  { ruleType: "time", pattern: /dd?\. ?MM?\. ?(yyyy|yy)/ }
+  #{ ruleType: "time", pattern: /dd?\.? MMMM (yyyy|yy)/ }
+  { ruleType: "time", pattern: /HH?''hmm/ }
+
+  # Timezones
+  { ruleType: "time", pattern: /zzz/, action: Tag(_, "TIMEZONE", TRUE) }
+  { ruleType: "time", pattern: /ZZZ/, action: Tag(_, "TIMEZONE", TRUE) }
+
+  # Birthdays
+  { ( [ { tag:NNP } ]+ [ { tag:POS } ] /narodeniny/ ) => SimpleTime($0) }
+
+  # Generic decade
+  { ( /the/? ( /\w+teen/ /$Decades/ ) )
+       => IsoDate( Concat( Format("%02d", $0[0].numcompvalue), DECADES_MAP[L
