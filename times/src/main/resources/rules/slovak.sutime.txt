@@ -500,4 +500,20 @@
   { name: "temporal-composite-6b",
     priority: 20,
     pattern: ( ( $REL_MOD ) ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
-	result: RelativeTime( GetTag($
+	result: RelativeTime( GetTag($1[0], "TemporalOp"), $2[0].temporal.value )
+  }
+
+  ########################################################################################################################
+  # Composite Duration rules
+
+  ENV.defaults["priority"] = 10
+  ENV.defaults["stage"] = 2
+
+  # Duration (start, end, unit, range_start, range_end)
+  # Duration rules
+  # i.e. "the past twenty four years"
+  { pattern: ( /posledných|predchádzajúcich/ (?: ($NUM) /to|-/ )? ($NUM)? ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: Duration($1,$2,$3,TIME_UNKNOWN,TIME_REF)
+  }
+
+  { pattern: ( /následujúcich|následujúce/ (?: ($NUM) /to|-
