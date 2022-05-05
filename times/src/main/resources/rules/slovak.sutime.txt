@@ -483,4 +483,21 @@
 
   { ( ($POSSIBLE_YEAR) & [ { ner::IS_NIL } | { ner:DATE } | { ner:O } | { ner:NUMBER } ]+ )
       => :case {
-            $1[0].word =~ /'.*/ => IsoDate( GetTag($1[0], "YEAR"), NIL, NIL )
+            $1[0].word =~ /'.*/ => IsoDate( GetTag($1[0], "YEAR"), NIL, NIL ),
+            :else => IsoDate( GetTag($1[0], "YEAR"), NIL, NIL, GetTag($1[0], "YEAR_ERA"), TRUE)
+         }
+  }
+
+  { ( ($TIMEOFDAY) ) => $1[0].temporal.value }
+
+  { ( /dobr[éúý]/ /ráno|večer|deň|popoludnie|noc/ ) => NON_TEMPORAL }
+
+  ########################################################################################################################
+  # Compositional rules
+
+  ENV.defaults["ruleType"] = "composite"
+
+  { name: "temporal-composite-6b",
+    priority: 20,
+    pattern: ( ( $REL_MOD ) ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
+	result: RelativeTime( GetTag($
