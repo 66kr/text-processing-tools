@@ -467,4 +467,20 @@
 			    :else => GetTag($0[-1], "PeriodicSet") }
   }
 
-  # som
+  # some interval expressions
+  { text: /\b(\d{4})\s*(?:-)\s*(\d{4})\b/ =>
+          TimeRange( IsoDate($1, NIL, NIL), IsoDate($2, NIL, NIL) ) }
+  { ( /víkend/ ) => WEEKEND }
+
+
+  # Year
+  { ( /rok/ ($POSSIBLE_YEAR) )
+      => :case {
+            $1[0].word =~ /'.*/ => IsoDate( GetTag($1[0], "YEAR"), NIL, NIL ),
+            :else => IsoDate( GetTag($1[0], "YEAR"), NIL, NIL, GetTag($1[0], "YEAR_ERA"), TRUE)
+         }
+  }
+
+  { ( ($POSSIBLE_YEAR) & [ { ner::IS_NIL } | { ner:DATE } | { ner:O } | { ner:NUMBER } ]+ )
+      => :case {
+            $1[0].word =~ /'.*/ => IsoDate( GetTag($1[0], "YEAR"), NIL, NIL )
