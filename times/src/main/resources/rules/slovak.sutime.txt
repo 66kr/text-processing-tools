@@ -440,4 +440,15 @@
 
   # some century expressions
   { ( ([{lemma:"každý"}]|/každé/ $NUM_ORD) ([{lemma:"storočie"}]|/storočie/) ) =>
-    MakePeriodicTem
+    MakePeriodicTemporalSet(CENTURY, GetTag($1[0], "PTS.quant"), GetTag($1[0], "PTS.multiple") ) }
+
+  #{ ( /the/? ($NUM_ORD|$INT) /-/? ([{lemma:"storočie"}]|/storočie/) (/b\.?c\.?/)  )
+  { ( /the/? ($NUM_ORD) /-/? ([{lemma:"storočie"}]|/storočie/) (/pred Kr\.?/|/p?\.?n\.l\./)?  )
+	  => IsoDate(Format("-%02dXX", Subtract($1[0].numcompvalue, 1)), NIL, NIL)
+  }
+
+  # some quarter expressions - need to add year refs
+  { ( /the/? [{tag:JJ}]? ($NUM_ORD) /-/? [{tag:JJ}]? /quarter/ ) =>
+      TemporalCompose(CREATE, QUARTER_OF_YEAR, $1[0].numcompvalue) }
+  { text: /(\d+)(st|nd|rd|th)-quarter/ =>
+      TemporalCompo
