@@ -430,4 +430,14 @@
   { (/the/?  /'/ /\d0s/ | /the/? /'\d0s/ ) => IsoDate( Replace($0[-1].word, /'?(\d)0s/, "XX$1X"), NIL, NIL) }
   { (/the/? /\d\d\d0s/) => IsoDate( Replace($0[-1].word, /(\d\d\d)0s/, "$1X"), NIL, NIL) }
   { (/the/? /\d\d00s/) => IsoDate( Replace($0[-1].word, /(\d\d)00s/, "$1XX"), NIL, NIL) }
-  { (/the/? /mid-\d\d\d0s/) => I
+  { (/the/? /mid-\d\d\d0s/) => IsoDate( Replace($0[-1].word, /mid-(\d\d\d)0s/, "$1X"), NIL, NIL) }
+  { (/the/? /mid-\d\d00s/) => IsoDate( Replace($0[-1].word, /mid-(\d\d)00s/, "$1XX"), NIL, NIL) }
+
+  #SVK
+  #{ (/\d\d?\.? ?(januára|január) ?\d\d\d?\d?/) => IsoDate(NIL, NIL, NIL)}
+  { ( /\d\d?\.? ?($mesiace) ?\d\d\d?\d?/) => IsoDate(Replace($0[0].word,/\d\d?\.? ?($mesiace) ?/,""),
+        MESIAC_MAP[Lowercase(Replace($0[0].word,/ ?\d\d?\.? ?/,""))] , Replace($0[0].word,/\.? ?($mesiace) ?\d\d\d?\d?/,""))}
+
+  # some century expressions
+  { ( ([{lemma:"každý"}]|/každé/ $NUM_ORD) ([{lemma:"storočie"}]|/storočie/) ) =>
+    MakePeriodicTem
