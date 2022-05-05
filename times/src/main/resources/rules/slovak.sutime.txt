@@ -451,4 +451,20 @@
   { ( /the/? [{tag:JJ}]? ($NUM_ORD) /-/? [{tag:JJ}]? /quarter/ ) =>
       TemporalCompose(CREATE, QUARTER_OF_YEAR, $1[0].numcompvalue) }
   { text: /(\d+)(st|nd|rd|th)-quarter/ =>
-      TemporalCompo
+      TemporalCompose(CREATE, QUARTER_OF_YEAR, $1 )
+  }
+  { text: /($BasicOrdTerm)-quarter/ =>
+      TemporalCompose(CREATE, QUARTER_OF_YEAR, BASIC_ORDINAL_MAP[Lowercase($1)])
+  }
+
+  # (unit)ly
+  { ruleType: "tokens",
+#    pattern: ( (?m){1,3} /((pol|štvrť)\s*-?\s*)?(ročne|mesačne|týždne|denne|hodinovo|nočne)/ ),
+    pattern: ( (?m){1,3} /((pol|štvrť)\s*-?\s*)?($PeriodicSetRegex)/ ),
+    result: :case {
+			    $0[0].word =~ /pol.*/ => TemporalCompose(DIVIDE, GetTag($0[-1], "PeriodicSet"), 2),
+			    $0[0].word =~ /štvrť.*/ => TemporalCompose(DIVIDE, GetTag($0[-1], "PeriodicSet"), 4),
+			    :else => GetTag($0[-1], "PeriodicSet") }
+  }
+
+  # som
