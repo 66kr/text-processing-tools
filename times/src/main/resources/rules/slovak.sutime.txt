@@ -516,4 +516,15 @@
 	result: Duration($1,$2,$3,TIME_UNKNOWN,TIME_REF)
   }
 
-  { pattern: ( /následujúcich|následujúce/ (?: ($NUM) /to|-
+  { pattern: ( /následujúcich|následujúce/ (?: ($NUM) /to|-/ )? ($NUM)? ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: Duration($1,$2,$3,TIME_REF,TIME_UNKNOWN)
+  }
+
+  # i.e. "another 3 years", "another thirteen months"
+  { pattern: ( /ešte|ďalšie/ (?: ($NUM) /to|-/ )? ($NUM)? ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: Duration($1, $2, $3, TIME_REF, TIME_UNKNOWN) }
+
+  # i.e. "the 2 months following the crash", "for ten days before leaving"
+  # TODO: NEED TO FIX THIS, right now it doesn't include "the crash" or "leaving"
+  # ...need to be able to recognize NPs and VPs using POS tags
+  { pattern: ( (?: ($NUM) /do|-/ )? ($NUM) ([ { tempo
