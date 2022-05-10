@@ -537,4 +537,17 @@
 	result: Duration( $1, $2, $3 ) }
 
   # i.e. "the fifth straight year", "the third straight month in a row", "the ninth day consecutively"
-  # i.e. "the eighth consecutive 
+  # i.e. "the eighth consecutive day in a row"
+  # i.e. "the twenty ninth day straight"
+  { pattern: ( ($NUM_ORD) /následujúcich/ ([ { temporal::IS_TIME_UNIT } ]) (?: /v/ /rade/ )? ),
+	result: Duration (NIL, $1, $2, TIME_UNKNOWN, TIME_REF) }
+
+  # hundreds of years
+  { pattern: ( (/(desať|desiatky|sto|stovky|tisíce?|milióny?|miliarda|miliardy|trilión|trilióny)/) ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: Duration ( NIL, $1, $2) }
+
+  # i.e. "recent weeks", "several days"
+  { pattern: ( (/posledné|niekoľko/) /-/? ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: InexactDuration( Duration(NIL, NIL, $2) ) }
+
+  #
