@@ -527,4 +527,14 @@
   # i.e. "the 2 months following the crash", "for ten days before leaving"
   # TODO: NEED TO FIX THIS, right now it doesn't include "the crash" or "leaving"
   # ...need to be able to recognize NPs and VPs using POS tags
-  { pattern: ( (?: ($NUM) /do|-/ )? ($NUM) ([ { tempo
+  { pattern: ( (?: ($NUM) /do|-/ )? ($NUM) ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: Duration($1, $2, $3) }
+
+  # i.e. "the first 9 months of 1997"
+  { pattern: ( [{lemma:"prvý"}]|[{lemma:"počiatočný"}]|[{lemma:"posledný"}]|[{lemma:"finálny"}]|/prvý|počiatočný|posledný|finálny/ (?: ($NUM) /do|-/ )? ($NUM)? ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: Duration( $1, $2, $3 ) }
+  { pattern: ( /prvá|počiatočná|posledná|druhá/ /polovica/ ([ { temporal::IS_TIME_UNIT } ]) ),
+	result: Duration( $1, $2, $3 ) }
+
+  # i.e. "the fifth straight year", "the third straight month in a row", "the ninth day consecutively"
+  # i.e. "the eighth consecutive 
