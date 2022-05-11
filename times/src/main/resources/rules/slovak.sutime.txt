@@ -550,4 +550,13 @@
   { pattern: ( (/posledné|niekoľko/) /-/? ([ { temporal::IS_TIME_UNIT } ]) ),
 	result: InexactDuration( Duration(NIL, NIL, $2) ) }
 
-  #
+  # i.e. 3-months old, "four years", "four minutes"
+  { pattern: ( ($NUM) /to|-/ ($NUM) [ "-" ]? ([ { temporal::IS_TIME_UNIT } ]) (?: [ "-" ]? /starý/ )? ),
+    result: Duration( $1, $2, $3) }
+  { pattern: ( ($NUM) [ "-" ]? ([ { temporal::IS_TIME_UNIT } ]) (?: [ "-" ]? /starý/ )? ),
+	result: Duration( NIL, $1, $2 ) }
+
+  # i.e. "a decade", "a few decades", NOT "a few hundred decades"
+  { pattern: ( (?: /posledné|ďalšie|následujúce|predchádzajúce/ )? (/niekoľko/ ) ([ { temporal::IS_TIME_UNIT } ]) ),
+ 	result: Duration ( Duration( NIL, NIL, $2 ), 2 ) }
+  { pattern: ( (?: /posledné|ďalšie|následujúce|predchádzajúce/ )?
