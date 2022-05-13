@@ -559,4 +559,16 @@
   # i.e. "a decade", "a few decades", NOT "a few hundred decades"
   { pattern: ( (?: /posledné|ďalšie|následujúce|predchádzajúce/ )? (/niekoľko/ ) ([ { temporal::IS_TIME_UNIT } ]) ),
  	result: Duration ( Duration( NIL, NIL, $2 ), 2 ) }
-  { pattern: ( (?: /posledné|ďalšie|následujúce|predchádzajúce/ )?
+  { pattern: ( (?: /posledné|ďalšie|následujúce|predchádzajúce/ )? (/niekoľko/ ) ([ { temporal::IS_TIME_UNIT } ]) ),
+ 	result: InexactDuration ( Duration( NIL, NIL, $2 ) ) }
+  { pattern: ( (?: /posledné|ďalšie|následujúce|predchádzajúce/ )? (/pár/) ([ { temporal::IS_TIME_UNIT } ]) ),
+ 	result: InexactDuration ( Duration( NIL, NIL, $2 ) ) }
+
+  { pattern: ( [ { tag:JJ } ]? ([ { temporal::IS_TIME_UNIT } & { word:/.*s/ } ]) ),
+    priority: -1,
+    result:	InexactDuration( $1[0].temporal.value ) }
+
+  { pattern: ( ([ { temporal::IS_TIME_UNIT } ]) ),
+    result: Duration( $1[0].temporal.value, 1) }
+
+  #####################################################################
