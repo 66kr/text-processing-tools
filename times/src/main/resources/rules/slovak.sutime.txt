@@ -587,4 +587,17 @@
 
   { name: "composite-date-expression-1a",
 	priority: 1,
-	pattern: ( (/
+	pattern: ( (/každý/ $NUM_ORD) (?$month [ { temporal::MONTH }]) ),
+	result: MakePeriodicTemporalSet(
+	            $month[0].temporal,
+	            GetTag($1[0], "PTS.quant"), GetTag($1[0], "PTS.multiple") ) }
+
+  { name: "composite-date-expression-1",
+	priority: 1,
+	pattern: ( ( (?$day $NUM_ORD & $INT1TO31) (?$day /\d\d?/ & $INT1TO31) )?
+	           (?$month [ { temporal::MONTH } ])
+			   (?$day $NUM_ORD|/\d\d?/ & $INT1TO31)?
+			   (?: /of|,/? (?$year $POSSIBLE_YEAR))? ),
+	result: TemporalCompose(INTERSECT,
+	           $year[0].temporal,
+	           IsoDate(NIL, $month[0].temporal.value.month, $day[0].num
