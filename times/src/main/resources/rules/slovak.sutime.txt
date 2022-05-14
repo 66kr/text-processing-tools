@@ -643,4 +643,18 @@
 	result: TemporalCompose(ADD_MODIFIER, $date[0].temporal, "EARLY" ) }
 
   { name: "composite-date-expression-2a2",
-	pattern: ( /the/? (?$mod /second|last|latter/ /half/) /of/ (?$date [ { temporal
+	pattern: ( /the/? (?$mod /second|last|latter/ /half/) /of/ (?$date [ { temporal::IS_TIMEX_DATE } ]) ),
+	result: TemporalCompose(ADD_MODIFIER, $date[0].temporal, "LATE" ) }
+
+  { name: "composite-date-expression-2b",
+	pattern: ( /the/? (?$date [ { temporal::IS_TIMEX_DATE } ]) (/'/ /s/ | /'s/ )? (?$mod /beginning|end/) ),
+	result: TemporalCompose(ADD_MODIFIER, $date[0].temporal, GetTag($mod[0], "Modifier") ) }
+
+  { name: "composite-date-expression-3",
+	pattern: ( /the/? (?$weeknum ($NUM_ORD|last)) (?$week /week(end)?/ ) /of|in/? [ { temporal::IS_TIMEX_DATE } ] ),
+	result: TemporalCompose(
+              IN,
+			  $0[-1].temporal,
+              TemporalCompose(
+			     CREATE,
+ 
