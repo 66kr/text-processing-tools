@@ -630,4 +630,17 @@
 	            $month[0].temporal.value.month == 7 => 7,
 	            $month[0].temporal.value.month == 10 => 7,
 				:else => 5
-      
+             }
+            )
+   }
+
+  { name: "composite-date-expression-2",
+	pattern: ( /the/? (?$mod /beginning|start|middle|mid-?|end/ ) /of|in/? (?$date [ { temporal::IS_TIMEX_DATE } ]) ),
+	result: TemporalCompose(ADD_MODIFIER, $date[0].temporal, GetTag($mod[0], "Modifier") ) }
+
+  { name: "composite-date-expression-2a1",
+	pattern: ( /the/? (?$mod /first/ /half/) /of/ (?$date [ { temporal::IS_TIMEX_DATE } ]) ),
+	result: TemporalCompose(ADD_MODIFIER, $date[0].temporal, "EARLY" ) }
+
+  { name: "composite-date-expression-2a2",
+	pattern: ( /the/? (?$mod /second|last|latter/ /half/) /of/ (?$date [ { temporal
