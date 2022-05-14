@@ -613,4 +613,21 @@
                     $month[0].temporal.value.month == 3 => 15,
                     $month[0].temporal.value.month == 5 => 15,
                     $month[0].temporal.value.month == 7 => 15,
-                    $month[0].temporal.value
+                    $month[0].temporal.value.month == 10 => 15,
+                    :else => 13
+                 }
+                ))
+   }
+
+  { name: "composite-date-expression-1c",
+	pattern: ( /the/? /nones/ /of|in/? (?$month [ { temporal::MONTH } ]) (?: /of|,/? (?$year $POSSIBLE_YEAR))? ),
+	result: IsoDate(
+             GetTag($year[0].numtokens[0], "YEAR"),
+			 $month[0].temporal.value.month,
+	         :case {
+	            $month[0].temporal.value.month == 3 => 7,
+	            $month[0].temporal.value.month == 5 => 7,
+	            $month[0].temporal.value.month == 7 => 7,
+	            $month[0].temporal.value.month == 10 => 7,
+				:else => 5
+      
