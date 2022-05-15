@@ -657,4 +657,24 @@
 			  $0[-1].temporal,
               TemporalCompose(
 			     CREATE,
- 
+                 $week[0].temporal,
+			     :case {
+			       $weeknum =~ (/last/) => -1,
+			       :else => $weeknum[0].numcompvalue
+                 } ))
+  }
+
+  { name: "composite-date-expression-3b",
+	pattern: ( /the/? (?$week /week(end)?/ ) /of|in/? [ { temporal::IS_TIMEX_DATE } ] ),
+	result: TemporalCompose(
+              INTERSECT,
+			  $0[-1].temporal,
+			  $week[0].temporal)
+  }
+
+  { name: "composite-date-expression-3c",
+	pattern: ( ( [ { temporal::DAYOFWEEK } ] ) /the/? (?$day $NUM_ORD) ),
+	result: TemporalCompose(
+              INTERSECT,
+			  $1[0].temporal,
+			  Is
