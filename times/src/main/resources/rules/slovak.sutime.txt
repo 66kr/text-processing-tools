@@ -677,4 +677,24 @@
 	result: TemporalCompose(
               INTERSECT,
 			  $1[0].temporal,
-			  Is
+			  IsoDate(NIL, NIL, $day[0].numcompvalue))
+  }
+
+  { name: "composite-date-expression-6",
+    pattern: ( ([ { temporal::IS_TIMEX_DATE } ]) (morning|afternoon|evening|night) ),
+	result: TemporalCompose(INTERSECT, $1[0].temporal, $2[0].temporal)
+  }
+
+  { name: "composite-date-expression-7a",
+    pattern: ( (?: /the/? /day/ (/before/|/prior/ /to/) ([ { temporal::IS_TIMEX_DATE } ]) ) ),
+	result: TemporalCompose(
+	          PLUS,
+			  $2[0].temporal,
+			  TemporalCompose(
+			   MULTIPLY,
+			   DAY,
+			   -1))
+  }
+
+  { name: "composite-date-expression-7b",
+    pattern: ( (?: /the/? /day/ (/a
