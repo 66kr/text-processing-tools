@@ -697,4 +697,22 @@
   }
 
   { name: "composite-date-expression-7b",
-    pattern: ( (?: /the/? /day/ (/a
+    pattern: ( (?: /the/? /day/ (/after/) ([ { temporal::IS_TIMEX_DATE } ]) ) ),
+	result: TemporalCompose(
+	          PLUS,
+			  $2[0].temporal,
+			  DAY)
+  }
+
+  { name: "composite-date-expression-8",
+    pattern: ( /the/ [ { tag:JJ } ]* ([ { temporal::IS_TIME_UNIT }
+	                                     & !{ word:/.*s/ } ] )),
+	result: RelativeTime( THIS, $1[0].temporal.value )
+  }
+
+  ########################################################################################################################
+  # Composite time expressions
+
+  { name: "composite-time-expression-1a",
+    active: TRUE,
+    pattern: (   (?: (?$time [ { temporal::IS_TIME
