@@ -801,4 +801,18 @@
 	 (( [ $hasTemporal ] ) /,|of|in/? ( [ { temporal::IS_TIMEX_DATE } | { temporal::IS_TIMEX_TIME } ] ) |
       ( [ { temporal::IS_TIMEX_DATE } ] ) /at/  ( [ { temporal::IS_TIMEX_TIME } ] ) |
       ( [ { temporal::IS_TIMEX_TIME } | { temporal::IS_TIMEX_DURATION } ] ) /on/  ( [ { temporal::IS_TIMEX_DATE } ] | [ { temporal::IS_TIMEX_SET } ]) |
-      ( [ { temporal::IS_TIMEX_DATE } | { temporal::IS_TIMEX_TIME } ] ) (/'s/ | /'/ /s/) (
+      ( [ { temporal::IS_TIMEX_DATE } | { temporal::IS_TIMEX_TIME } ] ) (/'s/ | /'/ /s/) ( [ $hasTemporal ] )) ),
+	result: TemporalCompose(INTERSECT, $1[0].temporal, $1[-1].temporal)
+  }
+
+  { name: "temporal-composite-2",
+    pattern: ( ( [ { temporal::IS_TIMEX_DATE } | { temporal::IS_TIMEX_TIME } ] )  (/today|tonight/) ),
+	result: $0[0].temporal.value
+  }
+
+  { name: "temporal-composite-3",
+    pattern: ( ( [ { temporal::IS_TIMEX_DURATION } ] )  (/before|from|since|after/ | /prior/ /to/)
+	   ( [ ({ temporal::IS_TIMEX_TIME }  |  { temporal::IS_TIMEX_DATE }) ] ) ),
+	result: TemporalCompose(
+	          OFFSET, $0[-1].temporal,
+			  TemporalCompose(
