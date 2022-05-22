@@ -792,4 +792,13 @@
   }
 
   { name: "temporal-composite-timezone2",
-    pattern: ( (?$time [ { temporal::IS_TIMEX_TIME } ]) "-LRB-" (?$timezone [ {{ tags["TIMEZONE"] }} ]
+    pattern: ( (?$time [ { temporal::IS_TIMEX_TIME } ]) "-LRB-" (?$timezone [ {{ tags["TIMEZONE"] }} ]) "-RRB-" ),
+    result: TemporalCompose(INTERSECT, $time[0].temporal, $timezone[0].temporal)
+  }
+
+  { name: "temporal-composite-1",
+    pattern: ( /the/?
+	 (( [ $hasTemporal ] ) /,|of|in/? ( [ { temporal::IS_TIMEX_DATE } | { temporal::IS_TIMEX_TIME } ] ) |
+      ( [ { temporal::IS_TIMEX_DATE } ] ) /at/  ( [ { temporal::IS_TIMEX_TIME } ] ) |
+      ( [ { temporal::IS_TIMEX_TIME } | { temporal::IS_TIMEX_DURATION } ] ) /on/  ( [ { temporal::IS_TIMEX_DATE } ] | [ { temporal::IS_TIMEX_SET } ]) |
+      ( [ { temporal::IS_TIMEX_DATE } | { temporal::IS_TIMEX_TIME } ] ) (/'s/ | /'/ /s/) (
