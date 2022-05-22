@@ -715,4 +715,18 @@
 
   { name: "composite-time-expression-1a",
     active: TRUE,
-    pattern: (   (?: (?$time [ { temporal::IS_TIME
+    pattern: (   (?: (?$time [ { temporal::IS_TIMEX_TIME } ]) | (?$hour [ $INT & { numcompvalue<=24 } ]))
+                 (?$context /in/ /the/ /morning/ | /a\.?m\.?/)
+             ),
+	result: :case {
+			    $time => TemporalCompose(INTERSECT, $time[0].temporal.value, AM),
+	            $hour[0].numcompvalue == 12 => IsoTime(0, 0, NIL),
+				:else => IsoTime($hour[0].numcompvalue, 0, NIL)
+			}
+  }
+
+  { name: "composite-time-expression-1b",
+    active: TRUE,
+    pattern: (   (?: (?$time [ { temporal::IS_TIMEX_TIME } ]) | (?$hour [ $INT & { numcompvalue<=24 } ]))
+                 (?$context /in/ /the/ /afternoon|evening/| /at/ /night/| /p\.?m\.?/)
+         
