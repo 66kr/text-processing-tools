@@ -758,4 +758,25 @@
              ),
 	result: TemporalCompose(
 	          :case {
-			    $rel[0].word =~ /past|after/ => PLU
+			    $rel[0].word =~ /past|after/ => PLUS,
+				:else => MINUS
+			  },
+			  :case {
+			    $time => $time[0].temporal,
+				:else => IsoTime($hour[0].numcompvalue, 0, NIL)
+			  },
+			  Duration(
+				MINUTE,
+			    :case {
+			       $minute =~ ( /a/? /quarter/ ) => 15,
+			       $minute =~ ( /a/? /half/ ) => 30,
+			       :else => $0[0].numcompvalue
+			    }
+			  )
+			) }
+
+  { pattern: ( ( /\d\d\d\d/ | $NUM ) [ {tag:/RB/} ] [ {tag:/JJ/} ]+ [ {tag:/NNS/} & !($hasTemporal) ] ),
+    result: NON_TEMPORAL,
+    priority: -1 }
+  { pattern: ( ( /\d\d\d\d/ | $NUM ) [ {tag:/JJ/} ]* [ {tag:/NNS/} & !($hasTemporal) ] ),
+    re
