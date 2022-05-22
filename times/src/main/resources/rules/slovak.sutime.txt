@@ -742,4 +742,20 @@
   { name: "composite-time-expression-1c",
     active: TRUE,
     pattern: (   (?: (?$time [ { temporal::IS_TIMEX_TIME } ]) | (?$hour [ $INT & { numcompvalue==12 } ]))
-                 (?$context /mi
+                 (?$context /midnight/)
+             ),
+	result: :case {
+			    $time[0].temporal.value.hour == 12 => MIDNIGHT,
+	            $hour[0].numcompvalue == 12 => MIDNIGHT,
+				:else => NIL
+			}
+  }
+
+  { name: "composite-time-expression-2",
+    pattern: (  (?$minute /a/? /quarter/ | /a/? /half/ | [ $INT & { numcompvalue<=60 } ] /minutes?/? )
+		        (?$rel /past|after|before|to|until/)
+				(?: (?$time [ { temporal::IS_TIMEX_TIME } ]) | (?$hour [ $INT & { numcompvalue<=24 } ]))
+             ),
+	result: TemporalCompose(
+	          :case {
+			    $rel[0].word =~ /past|after/ => PLU
