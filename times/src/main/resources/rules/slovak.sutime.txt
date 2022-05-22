@@ -779,4 +779,17 @@
     result: NON_TEMPORAL,
     priority: -1 }
   { pattern: ( ( /\d\d\d\d/ | $NUM ) [ {tag:/JJ/} ]* [ {tag:/NNS/} & !($hasTemporal) ] ),
-    re
+    result: NON_TEMPORAL,
+    priority: -1 }
+
+  ########################################################################################################################
+  # General compositional rules
+  ENV.defaults["stage"] = 3
+
+  { name: "temporal-composite-timezone1",
+    pattern: ( (?$time [ { temporal::IS_TIMEX_TIME } ]) (?$timezone [ {{ tags["TIMEZONE"] }} ])  ),
+    result: TemporalCompose(INTERSECT, $time[0].temporal, $timezone[0].temporal)
+  }
+
+  { name: "temporal-composite-timezone2",
+    pattern: ( (?$time [ { temporal::IS_TIMEX_TIME } ]) "-LRB-" (?$timezone [ {{ tags["TIMEZONE"] }} ]
