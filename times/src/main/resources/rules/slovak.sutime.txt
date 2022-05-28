@@ -837,4 +837,16 @@
 
   # expand: timex later|earlier|late => one timex
   { name: "temporal-composite-5",
- 
+    pattern: ( ( [ $hasTemporal & !{ temporal::IS_TIMEX_DURATION } ] )
+               (/before|earlier|later|late|ago|hence/ | /from/ /now/) ),
+	result: $0[0].temporal.value }
+
+  { name: "temporal-composite-6a",
+    pattern: ( /the/? ( $EARLY_LATE_MOD ) ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
+	result: TemporalCompose( ADD_MODIFIER, $2[0].temporal.value, GetTag($1[0], "Modifier") )
+  }
+
+  { name: "temporal-composite-6b",
+    priority: 4,
+    pattern: ( ( $REL_MOD ) ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
+	result: RelativeTime( GetTag($1[0], "TemporalOp")
