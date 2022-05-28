@@ -816,3 +816,25 @@
 	result: TemporalCompose(
 	          OFFSET, $0[-1].temporal,
 			  TemporalCompose(
+			   MULTIPLY,
+			   $0[0].temporal,
+			   :case {
+			     $2 =~ (/before/|/prior/ /to/) => -1,
+			     :else => 1
+               } ))
+  }
+
+  # expand: timex later|earlier|late => one timex
+  { name: "temporal-composite-4",
+    pattern: ( ( [ { temporal::IS_TIMEX_DURATION } ] )  (/earlier|later|ago|hence/ | /from/ /now/) ),
+	result: TemporalCompose(OFFSET, TIME_REF,
+	         TemporalCompose( MULTIPLY, $0[0].temporal,
+			 :case {
+			   $2 =~ (/earlier/|/ago/) => -1,
+			   :else => 1
+             }))
+  }
+
+  # expand: timex later|earlier|late => one timex
+  { name: "temporal-composite-5",
+ 
