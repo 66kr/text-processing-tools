@@ -864,4 +864,17 @@
 	           ( [ { temporal::IS_TIMEX_DURATION } & !{{ temporal.value.mod }} ] ) ),
     result: TemporalCompose( ADD_MODIFIER, $0[-1].temporal.value, "MORE_THAN" )
   }
-  { name: "tempo
+  { name: "temporal-composite-6b3",
+    priority: 4,
+    pattern: ( (  /no/ /less/ /than/ | /at/ /least/ )
+	           ( [ { temporal::IS_TIMEX_DURATION } & !{{ temporal.value.mod }} ] ) ),
+    result: TemporalCompose( ADD_MODIFIER, $0[-1].temporal.value, "EQUAL_OR_MORE" )
+  }
+  { name: "temporal-composite-6b4",
+    priority: 4,
+    pattern: ( (  /less/ /than/ )
+	           ( [ { temporal::IS_TIMEX_DURATION } & !{{ temporal.value.mod }} ] ) ),
+    result: TemporalCompose( ADD_MODIFIER, $0[-1].temporal.value, "LESS_THAN" )
+  }
+
+  # expand: (the|this|about|nearl
