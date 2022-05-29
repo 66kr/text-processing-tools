@@ -849,4 +849,19 @@
   { name: "temporal-composite-6b",
     priority: 4,
     pattern: ( ( $REL_MOD ) ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
-	result: RelativeTime( GetTag($1[0], "TemporalOp")
+	result: RelativeTime( GetTag($1[0], "TemporalOp"), $2[0].temporal.value )
+  }
+
+  { name: "temporal-composite-6b1",
+    priority: 4,
+    pattern: ( (  /no/ /more/ /than/ | /at/ /most/ | /up/ /to/ )
+	           ( [ { temporal::IS_TIMEX_DURATION } & !{{ temporal.value.mod }} ] ) ),
+    result: TemporalCompose( ADD_MODIFIER, $0[-1].temporal.value, "EQUAL_OR_LESS" )
+  }
+  { name: "temporal-composite-6b2",
+    priority: 4,
+    pattern: ( (  /more/ /than/ )
+	           ( [ { temporal::IS_TIMEX_DURATION } & !{{ temporal.value.mod }} ] ) ),
+    result: TemporalCompose( ADD_MODIFIER, $0[-1].temporal.value, "MORE_THAN" )
+  }
+  { name: "tempo
