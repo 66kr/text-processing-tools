@@ -877,4 +877,18 @@
     result: TemporalCompose( ADD_MODIFIER, $0[-1].temporal.value, "LESS_THAN" )
   }
 
-  # expand: (the|this|about|nearl
+  # expand: (the|this|about|nearly|early|later|earlier|late) timex => one timex
+  # expand: more than| up to| less than timex => one timex
+  { name: "temporal-composite-6c",
+    pattern: ( ( /this|about|nearly|early|later|earlier|late/ )
+	           ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
+    result: $0[-1].temporal.value
+  }
+
+  { name: "temporal-composite-7a",
+    pattern: ( /every/ ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
+	result: MakePeriodicTemporalSet($1[0].temporal, "every", 1 )
+  }
+
+  { name: "temporal-composite-7b",
+#    pattern: ( ( $FREQ_MOD ) ( [ $hasTemporal & !
