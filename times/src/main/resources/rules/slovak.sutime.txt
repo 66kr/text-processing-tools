@@ -902,4 +902,17 @@
 	result: TimeRange( $1[0].temporal.value, $2[0].temporal.value ) }
 
   { name: "temporal-composite-9",
-	pattern: ( [{ temporal::IS_TIMEX_TIME }] (?: /shar
+	pattern: ( [{ temporal::IS_TIMEX_TIME }] (?: /sharp/|/exactly/|/precisely/|/on/ /the/ /dot/) ),
+    result: $0[0].temporal.value }
+
+  ########################################################################################################################
+
+  ENV.defaults["stage"] = 4
+  ENV.defaults["ruleType"] = "tokens"
+
+  # Vague times
+  { ( /v/? /nedávnej/?  [{lemma:"minulosť"}]| /nedávno/ ) => TIME_PAST }
+  #{ pattern: ( /v/ /tom/ /čase/ ), matchedExpressionGroup: 1, result: TIME_PAST }
+  { ( /minule|kedysi|medieval|predtým/ ) => TIME_PAST }
+  #{ ( /past|once|medieval|previously/ ) => TIME_PAST }
+  { ( /súčastnosť|aktuálne|teraz|prá
