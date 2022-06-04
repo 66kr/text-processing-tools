@@ -891,4 +891,15 @@
   }
 
   { name: "temporal-composite-7b",
-#    pattern: ( ( $FREQ_MOD ) ( [ $hasTemporal & !
+#    pattern: ( ( $FREQ_MOD ) ( [ $hasTemporal & !{ temporal::IS_TIMEX_SET } ] ) ),
+    pattern: ( ( $FREQ_MOD ) ( [ $hasTemporal ] ) ),
+	result: MakePeriodicTemporalSet($2[0].temporal, GetTag($1[0], "PTS.quant"), GetTag($1[0], "PTS.multiple") )
+  }
+
+  { name: "temporal-composite-8:ranges",
+	active: options."markTimeRanges",
+    pattern: ( /from/? ( [ { temporal::IS_TIMEX_TIME } | { temporal::IS_TIMEX_DATE } ] ) /to|-/ ( [ { temporal::IS_TIMEX_TIME } |   {   temporal::IS_TIMEX_DATE } ] ) ),
+	result: TimeRange( $1[0].temporal.value, $2[0].temporal.value ) }
+
+  { name: "temporal-composite-9",
+	pattern: ( [{ temporal::IS_TIMEX_TIME }] (?: /shar
