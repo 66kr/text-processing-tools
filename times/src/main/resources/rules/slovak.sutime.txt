@@ -915,4 +915,15 @@
   #{ pattern: ( /v/ /tom/ /čase/ ), matchedExpressionGroup: 1, result: TIME_PAST }
   { ( /minule|kedysi|medieval|predtým/ ) => TIME_PAST }
   #{ ( /past|once|medieval|previously/ ) => TIME_PAST }
-  { ( /súčastnosť|aktuálne|teraz|prá
+  { ( /súčastnosť|aktuálne|teraz|práve / | /v/ /súčastnosti|prítomnosti/) => TIME_PRESENT }
+  #{ ( /present|current|currently/ | /right/? /now/ ) => TIME_PRESENT }
+  { (  /v/? /blízkej/? [{lemma:"budúcnosť"}] ) => TIME_FUTURE }
+
+  # Final rules to determine how to resolve date
+  ENV.defaults["ruleType"] = "composite"
+  ENV.defaults["stage.limitIters"] = 1
+  { pattern: ( [ { temporal::IS_TIMEX_DURATION } & {{ tokens =~ ( /.*s/ ) }} ] ),
+    result:	InexactDuration( $0[0].temporal.value ) }
+
+  {  pattern: ( [ { tag:/VBD/ } | /have/ ] []{0,2} [ $hasTemporal ] ),
+     action: VTag( $0[-1].temporal.value, "resolveTo", RESOLVE_TO_PA
