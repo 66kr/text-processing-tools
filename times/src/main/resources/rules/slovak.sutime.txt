@@ -926,4 +926,19 @@
     result:	InexactDuration( $0[0].temporal.value ) }
 
   {  pattern: ( [ { tag:/VBD/ } | /have/ ] []{0,2} [ $hasTemporal ] ),
-     action: VTag( $0[-1].temporal.value, "resolveTo", RESOLVE_TO_PA
+     action: VTag( $0[-1].temporal.value, "resolveTo", RESOLVE_TO_PAST )
+  }
+  {  pattern: ( [ $hasTemporal ] []{0,2} [ { tag:/VBD/ } | /have/ ] ),
+     action: VTag( $0[0].temporal.value, "resolveTo", RESOLVE_TO_PAST )
+  }
+  {  pattern: ( (/would/ | /could/ | /should/ | /will/ | /going/ /to/ | /'/ /ll/ | /'ll/ )
+                []{0,2} [ $hasTemporal ]
+              ),
+     action: VTag( $0[-1].temporal.value, "resolveTo", RESOLVE_TO_FUTURE )
+  }
+  {  pattern: ( [ $hasTemporal ] []{0,2}
+                (/would/ | /could/ | /should/ | /will/ | /going/ /to/ | /'/ /ll/ | /'ll/ ) ),
+     action: VTag( $0[0].temporal.value, "resolveTo", RESOLVE_TO_FUTURE )
+  }
+
+ ##################################
