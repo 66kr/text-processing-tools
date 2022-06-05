@@ -952,4 +952,8 @@
   {  pattern: ( [ { word:/(fall|spring|second|march|may|sat|sun|min)s?/ } & !{ tag:/NN.*/ } ] )  }
   {  pattern: ( /the/ [ { word:/second/ } & !{ tag:/NN.*/ } ] )  }
   {  pattern: ( [ { word:/((twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)-)?second/ } ] )  }
-  {  pattern: ( [ {{ te
+  {  pattern: ( [ {{ temporal.value == NON_TEMPORAL }} ] ), over: NIL }
+
+  # Reject anything that is just a timezone
+  {  pattern: ( [ {{ tags["TIMEZONE"] }} ] ), over: NIL  }
+
