@@ -31,4 +31,12 @@
             <configuration>
               <outputDirectory>src/main/java/</outputDirectory>
               <lexDefinitions>
-                <lexDefinition>src/main/java/sk/bednarik/nlp/tokenizer/SVKPTBLexer.flex</lexDef
+                <lexDefinition>src/main/java/sk/bednarik/nlp/tokenizer/SVKPTBLexer.flex</lexDefinition>
+              </lexDefinitions>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
