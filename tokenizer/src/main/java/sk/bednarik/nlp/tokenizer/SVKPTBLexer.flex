@@ -997,3 +997,409 @@ CP1252_MISC_SYMBOL = [\u0086\u0087\u0089\u0095\u0098\u0099]
                          }
 /* Malaysian currency */
 RM/{NUM}        { String txt = yytext();
+                  return getNext(txt, txt);
+                }
+{NUMBER}                { handleHyphenatedNumber(yytext());
+                          if (DEBUG) { logger.info("Used {NUMBER} to recognize " + yytext() + " as " + removeFromNumber(yytext())); }
+                          return getNext(removeFromNumber(yytext()), yytext()); }
+{SUBSUPNUM}             { return getNext(); }
+{FRAC}          { String txt = yytext();
+                  // if we are in strictTreebank3 mode, we need to reject everything after a space or non-breaking space...
+                  if (strictTreebank3) {
+                    int spaceIndex = indexOfSpace(txt);
+                    if (spaceIndex >= 0) {
+                      yypushback(txt.length() - spaceIndex);
+                      return getNext();
+                    }
+                  }
+                  if (escapeForwardSlashAsterisk) {
+                    txt = LexerUtils.escapeChar(txt, '/');
+                  }
+                  if (normalizeSpace) {
+                    txt = txt.replace(' ', '\u00A0'); // change space to non-breaking space
+                  }
+                  return getNext(txt, yytext());
+                }
+{FRAC2}         { String txt = yytext();
+                  String norm = LexerUtils.normalizeFractions(normalizeFractions, escapeForwardSlashAsterisk, yytext());
+                  if (DEBUG) { logger.info("Used {FRAC2} to recognize " + txt + " as " + norm +
+                                       "; normalizeFractions=" + normalizeFractions +
+                                       ", escapeForwardSlashAsterisk=" + escapeForwardSlashAsterisk); }
+                  return getNext(norm, txt);
+                }
+{TBSPEC}        { final String origTxt = yytext();
+                  String tok;
+                  if (normalizeAmpersandEntity) {
+                    tok = LexerUtils.normalizeAmp(origTxt);
+                  } else {
+                    tok = origTxt;
+                  }
+                  if (DEBUG) { logger.info("Used {TBSPEC} to recognize " + origTxt + " as " + tok); }
+                  return getNext(tok, origTxt);
+                }
+{SWEARING}      { String txt = yytext();
+                  String normTok = txt;
+                  if (escapeForwardSlashAsterisk) {
+                    normTok = LexerUtils.escapeChar(normTok, '*');
+                  }
+                  if (DEBUG) { logger.info("Used {SWEARING} to recognize " + txt + " as " + normTok); }
+                  return getNext(normTok, txt);
+                }
+{BANGWORDS}     { return getNext(); }
+<YyNotTokenizePerLine>{BANGMAGAZINES}/{SPACENL}magazine   { return getNext(); }
+<YyTokenizePerLine>{BANGMAGAZINES}/{SPACE}magazine   { return getNext(); }
+{THING3}                { if (escapeForwardSlashAsterisk) {
+                            return getNext(LexerUtils.escapeChar(yytext(), '/'), yytext());
+                          } else {
+                            return getNext();
+                          }
+                        }
+{DOLSIGN}               { return getNext(); }
+{DOLSIGN2}              { if (normalizeCurrency) {
+                            return getNext(LexerUtils.normalizeCurrency(yytext()), yytext());
+                          } else {
+                            return getNext(LexerUtils.minimallyNormalizeCurrency(yytext()), yytext());
+                          }
+                        }
+/* Any acronym can be treated as sentence final iff followed by this list of words (pronouns, determiners, and prepositions, etc.). "U.S." is the single big source of errors.  Character classes make this rule case sensitive! (This is needed!!). A one letter acronym candidate like "Z." or "I." in this context usually isn't, and so we return the leter and pushback the period for next time. */
+<YyNotTokenizePerLine>{ACRONYM}/({SPACENLS})([A]bout|[A]ccording|[A]dditionally|[A]fter|[A]n|[A]|[A]s|[A]t|[B]ut|[D]id|[D]uring|[E]arlier|[H]e|[H]er|[H]ere|[H]ow|[H]owever|[I]f|[I]n|[I]t|[L]ast|[M]any|[M]ore|[M]r\.|[M]s\.|[N]ow|[O]nce|[O]ne|[O]ther|[O]ur|[S]he|[S]ince|[S]o|[S]ome|[S]uch|[T]hat|[T]he|[T]heir|[T]hen|[T]here|[T]hese|[T]hey|[T]his|[W]e|[W]hen|[W]hile|[W]hat|[W]ho|[W]hy|[Y]et|[Y]ou|{SGML1})({SPACENL}|[?!]) {
+                          return processAcronym();
+                        }
+<YyTokenizePerLine>{ACRONYM}/({SPACES})([A]bout|[A]ccording|[A]dditionally|[A]fter|[A]n|[A]|[A]s|[A]t|[B]ut|[D]id|[D]uring|[E]arlier|[H]e|[H]er|[H]ere|[H]ow|[H]owever|[I]f|[I]n|[I]t|[L]ast|[M]any|[M]ore|[M]r\.|[M]s\.|[N]ow|[O]nce|[O]ne|[O]ther|[O]ur|[S]he|[S]ince|[S]o|[S]ome|[S]uch|[T]hat|[T]he|[T]heir|[T]hen|[T]here|[T]hese|[T]hey|[T]his|[W]e|[W]hen|[W]hile|[W]hat|[W]ho|[W]hy|[Y]et|[Y]ou|{SGML1})({SPACE}|[?!]) {
+                          return processAcronym();
+                        }
+
+/* Special case to get ca., fig. or Prop. before numbers */
+<YyNotTokenizePerLine>{ABBREV3}/{SPACENL}?[:digit:]   {
+                          return processAbbrev3();
+                        }
+<YyTokenizePerLine>{ABBREV3}/{SPACENL}?[:digit:]   {
+                          return processAbbrev3();
+                        }
+<YyNotTokenizePerLine>{ABBREVSN}/{SPACENL}+(Africa|Korea|Cal) { return getNext(); }
+<YyTokenizePerLine>{ABBREVSN}/{SPACE}+(Africa|Korea|Cal) { return getNext(); }
+/* Special case to get pty. ltd. or pty limited. Also added "Co." since someone complained, but usually a comma after it. */
+(pty|pte|pvt|co)\./{SPACE}(ltd|lim|llc)  { return getNext(); }
+<YyNotTokenizePerLine>{ABBREV1}/{SENTEND1}     {
+                          return processAbbrev1();
+                        }
+<YyTokenizePerLine>{ABBREV1}/{SENTEND2}     {
+                          return processAbbrev1();
+                        }
+<YyNotTokenizePerLine>{ABBREV1}/[^][^]        { return getNext(); }
+<YyTokenizePerLine>{ABBREV1}/[^\r\n][^\r\n]        { return getNext(); }
+{ABBREV1}               { // this one should only match if we're basically at the end of file
+                          // since the last one matches two things, even newlines (if not tokenize per line)
+                          return processAbbrev1();
+                        }
+{ABBREV2}               { return getNext(); }
+{PORADIE}               { return getNext(); }
+{ABBREV4}/{SPACE}       { return getNext(); }
+{ACRO}/{SPACENL}        { return getNext(); }
+{TBSPEC2}/{SPACENL}     { return getNext(); }
+{ISO8601DATETIME}       { return getNext(); }
+{DEGREES}               { return getNext(); }
+<YyNotTokenizePerLine>{FILENAME}/({SPACENL}|[.?!,\"'<()])      { return getNext(); }
+<YyTokenizePerLine>{FILENAME}/({SPACE}|[.?!,\"'<()])      { return getNext(); }
+{WORD}\./{INSENTP}      { String origTok = yytext();
+                          String norm = LexerUtils.removeSoftHyphens(origTok);
+                          if (DEBUG) { logger.info("Used {WORD} (3) to recognize " + origTok + " as " + norm); }
+                          return getNext(norm, origTok);
+                        }
+{PHONE}                 { String txt = yytext();
+                          if (normalizeSpace) {
+                            txt = txt.replace(' ', '\u00A0'); // change space to non-breaking space
+                          }
+                          if (normalizeParentheses) {
+                            txt = LEFT_PAREN_PATTERN.matcher(txt).replaceAll(openparen);
+                            txt = RIGHT_PAREN_PATTERN.matcher(txt).replaceAll(closeparen);
+                          }
+                          if (DEBUG) { logger.info("Used {PHONE} to recognize " + yytext() + " as " + txt); }
+                          return getNext(txt, yytext());
+                        }
+{DBLQUOT}/[\p{Alpha}\p{Digit}$]  { String tok = yytext();
+                                   String norm = handleQuotes(tok, true);
+                                   if (DEBUG) { logger.info("Used {DBLQUOT} to recognize " + tok + " as " + norm +
+                                                            "; probablyLeft=" + true); }
+                                   return getNext(norm, tok);
+                                 }
+{DBLQUOT}               { String tok = yytext();
+                          String norm = handleQuotes(tok, false);
+                          if (DEBUG) { logger.info("Used {SREDAUX} to recognize " + tok + " as " + norm +
+                                                   "; probablyLeft=" + false); }
+                          return getNext(norm, tok);
+                        }
+\x7F                    { if (invertible) {
+                            prevWordAfter.append(yytext());
+                        } }
+{SMILEY}/[^\p{Alpha}\p{Digit}] { String txt = yytext();
+                  String origText = txt;
+                  if (normalizeParentheses) {
+                    txt = LEFT_PAREN_PATTERN.matcher(txt).replaceAll(openparen);
+                    txt = RIGHT_PAREN_PATTERN.matcher(txt).replaceAll(closeparen);
+                  }
+                  return getNext(txt, origText);
+                }
+{ASIANSMILEY}        { String txt = yytext();
+                  String origText = txt;
+                  if (normalizeParentheses) {
+                    txt = LEFT_PAREN_PATTERN.matcher(txt).replaceAll(openparen);
+                    txt = RIGHT_PAREN_PATTERN.matcher(txt).replaceAll(closeparen);
+                  }
+                  return getNext(txt, origText);
+                }
+{EMOJI}         { String txt = yytext();
+                  if (DEBUG) { logger.info("Used {EMOJI} to recognize " + txt); }
+                  return getNext(txt, txt);
+                }
+{LESSTHAN}      { return getNext("<", yytext()); }
+{GREATERTHAN}   { return getNext(">", yytext()); }
+\{              { if (normalizeOtherBrackets) {
+                    return getNext(openbrace, yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+\}              { if (normalizeOtherBrackets) {
+                    return getNext(closebrace, yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+\[              { if (normalizeOtherBrackets) {
+                    return getNext("-LSB-", yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+\]              { if (normalizeOtherBrackets) {
+                    return getNext("-RSB-", yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+\(              { if (normalizeParentheses) {
+                    return getNext(openparen, yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+\)              { if (normalizeParentheses) {
+                    return getNext(closeparen, yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+{HYPHENS}       { if (yylength() >= 3 && yylength() <= 4 && ptb3Dashes) {
+                    return getNext(ptbmdash, yytext());
+                  } else {
+                    return getNext();
+                  }
+                }
+<YyNotTokenizePerLine>{LDOTS}/\.{SPACENLS}[:letter:]    { /* attempt to treat fourth ellipsis as period if followed by space and letter. */
+                                    return handleEllipsis(yytext());
+                                  }
+<YyTokenizePerLine>{LDOTS}/\.{SPACES}[:letter:]    { /* attempt to treat fourth ellipsis as period if followed by space and letter. */
+                                    return handleEllipsis(yytext());
+                                  }
+<YyNotTokenizePerLine>{SPACEDLDOTS}/{SPACE}\.{SPACENLS}[:letter:]    { /* attempt to treat fourth ellipsis as period if followed by space and letter. */
+                                    return handleEllipsis(yytext());
+                                  }
+<YyTokenizePerLine>{SPACEDLDOTS}/{SPACE}\.{SPACES}[:letter:]    { /* attempt to treat fourth ellipsis as period if followed by space and letter. */
+                                    return handleEllipsis(yytext());
+                                  }
+{LDOTS}|{SPACEDLDOTS}         { return handleEllipsis(yytext()); }
+{FNMARKS}       { return getNext(); }
+{ASTS}          { if (escapeForwardSlashAsterisk) {
+                    return getNext(LexerUtils.escapeChar(yytext(), '*'), yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+{INSENTP}       { return getNext(); }
+[?!]+|[\u2047\u2048]    { return getNext(); }
+[.¡¿\u037E\u0589\u061F\u06D4\u0700-\u0702\u07FA\u3002]  { return getNext(); }
+=+              { return getNext(); }
+\/              { if (escapeForwardSlashAsterisk) {
+                    return getNext(LexerUtils.escapeChar(yytext(), '/'), yytext()); }
+                  else {
+                    return getNext();
+                  }
+                }
+/* {HTHING}/[^\p{Alpha}\p{Digit}.+]    { return getNext(LexerUtils.removeSoftHyphens(yytext()),
+                                               yytext()); } */
+{HTHINGEXCEPTIONWHOLE}  {return getNext(LexerUtils.removeSoftHyphens(yytext()), yytext());}
+{HTHINGEXCEPTIONWHOLE}\./{INSENTP}  {return getNext(LexerUtils.removeSoftHyphens(yytext()), yytext());}
+{HTHINGEXCEPTIONPREFIXED}  {return getNext(LexerUtils.removeSoftHyphens(yytext()), yytext());}
+{HTHINGEXCEPTIONPREFIXED}\./{INSENTP}  {return getNext(LexerUtils.removeSoftHyphens(yytext()), yytext());}
+{HTHINGEXCEPTIONSUFFIXED}  {return getNext(LexerUtils.removeSoftHyphens(yytext()), yytext());}
+{HTHINGEXCEPTIONSUFFIXED}\./{INSENTP}  {return getNext(LexerUtils.removeSoftHyphens(yytext()), yytext());}
+{HTHING}        { String tok = yytext();
+                  breakByHyphens(tok);
+                  tok = yytext();
+                  String norm = LexerUtils.removeSoftHyphens(tok);
+                  if (DEBUG) { logger.info("Used {HTHING} to recognize " + tok + " as " + norm); }
+                  return getNext(norm, tok); }
+{HTHING}\./{INSENTP}
+                { String tok = yytext();
+                  breakByHyphens(tok);
+                  tok = yytext();
+                  String norm = LexerUtils.removeSoftHyphens(tok);
+                  if (DEBUG) { logger.info("Used {HTHING} (2) to recognize " + tok + " as " + norm); }
+                  return getNext(norm, tok);
+                }
+/* {THING}\./{INSENTP}          { String tok = yytext();       // cdm [2017]: I don't understand what this was for, and it seems harmful....
+                               /* A THING can contain quote like O'Malley */
+                               String norm = handleQuotes(tok, false);
+                                if (DEBUG) { logger.info("Used {THING} to recognize " + tok + " as " + norm +
+                                                         "; probablyLeft=" + false); }
+                                return getNext(norm, tok);
+                              } */
+{THING}         { // breakByHyphens(yytext()); // this is causing fail of attempted to pushback too much!
+                  String tok = yytext();
+                  /* A THING can contain quote like O'Malley */
+                  String norm = handleQuotes(tok, false);
+                  if (DEBUG) { logger.info("Used {THING} (2) to recognize " + tok + " as " + norm +
+                                           "; probablyLeft=" + false); }
+                  return getNext(norm, tok);
+                }
+{THINGA}\./{INSENTP}    { final String origTxt = yytext();
+                          String tok;
+                          if (normalizeAmpersandEntity) {
+                            tok = LexerUtils.normalizeAmp(origTxt);
+                          } else {
+                            tok = origTxt;
+                          }
+                          if (DEBUG) { logger.info("Used {THINGA} to recognize " + origTxt + " as " + tok); }
+                          return getNext(tok, origTxt);
+                        }
+{THINGA}                { final String origTxt = yytext();
+                          String tok;
+                          if (normalizeAmpersandEntity) {
+                            tok = LexerUtils.normalizeAmp(origTxt);
+                          } else {
+                            tok = origTxt;
+                          }
+                          if (DEBUG) { logger.info("Used {THINGA} (2) to recognize " + origTxt + " as " + tok); }
+                          return getNext(tok, origTxt);
+                        }
+/* Special case so as to prefer treating ''' as a single followed by a double quote (happens in newswire) */
+'/''[^'\p{Alpha}]       { String tok = yytext();
+                          String norm = handleQuotes(tok, false);
+                          if (DEBUG) { logger.info("Used {'/''} to recognize " + tok + " as " + norm +
+                                           "; probablyLeft=" + false); }
+                          return getNext(norm, tok);
+                        }
+/* This QUOTES must proceed (S)REDAUX (2) so it by preference matches straight quote before word.
+   Trying to collapse the first two cases seemed to break things (?!?). */
+{QUOTES}/[:letter:]{NOT_SPACENL_ONE_CHAR}
+                { // Extra context is to not match on ones like 'd but you do want words like "a"
+                  // can't have digit here because of cases like '90s
+                  String tok = yytext();
+                  /* invert single quote - often but not always right */
+                  String norm = handleQuotes(tok, true);
+                  if (DEBUG) { logger.info("Used {QUOTES} to recognize " + tok + " as " + norm +
+                                           "; probablyLeft=" + true); }
+                  return getNext(norm, tok);
+                }
+{QUOTES}/[AaIiUu]{SPACENL_ONE_CHAR}
+                { // Extra context is to not match on ones like 'd but you do want words like "a"
+                  // can't have digit here because of cases like '90s
+                  String tok = yytext();
+                  /* invert single quote - often but not always right */
+                  String norm = handleQuotes(tok, true);
+                  if (DEBUG) { logger.info("Used {QUOTES} (2) to recognize " + tok + " as " + norm +
+                                           "; probablyLeft=" + true); }
+                  return getNext(norm, tok);
+                }
+{QUOTES}        { String tok = yytext();
+                  String norm = handleQuotes(tok, false);
+                  if (DEBUG) { logger.info("Used {QUOTES} (3) to recognize " + tok + " as " + norm +
+                                           "; probablyLeft=" + false); }
+                  return getNext(norm, tok);
+                }
+/* These (S)REDAUX (2) cases are needed in case string ends on "it's". See: testJacobEisensteinApostropheCase */
+{REDAUX}        { String tok = yytext();
+                  if (DEBUG) { logger.info("Used {REDAUX} (2) to recognize " + tok); }
+                  return getNext(tok, tok);
+                }
+{SREDAUX}       { String tok = yytext();
+                  String norm = handleQuotes(tok, false);
+                  if (DEBUG) { logger.info("Used {SREDAUX} (2) to recognize " + tok + " as " + norm +
+                                           "; probablyLeft=" + false); }
+                  return getNext(norm, tok);
+                }
+
+{FAKEDUCKFEET}  { return getNext(); }
+{MISCSYMBOL}    { return getNext(); }
+{CP1252_MISC_SYMBOL}  { String tok = yytext();
+                        String norm = LexerUtils.processCp1252misc(tok);
+                        if (DEBUG) { logger.info("Used {CP1252_MISC_SYMBOL} to recognize " + tok + " as " + norm); }
+                        return getNext(norm, tok);
+                      }
+\0|{SPACES}|[\u200B\u200E-\u200F\uFEFF] { if (invertible) {
+                     prevWordAfter.append(yytext());
+                  }
+                }
+{NEWLINE}       { if (tokenizeNLs) {
+                      return getNext(AbstractTokenizer.NEWLINE_TOKEN, yytext()); // for tokenizing newliens
+                  } else if (invertible) {
+                    // System.err.println("Appending newline: |" + yytext() + "|");
+                    prevWordAfter.append(yytext());
+                  }
+                }
+&nbsp;          { if (invertible) {
+                     prevWordAfter.append(yytext());
+                  }
+                }
+.       { String str = yytext();
+          int first = str.codePointAt(0);
+          String msg = String.format("Untokenizable: %s (U+%s, decimal: %s)",
+                          yytext(), Integer.toHexString(first).toUpperCase(), Integer.toString(first));
+          switch (untokenizable) {
+            case NONE_DELETE:
+              if (invertible) {
+                prevWordAfter.append(str);
+              }
+              break;
+            case FIRST_DELETE:
+              if (invertible) {
+                prevWordAfter.append(str);
+              }
+              if ( ! this.seenUntokenizableCharacter) {
+                logger.warning(msg);
+                this.seenUntokenizableCharacter = true;
+              }
+              break;
+            case ALL_DELETE:
+              if (invertible) {
+                prevWordAfter.append(str);
+              }
+              logger.warning(msg);
+              this.seenUntokenizableCharacter = true;
+              break;
+            case NONE_KEEP:
+              return getNext();
+            case FIRST_KEEP:
+              if ( ! this.seenUntokenizableCharacter) {
+                logger.warning(msg);
+                this.seenUntokenizableCharacter = true;
+              }
+              return getNext();
+            case ALL_KEEP:
+              logger.warning(msg);
+              this.seenUntokenizableCharacter = true;
+              return getNext();
+          }
+        }
+<<EOF>> { if (invertible) {
+            // prevWordAfter.append(yytext());
+            String str = prevWordAfter.toString();
+            // System.err.println("At end of text making after: |" + str + "|");
+            prevWord.set(CoreAnnotations.AfterAnnotation.class, str);
+            // System.err.println("prevWord is |" + prevWord.get(CoreAnnotations.TextAnnotation.class) + "|, its after is |" +
+            //         prevWord.get(CoreAnnotations.AfterAnnotation.class) + "|");
+            prevWordAfter.setLength(0);
+          }
+          return null;
+        }
