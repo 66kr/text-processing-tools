@@ -26,4 +26,24 @@ import java.io.StringReader;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
-import 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+
+/**
+ * This class will PTB tokenize the input.  It assumes that the original String is under the
+ * CoreAnnotations.TextAnnotation field and it will add the output from the InvertiblePTBTokenizer ({@code
+ * List<CoreLabel>}) under CoreAnnotation.TokensAnnotation.
+ *
+ * @author Jenny Finkel
+ * @author Christopher Manning
+ * @author Ishita Prasad
+ */
+public class SVKTokenizerAnnotator implements Annotator {
+
+  /**
+   * A logger for this class
+   */
+  private static final Redwood.RedwoodC
