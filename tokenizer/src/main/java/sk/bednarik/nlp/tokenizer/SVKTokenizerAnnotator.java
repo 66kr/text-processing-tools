@@ -58,4 +58,21 @@ public class SVKTokenizerAnnotator implements Annotator {
     Chinese("zh", null, ""),
     Spanish("es", "SpanishTokenizer", "invertible,ptb3Escaping=true,splitAll=true"),
     English("en", "PTBTokenizer", "invertible,ptb3Escaping=true"),
-    Slovak("sk", "SVKPTBToke
+    Slovak("sk", "SVKPTBTokenizer", "invertible,ptb3Escaping=true"),
+    German("de", null, "invertible,ptb3Escaping=true"),
+    French("fr", "FrenchTokenizer", ""),
+    Whitespace(null, "WhitespaceTokenizer", "");
+
+    private final String abbreviation;
+    private final String className;
+    private final String defaultOptions;
+
+    TokenizerType(String abbreviation, String className, String defaultOptions) {
+      this.abbreviation = abbreviation;
+      this.className = className;
+      this.defaultOptions = defaultOptions;
+    }
+
+    public String getDefaultOptions() {
+      return defaultOptions;
+    }
