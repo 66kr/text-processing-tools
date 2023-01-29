@@ -46,4 +46,16 @@ public class SVKTokenizerAnnotator implements Annotator {
   /**
    * A logger for this class
    */
-  private static final Redwood.RedwoodC
+  private static final Redwood.RedwoodChannels log = Redwood.channels(SVKTokenizerAnnotator.class);
+
+  /**
+   * Enum to identify the different TokenizerTypes. To add a new TokenizerType, add it to the list with a default
+   * options string and add a clause in getTokenizerType to identify it.
+   */
+  public enum TokenizerType {
+    Unspecified(null, null, "invertible,ptb3Escaping=true"),
+    Arabic("ar", null, ""),
+    Chinese("zh", null, ""),
+    Spanish("es", "SpanishTokenizer", "invertible,ptb3Escaping=true,splitAll=true"),
+    English("en", "PTBTokenizer", "invertible,ptb3Escaping=true"),
+    Slovak("sk", "SVKPTBToke
