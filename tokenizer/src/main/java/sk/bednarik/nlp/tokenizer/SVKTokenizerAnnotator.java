@@ -76,3 +76,18 @@ public class SVKTokenizerAnnotator implements Annotator {
     public String getDefaultOptions() {
       return defaultOptions;
     }
+
+    private static final Map<String, TokenizerType> nameToTokenizerMap = initializeNameMap();
+
+    private static Map<String, TokenizerType> initializeNameMap() {
+      Map<String, TokenizerType> map = Generics.newHashMap();
+      for (TokenizerType type : TokenizerType.values()) {
+        if (type.abbreviation != null) {
+          map.put(type.abbreviation.toUpperCase(), type);
+        }
+        map.put(type.toString().toUpperCase(), type);
+      }
+      return Collections.unmodifiableMap(map);
+    }
+
+    private static final Map<String, 
