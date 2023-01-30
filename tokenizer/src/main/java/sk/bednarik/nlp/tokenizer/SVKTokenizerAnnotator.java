@@ -90,4 +90,19 @@ public class SVKTokenizerAnnotator implements Annotator {
       return Collections.unmodifiableMap(map);
     }
 
-    private static final Map<String, 
+    private static final Map<String, TokenizerType> classToTokenizerMap = initializeClassMap();
+
+    private static Map<String, TokenizerType> initializeClassMap() {
+      Map<String, TokenizerType> map = Generics.newHashMap();
+      for (TokenizerType type : TokenizerType.values()) {
+        if (type.className != null) {
+          map.put(type.className.toUpperCase(), type);
+        }
+      }
+      return Collections.unmodifiableMap(map);
+    }
+
+    /**
+     * Get TokenizerType based on what's in the properties.
+     *
+     * @param props Properties to find tokenizer opti
