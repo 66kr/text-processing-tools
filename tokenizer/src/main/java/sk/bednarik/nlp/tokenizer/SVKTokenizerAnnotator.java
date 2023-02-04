@@ -105,4 +105,19 @@ public class SVKTokenizerAnnotator implements Annotator {
     /**
      * Get TokenizerType based on what's in the properties.
      *
-     * @param props Properties to find tokenizer opti
+     * @param props Properties to find tokenizer options in
+     * @return An element of the TokenizerType enum indicating the tokenizer to use
+     */
+    public static TokenizerType getTokenizerType(Properties props) {
+      String tokClass = props.getProperty("tokenize.class", null);
+      boolean whitespace = Boolean.valueOf(props.getProperty("tokenize.whitespace", "false"));
+      String language = props.getProperty("tokenize.language", "en");
+
+      if (whitespace) {
+        return Whitespace;
+      }
+
+      if (tokClass != null) {
+        TokenizerType type = classToTokenizerMap.get(tokClass.toUpperCase());
+        if (type == null) {
+       
