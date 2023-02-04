@@ -120,4 +120,22 @@ public class SVKTokenizerAnnotator implements Annotator {
       if (tokClass != null) {
         TokenizerType type = classToTokenizerMap.get(tokClass.toUpperCase());
         if (type == null) {
-       
+          throw new IllegalArgumentException("SVKTokenizerAnnotator: unknown tokenize.class property " + tokClass);
+        }
+        return type;
+      }
+
+      if (language != null) {
+        TokenizerType type = nameToTokenizerMap.get(language.toUpperCase());
+        if (type == null) {
+          throw new IllegalArgumentException("SVKTokenizerAnnotator: unknown tokenize.language property " + language);
+        }
+        return type;
+      }
+
+      return Unspecified;
+    }
+  } // end enum TokenizerType
+
+
+  public static final String EOL_PROPERTY = "
