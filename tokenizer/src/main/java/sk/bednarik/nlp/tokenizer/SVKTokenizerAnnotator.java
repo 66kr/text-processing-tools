@@ -138,4 +138,28 @@ public class SVKTokenizerAnnotator implements Annotator {
   } // end enum TokenizerType
 
 
-  public static final String EOL_PROPERTY = "
+  public static final String EOL_PROPERTY = "tokenize.keepeol";
+
+  private final boolean VERBOSE;
+  private final TokenizerFactory<CoreLabel> factory;
+
+  /**
+   * new segmenter properties
+   **/
+  private final boolean useSegmenter;
+  private final Annotator segmenterAnnotator;
+
+  // CONSTRUCTORS
+
+  /**
+   * Gives a non-verbose, English tokenizer.
+   */
+  public SVKTokenizerAnnotator() {
+    this(false);
+  }
+
+
+  private static String computeExtraOptions(Properties properties) {
+    String extraOptions = null;
+    boolean keepNewline = Boolean
+        .valueOf(properties.getProperty(StanfordCoreNLP.NEWLINE_SPLITTER_PROPERTY, "fals
