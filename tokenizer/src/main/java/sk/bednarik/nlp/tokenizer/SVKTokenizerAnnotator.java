@@ -162,4 +162,12 @@ public class SVKTokenizerAnnotator implements Annotator {
   private static String computeExtraOptions(Properties properties) {
     String extraOptions = null;
     boolean keepNewline = Boolean
-        .valueOf(properties.getProperty(StanfordCoreNLP.NEWLINE_SPLITTER_PROPERTY, "fals
+        .valueOf(properties.getProperty(StanfordCoreNLP.NEWLINE_SPLITTER_PROPERTY, "false")); // ssplit.eolonly
+
+    String hasSsplit = properties.getProperty("annotators");
+    if (hasSsplit != null && hasSsplit.contains(StanfordCoreNLP.STANFORD_SSPLIT)) { // ssplit
+      // Only possibly put in *NL* if not all one (the Boolean method treats null as false)
+      if (!Boolean.parseBoolean(properties.getProperty("ssplit.isOneSentence"))) {
+        // Set to { NEVER, ALWAYS, TWO_CONSECUTIVE } based on  ssplit.newlineIsSentenceBreak
+        String nlsbString = properties.getProperty(StanfordCoreNLP.NEWLINE_IS_SENTENCE_BREAK_PROPERTY,
+            StanfordCoreNLP.DEFAUL
