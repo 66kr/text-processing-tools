@@ -170,4 +170,24 @@ public class SVKTokenizerAnnotator implements Annotator {
       if (!Boolean.parseBoolean(properties.getProperty("ssplit.isOneSentence"))) {
         // Set to { NEVER, ALWAYS, TWO_CONSECUTIVE } based on  ssplit.newlineIsSentenceBreak
         String nlsbString = properties.getProperty(StanfordCoreNLP.NEWLINE_IS_SENTENCE_BREAK_PROPERTY,
-            StanfordCoreNLP.DEFAUL
+            StanfordCoreNLP.DEFAULT_NEWLINE_IS_SENTENCE_BREAK);
+        WordToSentenceProcessor.NewlineIsSentenceBreak nlsb = WordToSentenceProcessor
+            .stringToNewlineIsSentenceBreak(nlsbString);
+        if (nlsb != WordToSentenceProcessor.NewlineIsSentenceBreak.NEVER) {
+          keepNewline = true;
+        }
+      }
+    }
+    if (keepNewline) {
+      extraOptions = "tokenizeNLs,";
+    }
+    return extraOptions;
+  }
+
+
+  public SVKTokenizerAnnotator(Properties properties) {
+    this(false, properties, computeExtraOptions(properties));
+  }
+
+  public SVKTokenizerAnnotator(boolean verbose) {
+    this(verbose, Token
