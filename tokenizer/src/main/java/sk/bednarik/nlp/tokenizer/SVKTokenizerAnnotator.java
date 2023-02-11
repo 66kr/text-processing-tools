@@ -190,4 +190,24 @@ public class SVKTokenizerAnnotator implements Annotator {
   }
 
   public SVKTokenizerAnnotator(boolean verbose) {
-    this(verbose, Token
+    this(verbose, TokenizerType.English);
+  }
+
+  public SVKTokenizerAnnotator(String lang) {
+    this(true, lang, null);
+  }
+
+  public SVKTokenizerAnnotator(boolean verbose, TokenizerType lang) {
+    this(verbose, lang.toString());
+  }
+
+  public SVKTokenizerAnnotator(boolean verbose, String lang) {
+    this(verbose, lang, null);
+  }
+
+  public SVKTokenizerAnnotator(boolean verbose, String lang, String options) {
+    this(verbose, lang == null ? null : PropertiesUtils.asProperties("tokenize.language", lang), options);
+  }
+
+  public SVKTokenizerAnnotator(boolean verbose, Properties props) {
+    this(verbose, pro
