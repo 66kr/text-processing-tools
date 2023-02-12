@@ -224,3 +224,12 @@ public class SVKTokenizerAnnotator implements Annotator {
         && !whitespace) {
       useSegmenter = true;
       if (LanguageInfo.getLanguageFromString(
+          props.getProperty("tokenize.language")) == LanguageInfo.HumanLanguage.ARABIC) {
+        segmenterAnnotator = new ArabicSegmenterAnnotator("segment", props);
+      } else if (LanguageInfo.getLanguageFromString(
+          props.getProperty("tokenize.language")) == LanguageInfo.HumanLanguage.CHINESE) {
+        segmenterAnnotator = new ChineseSegmenterAnnotator("segment", props);
+      } else {
+        segmenterAnnotator = null;
+        throw new RuntimeException("No segmenter implemented for: " +
+            LanguageInfo.getLanguageFromString(props.getProperty("tokenize.languag
