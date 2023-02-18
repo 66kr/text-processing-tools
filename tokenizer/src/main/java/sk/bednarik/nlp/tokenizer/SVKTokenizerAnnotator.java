@@ -281,4 +281,15 @@ public class SVKTokenizerAnnotator implements Annotator {
         break;
 
       case Spanish:
-        factory = SpanishTok
+        factory = SpanishTokenizer.factory(new CoreLabelTokenFactory(), options);
+        break;
+
+      case French:
+        factory = FrenchTokenizer.factory(new CoreLabelTokenFactory(), options);
+        break;
+
+      case Whitespace:
+        boolean eolIsSignificant = Boolean.valueOf(props.getProperty(EOL_PROPERTY, "false"));
+        eolIsSignificant =
+            eolIsSignificant || Boolean.valueOf(props.getProperty(StanfordCoreNLP.NEWLINE_SPLITTER_PROPERTY, "false"));
+        factory = new WhitespaceTokenizer.WhitespaceTokenizerFactory<>(new CoreLabelTokenFactory(), eolIsSignifican
