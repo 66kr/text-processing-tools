@@ -292,4 +292,21 @@ public class SVKTokenizerAnnotator implements Annotator {
         boolean eolIsSignificant = Boolean.valueOf(props.getProperty(EOL_PROPERTY, "false"));
         eolIsSignificant =
             eolIsSignificant || Boolean.valueOf(props.getProperty(StanfordCoreNLP.NEWLINE_SPLITTER_PROPERTY, "false"));
-        factory = new WhitespaceTokenizer.WhitespaceTokenizerFactory<>(new CoreLabelTokenFactory(), eolIsSignifican
+        factory = new WhitespaceTokenizer.WhitespaceTokenizerFactory<>(new CoreLabelTokenFactory(), eolIsSignificant);
+        break;
+
+      case English:
+      case German:
+        factory = PTBTokenizer.factory(new CoreLabelTokenFactory(), options);
+        break;
+      case Slovak:
+        factory = SVKPTBTokenizer.factory(new CoreLabelTokenFactory(), options);
+        break;
+      case Unspecified:
+        log.info("No tokenizer type provided. Defaulting to PTBTokenizer.");
+        factory = PTBTokenizer.factory(new CoreLabelTokenFactory(), options);
+        break;
+
+      default:
+        throw new IllegalArgumentException("No valid tokenizer type provided.\n" +
+            "Use -tokenize.language, -tokenize
