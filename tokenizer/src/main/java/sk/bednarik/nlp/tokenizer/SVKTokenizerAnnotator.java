@@ -246,4 +246,17 @@ public class SVKTokenizerAnnotator implements Annotator {
   /**
    * initFactory returns the right type of TokenizerFactory based on the options in the properties file and the type.
    * When adding a new Tokenizer, modify TokenizerType.getTokenizerType() to retrieve your tokenizer from the properties
-   * file, and then add a class is the switch structure here to instantiate the new Tokeniz
+   * file, and then add a class is the switch structure here to instantiate the new Tokenizer type.
+   *
+   * @param type the TokenizerType
+   * @param props the properties file
+   * @param extraOptions extra things that should be passed into the tokenizer constructor
+   */
+  private static TokenizerFactory<CoreLabel> initFactory(TokenizerType type, Properties props, String extraOptions)
+      throws IllegalArgumentException {
+    TokenizerFactory<CoreLabel> factory;
+    String options = props.getProperty("tokenize.options", null);
+
+    // set it to the equivalent of both extraOptions and options
+    // TODO: maybe we should always have getDefaultOptions() and
+    // expect the user t
