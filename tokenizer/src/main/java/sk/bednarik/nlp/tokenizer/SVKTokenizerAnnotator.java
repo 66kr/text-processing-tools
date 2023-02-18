@@ -232,4 +232,18 @@ public class SVKTokenizerAnnotator implements Annotator {
       } else {
         segmenterAnnotator = null;
         throw new RuntimeException("No segmenter implemented for: " +
-            LanguageInfo.getLanguageFromString(props.getProperty("tokenize.languag
+            LanguageInfo.getLanguageFromString(props.getProperty("tokenize.language")));
+      }
+    } else {
+      useSegmenter = false;
+      segmenterAnnotator = null;
+    }
+    VERBOSE = PropertiesUtils.getBool(props, "tokenize.verbose", verbose);
+    TokenizerType type = TokenizerType.getTokenizerType(props);
+    factory = initFactory(type, props, options);
+  }
+
+  /**
+   * initFactory returns the right type of TokenizerFactory based on the options in the properties file and the type.
+   * When adding a new Tokenizer, modify TokenizerType.getTokenizerType() to retrieve your tokenizer from the properties
+   * file, and then add a class is the switch structure here to instantiate the new Tokeniz
