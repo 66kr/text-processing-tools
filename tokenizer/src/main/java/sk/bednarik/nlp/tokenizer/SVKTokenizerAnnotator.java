@@ -259,4 +259,26 @@ public class SVKTokenizerAnnotator implements Annotator {
 
     // set it to the equivalent of both extraOptions and options
     // TODO: maybe we should always have getDefaultOptions() and
-    // expect the user t
+    // expect the user to turn off default options.  That would
+    // require all options to have negated options, but
+    // currently there are some which don't have that
+    if (options == null) {
+      options = type.getDefaultOptions();
+    }
+    if (extraOptions != null) {
+      if (extraOptions.endsWith(",")) {
+        options = extraOptions + options;
+      } else {
+        options = extraOptions + ',' + options;
+      }
+    }
+
+    switch (type) {
+
+      case Arabic:
+      case Chinese:
+        factory = null;
+        break;
+
+      case Spanish:
+        factory = SpanishTok
