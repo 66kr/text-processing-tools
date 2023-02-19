@@ -350,4 +350,20 @@ public class SVKTokenizerAnnotator implements Annotator {
   }
 
   /**
-   * Does the actual work of splitting TextAn
+   * Does the actual work of splitting TextAnnotation into CoreLabels, which are then attached to the TokensAnnotation.
+   */
+  @Override
+  public void annotate(Annotation annotation) {
+    if (VERBOSE) {
+      log.info("Tokenizing ... ");
+    }
+
+    // for Arabic and Chinese use a segmenter instead
+    if (useSegmenter) {
+      segmenterAnnotator.annotate(annotation);
+      // set indexes into document wide tokens list
+      setTokenBeginTokenEnd(annotation.get(CoreAnnotations.TokensAnnotation.class));
+      setNewlineStatus(annotation.get(CoreAnnotations.TokensAnnotation.class));
+      return;
+    }
+
