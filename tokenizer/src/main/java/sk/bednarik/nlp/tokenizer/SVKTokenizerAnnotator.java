@@ -309,4 +309,24 @@ public class SVKTokenizerAnnotator implements Annotator {
 
       default:
         throw new IllegalArgumentException("No valid tokenizer type provided.\n" +
-            "Use -tokenize.language, -tokenize
+            "Use -tokenize.language, -tokenize.class, or -tokenize.whitespace \n" +
+            "to specify a tokenizer.");
+    }
+    return factory;
+  }
+
+  /**
+   * Returns a thread-safe tokenizer
+   */
+  public Tokenizer<CoreLabel> getTokenizer(Reader r) {
+    return factory.getTokenizer(r);
+  }
+
+  /**
+   * Helper method to set the TokenBeginAnnotation and TokenEndAnnotation of every token.
+   */
+  private static void setTokenBeginTokenEnd(List<CoreLabel> tokensList) {
+    int tokenIndex = 0;
+    for (CoreLabel token : tokensList) {
+      token.set(CoreAnnotations.TokenBeginAnnotation.class, tokenIndex);
+      token.set(CoreAnnotations.TokenEndAnnotation
