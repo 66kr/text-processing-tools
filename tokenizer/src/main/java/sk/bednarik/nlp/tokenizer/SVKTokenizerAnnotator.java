@@ -329,4 +329,25 @@ public class SVKTokenizerAnnotator implements Annotator {
     int tokenIndex = 0;
     for (CoreLabel token : tokensList) {
       token.set(CoreAnnotations.TokenBeginAnnotation.class, tokenIndex);
-      token.set(CoreAnnotations.TokenEndAnnotation
+      token.set(CoreAnnotations.TokenEndAnnotation.class, tokenIndex + 1);
+      tokenIndex++;
+    }
+  }
+
+  /**
+   * set isNewline()
+   */
+  private static void setNewlineStatus(List<CoreLabel> tokensList) {
+    // label newlines
+    for (CoreLabel token : tokensList) {
+      if (token.word().equals(AbstractTokenizer.NEWLINE_TOKEN) && (token.endPosition() - token.beginPosition()
+          == 1)) {
+        token.set(CoreAnnotations.IsNewlineAnnotation.class, true);
+      } else {
+        token.set(CoreAnnotations.IsNewlineAnnotation.class, false);
+      }
+    }
+  }
+
+  /**
+   * Does the actual work of splitting TextAn
