@@ -367,3 +367,12 @@ public class SVKTokenizerAnnotator implements Annotator {
       return;
     }
 
+    if (annotation.containsKey(CoreAnnotations.TextAnnotation.class)) {
+      String text = annotation.get(CoreAnnotations.TextAnnotation.class);
+      Reader r = new StringReader(text);
+      // don't wrap in BufferedReader.  It gives you nothing for in-memory String unless you need the readLine() method!
+
+      List<CoreLabel> tokens = getTokenizer(r).tokenize();
+      // cdm 2010-05-15: This is now unnecessary, as it is done in CoreLabelTokenFactory
+      // for (CoreLabel token: tokens) {
+      // token.set(CoreAnnotations.TextAnnotation.class, token.get(CoreAnnot
