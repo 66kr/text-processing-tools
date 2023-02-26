@@ -398,4 +398,18 @@ public class SVKTokenizerAnnotator implements Annotator {
 
   @Override
   public Set<Class<? extends CoreAnnotation>> requires() {
-    retur
+    return Collections.emptySet();
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requirementsSatisfied() {
+    return new HashSet<>(Arrays.asList(
+        CoreAnnotations.TextAnnotation.class,
+        CoreAnnotations.TokensAnnotation.class,
+        CoreAnnotations.CharacterOffsetBeginAnnotation.class,
+        CoreAnnotations.CharacterOffsetEndAnnotation.class,
+        CoreAnnotations.BeforeAnnotation.class,
+        CoreAnnotations.AfterAnnotation.class,
+        CoreAnnotations.TokenBeginAnnotation.class,
+        CoreAnnotations.TokenEndAnnotation.class,
+        
