@@ -375,4 +375,27 @@ public class SVKTokenizerAnnotator implements Annotator {
       List<CoreLabel> tokens = getTokenizer(r).tokenize();
       // cdm 2010-05-15: This is now unnecessary, as it is done in CoreLabelTokenFactory
       // for (CoreLabel token: tokens) {
-      // token.set(CoreAnnotations.TextAnnotation.class, token.get(CoreAnnot
+      // token.set(CoreAnnotations.TextAnnotation.class, token.get(CoreAnnotations.TextAnnotation.class));
+      // }
+
+      // label newlines
+      setNewlineStatus(tokens);
+
+      // set indexes into document wide token list
+      setTokenBeginTokenEnd(tokens);
+
+      // add tokens list to annotation
+      annotation.set(CoreAnnotations.TokensAnnotation.class, tokens);
+
+      if (VERBOSE) {
+        log.info("done.");
+        log.info("Tokens: " + annotation.get(CoreAnnotations.TokensAnnotation.class));
+      }
+    } else {
+      throw new RuntimeException("Tokenizer unable to find text in annotation: " + annotation);
+    }
+  }
+
+  @Override
+  public Set<Class<? extends CoreAnnotation>> requires() {
+    retur
