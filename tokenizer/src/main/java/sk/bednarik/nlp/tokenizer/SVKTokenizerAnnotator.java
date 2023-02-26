@@ -412,4 +412,12 @@ public class SVKTokenizerAnnotator implements Annotator {
         CoreAnnotations.AfterAnnotation.class,
         CoreAnnotations.TokenBeginAnnotation.class,
         CoreAnnotations.TokenEndAnnotation.class,
-        
+        CoreAnnotations.PositionAnnotation.class,
+        CoreAnnotations.IndexAnnotation.class,
+        CoreAnnotations.OriginalTextAnnotation.class,
+        CoreAnnotations.ValueAnnotation.class,
+        CoreAnnotations.IsNewlineAnnotation.class
+    ));
+  }
+
+}
