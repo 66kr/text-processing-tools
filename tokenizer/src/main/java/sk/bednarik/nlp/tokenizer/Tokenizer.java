@@ -10,4 +10,20 @@ import java.util.List;
 
 public class Tokenizer {
 
-  public static void 
+  public static void main(String[] args) throws IOException {
+    tokenizeCoreNLP("sourceData.txt");
+  }
+
+  public static List<String> tokenizeCoreNLP(String input) throws IOException {
+    // option #2: By token
+    PTBTokenizer<CoreLabel> ptbt = new PTBTokenizer<>(new StringReader(input),
+        new CoreLabelTokenFactory(), "");
+    List<String> tokens = new ArrayList<>();
+    while (ptbt.hasNext()) {
+      CoreLabel label = ptbt.next();
+      tokens.add(label.toString());
+    }
+    return tokens;
+  }
+
+}
