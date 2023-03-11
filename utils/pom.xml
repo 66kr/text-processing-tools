@@ -27,4 +27,26 @@
     </dependency>
     <dependency>
       <groupId>sk.bednarik.nlp</groupId>
-      <artifactId>stemmer</artifac
+      <artifactId>stemmer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>sanitizer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>anonymizer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>ner</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>sspliter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>parser</artifactId>
+    </dependency>
+    <depende
