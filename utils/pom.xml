@@ -49,4 +49,25 @@
       <groupId>sk.bednarik.nlp</groupId>
       <artifactId>parser</artifactId>
     </dependency>
-    <depende
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>lemmatizer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>times</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>tagger</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>sk.bednarik.nlp</groupId>
+      <artifactId>commons</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>joda-time</group
