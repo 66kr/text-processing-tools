@@ -47,4 +47,25 @@ public class AnnotationFilesUtils {
           new FileInputStream(new File(fromFolder + id + ".tsv")), "UTF-8"))) {
         String line;
         int i = 0;
-        while (
+        while ((line = br.readLine()) != null) {
+          String[] parts = line.split("\t");
+          writer.println(parts[0] + "\t" + parts[4] + "\t" + labels.get(i).ner());
+          i++;
+        }
+      }
+    }
+  }
+
+  private static String convertLabel(String label) {
+    switch (label) {
+      case "ULICA":
+        return "Adresa";
+      case "OBEC":
+        return "Adresa";
+      case "MENO,OBEC":
+        return "Adresa";
+      case "PRIEZVISKO,OBEC":
+        return "Adresa";
+      case "PRIEZVISKO,ULICA":
+        return "Adresa";
+      case "MENO,ULICA
