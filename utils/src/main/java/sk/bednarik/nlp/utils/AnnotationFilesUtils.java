@@ -30,4 +30,21 @@ public class AnnotationFilesUtils {
             start = label.beginPosition();
           }
         } else {
-          st
+          start = label.beginPosition();
+        }
+        lastLabel = label;
+      }
+
+
+    }
+  }
+
+  public static void saveEvaluations(String id, Annotation annotation, String fromFolder, String toFolder)
+      throws IOException {
+    List<CoreLabel> labels = annotation.get(CoreAnnotations.TokensAnnotation.class);
+    try (PrintWriter writer = new PrintWriter(toFolder + id + ".tsv", "UTF-8")) {
+      try (BufferedReader br = new BufferedReader(new InputStreamReader(
+          new FileInputStream(new File(fromFolder + id + ".tsv")), "UTF-8"))) {
+        String line;
+        int i = 0;
+        while (
