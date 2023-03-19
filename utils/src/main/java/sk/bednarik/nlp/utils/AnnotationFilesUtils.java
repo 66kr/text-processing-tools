@@ -15,4 +15,19 @@ public class AnnotationFilesUtils {
     String originalText = annotation.get(CoreAnnotations.OriginalTextAnnotation.class);
     try (PrintWriter writer = new PrintWriter(folder + id + ".ann", "UTF-8")) {
       int i = 1;
-      CoreLabel lastLabel = nu
+      CoreLabel lastLabel = null;
+      int start = 0;
+      for (CoreLabel label : labels) {
+        if (lastLabel != null && label.ner().equals(lastLabel.ner())) {
+        } else if (lastLabel != null) {
+          if (!lastLabel.ner().equals("O")) {
+            writer.println(
+                "T" + i + "\t" + lastLabel.ner() + " " + start + " " + lastLabel.endPosition() + "\t" + originalText
+                    .substring(start, lastLabel.endPosition()));
+            start = label.beginPosition();
+            i++;
+          } else {
+            start = label.beginPosition();
+          }
+        } else {
+          st
