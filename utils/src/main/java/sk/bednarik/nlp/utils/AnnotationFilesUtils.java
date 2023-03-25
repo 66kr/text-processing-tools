@@ -68,4 +68,23 @@ public class AnnotationFilesUtils {
         return "Adresa";
       case "PRIEZVISKO,ULICA":
         return "Adresa";
-      case "MENO,ULICA
+      case "MENO,ULICA":
+        return "Adresa";
+           /* case "MENO":
+                return "Osoba";*//*
+            case "TITUL":
+                return "Osoba";
+            *//*case "PRIEZVISKO":
+                if(label.length()>3) {
+                    return "Osoba";
+                }else{
+                    return "O";
+                }*/
+      case "NUMBER":
+      case "DATE":
+        return "O";
+      default:
+        return label;
+    }
+  }
+}
