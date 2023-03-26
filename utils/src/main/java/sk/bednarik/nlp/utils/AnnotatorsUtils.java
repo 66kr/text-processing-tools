@@ -20,4 +20,17 @@ public class AnnotatorsUtils {
   }
 
   public static List<CoreMap> annotateToSentences(String input, AnnComponent... annComponents) {
-    return 
+    return annotateToSentences(input, AnnUtils.buildPipeline(annComponents));
+  }
+
+  private static List<CoreLabel> annotateToTokens(String input, AnnotationPipeline pipeline) {
+    Annotation annotation = new Annotation(input);
+    pipeline.annotate(annotation);
+    return annotation.get(CoreAnnotations.TokensAnnotation.class);
+  }
+
+  public static List<CoreLabel> annotateToTokens(String input, AnnComponent... annComponents) {
+    return annotateToTokens(input, AnnUtils.buildPipeline(annComponents));
+  }
+
+}
