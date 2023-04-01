@@ -12,4 +12,15 @@ import sk.bednarik.nlp.spring.FSTLemmaComponent;
 import sk.bednarik.nlp.ssplit.spring.SSplitLinguisticComponent;
 import sk.bednarik.nlp.tagger.spring.POSTaggerComponent;
 import sk.bednarik.nlp.times.spring.SVKNumberComponent;
-import sk
+import sk.bednarik.nlp.tokenizer.spring.TokenizerComponent;
+
+@Service
+@Import({TokenizerComponent.class, SSplitLinguisticComponent.class, FSTLemmaComponent.class, POSTaggerComponent.class,
+    SVKNumberComponent.class, NERHybridPipeline.class, AnonymizerPipeline.class})
+public class AnonymizerService {
+
+  private final TokenizerComponent tokenizerComponent;
+  private final SSplitLinguisticComponent splitLinguisticComponent;
+  private final FSTLemmaComponent fstLemmaComponent;
+  private final POSTaggerComponent posTaggerComponent;
+  private fina
