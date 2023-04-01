@@ -23,4 +23,13 @@ public class AnonymizerService {
   private final SSplitLinguisticComponent splitLinguisticComponent;
   private final FSTLemmaComponent fstLemmaComponent;
   private final POSTaggerComponent posTaggerComponent;
-  private fina
+  private final SVKNumberComponent svkNumberComponent;
+  private final NERHybridPipeline nerHybridPipeline;
+  private final AnonymizerPipeline anonymizerPipeline;
+
+  public AnonymizerService(TokenizerComponent tokenizerComponent,
+      SSplitLinguisticComponent splitLinguisticComponent, FSTLemmaComponent fstLemmaComponent,
+      POSTaggerComponent posTaggerComponent, SVKNumberComponent svkNumberComponent,
+      NERHybridPipeline nerHybridPipeline, AnonymizerPipeline anonymizerPipeline) {
+    this.tokenizerComponent = tokenizerComponent;
+    this.splitLinguisticComponent = splitLinguisticCompon
