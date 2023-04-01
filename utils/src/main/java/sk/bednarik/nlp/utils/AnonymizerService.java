@@ -32,4 +32,18 @@ public class AnonymizerService {
       POSTaggerComponent posTaggerComponent, SVKNumberComponent svkNumberComponent,
       NERHybridPipeline nerHybridPipeline, AnonymizerPipeline anonymizerPipeline) {
     this.tokenizerComponent = tokenizerComponent;
-    this.splitLinguisticComponent = splitLinguisticCompon
+    this.splitLinguisticComponent = splitLinguisticComponent;
+    this.fstLemmaComponent = fstLemmaComponent;
+    this.posTaggerComponent = posTaggerComponent;
+    this.svkNumberComponent = svkNumberComponent;
+    this.nerHybridPipeline = nerHybridPipeline;
+    this.anonymizerPipeline = anonymizerPipeline;
+  }
+
+  public String anonymize(String input) {
+    Annotation annotation = new Annotation(input);
+    AnnotationPipeline pipeline = AnnUtils
+        .buildPipeline(tokenizerComponent, splitLinguisticComponent, fstLemmaComponent, posTaggerComponent,
+            svkNumberComponent, nerHybridPipeline, anonymizerPipeline);
+    pipeline.annotate(annotation);
+    
