@@ -46,4 +46,7 @@ public class AnonymizerService {
         .buildPipeline(tokenizerComponent, splitLinguisticComponent, fstLemmaComponent, posTaggerComponent,
             svkNumberComponent, nerHybridPipeline, anonymizerPipeline);
     pipeline.annotate(annotation);
-    
+    return annotation.get(AsurAnnotations.ScrubbedTextAnnotation.class);
+  }
+
+}
