@@ -13,4 +13,24 @@ import sk.bednarik.nlp.utils.model.Lemma;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import java.util.Option
+import java.util.Optional;
+
+import static java.util.stream.Collectors.toList;
+
+public class FSTLemmatizerOrStemmer {
+
+  private FST<CharsRef> fst;
+  private SlovakStemmer slovakStemmer;
+
+  public FSTLemmatizerOrStemmer(File file) throws IOException {
+    slovakStemmer = new SlovakStemmer();
+    fst = FST.read(file.toPath(), CharSequenceOutputs.getSingleton());
+  }
+
+  public List<Lemma> lemmatizeOrStemString(List<Token> input, boolean keepNotLemmatized, boolean allowStemming)
+      throws IOException {
+    return input.stream()
+        .map(token -> {
+          String[] text = lemmatize(token)
+              .orElse(
+                  lemmatize
