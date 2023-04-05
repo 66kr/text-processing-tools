@@ -48,4 +48,22 @@ public class FSTLemmatizerOrStemmer {
   }
 
   private Optional<String[]> originalWord(Token token, boolean keepNotLemmatized) {
-    return keepNo
+    return keepNotLemmatized ? Optional.of(new String[]{token.getText()}) : Optional.empty();
+  }
+
+  public Optional<String[]> stem(Token token, boolean allowStemming) {
+    if (allowStemming) {
+      char[] wordCharArray = token.getText().toCharArray();
+      int size = slovakStemmer.stem(wordCharArray, wordCharArray.length);
+      return Optional.of(new String[]{new String(wordCharArray, 0, size)});
+    } else {
+      return Optional.empty();
+    }
+  }
+
+  private Optional<String[]> lemmatize(Token token) {
+    return getLemma(token.getText());
+  }
+
+  private Optional<String[]> lemmatizeLowerCase(Token token) {
+    ret
