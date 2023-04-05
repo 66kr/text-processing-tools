@@ -33,4 +33,19 @@ public class FSTLemmatizerOrStemmer {
         .map(token -> {
           String[] text = lemmatize(token)
               .orElse(
-                  lemmatize
+                  lemmatizeLowerCase(token)
+                      .orElse(
+                          lemmatizeProperCase(token)
+                              .orElse(
+                                  stem(token, allowStemming)
+                                      .orElse(
+                                          originalWord(token, keepNotLemmatized)
+                                              .orElse(new String[0])))));
+          return new Lemma(token, text);
+        })
+        .collect(toList());
+
+  }
+
+  private Optional<String[]> originalWord(Token token, boolean keepNotLemmatized) {
+    return keepNo
