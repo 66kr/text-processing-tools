@@ -66,4 +66,19 @@ public class FSTLemmatizerOrStemmer {
   }
 
   private Optional<String[]> lemmatizeLowerCase(Token token) {
-    ret
+    return getLemma(token.getText().toLowerCase());
+  }
+
+  private Optional<String[]> lemmatizeProperCase(Token token) {
+    return getLemma(WordUtils.capitalizeFully(token.getText()));
+  }
+
+  public Optional<String[]> getLemma(String text) {
+    try {
+      return Optional.of(Util.get(fst, new BytesRef(text)).toString().split("\\|"));
+    } catch (IOException exception) {
+      return Optional.empty();
+    }
+  }
+
+}
