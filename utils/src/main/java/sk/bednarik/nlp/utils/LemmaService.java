@@ -22,4 +22,16 @@ public class LemmaService {
   private final FSTLemmaComponent fstLemmaComponent;
   private final FSTLemmaKeepNotLemmatizedComponent fstLemmaKeepNotLemmatizedComponent;
   private final POSLemmaComponent posLemmaComponent;
-  private f
+  private final POSTaggerComponent posTaggerComponent;
+
+  public LemmaService(TokenizerComponent tokenizerComponent,
+      SSplitLinguisticComponent splitLinguisticComponent,
+      @Qualifier("keepOriginal")
+      FSTLemmaComponent fstLemmaComponent,
+      @Qualifier("keepNotLemmatized")
+      FSTLemmaKeepNotLemmatizedComponent fstLemmaKeepNotLemmatizedComponent,
+      POSLemmaComponent posLemmaComponent,
+      POSTaggerComponent posTaggerComponent) {
+    this.tokenizerComponent = tokenizerComponent;
+    this.splitLinguisticComponent = splitLinguisticComponent;
+    this.fstLemmaComponent
