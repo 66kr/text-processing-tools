@@ -34,4 +34,15 @@ public class LemmaService {
       POSTaggerComponent posTaggerComponent) {
     this.tokenizerComponent = tokenizerComponent;
     this.splitLinguisticComponent = splitLinguisticComponent;
-    this.fstLemmaComponent
+    this.fstLemmaComponent = fstLemmaComponent;
+    this.posLemmaComponent = posLemmaComponent;
+    this.posTaggerComponent = posTaggerComponent;
+    this.fstLemmaKeepNotLemmatizedComponent = fstLemmaKeepNotLemmatizedComponent;
+  }
+
+  public List<CoreMap> lemmatize(String input) {
+    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, fstLemmaComponent);
+  }
+
+  public List<CoreMap> lemmatizeKeepNotLemmatized(String input) {
+    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, fst
