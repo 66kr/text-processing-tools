@@ -45,4 +45,11 @@ public class LemmaService {
   }
 
   public List<CoreMap> lemmatizeKeepNotLemmatized(String input) {
-    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, fst
+    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, fstLemmaKeepNotLemmatizedComponent);
+  }
+
+  public List<CoreMap> lemmatizeWithPOS(String input) {
+    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent,
+        posLemmaComponent);
+  }
+}
