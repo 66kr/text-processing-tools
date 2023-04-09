@@ -10,4 +10,16 @@ import sk.bednarik.nlp.spring.FSTLemmaKeepNotLemmatizedComponent;
 import sk.bednarik.nlp.spring.POSLemmaComponent;
 import sk.bednarik.nlp.ssplit.spring.SSplitLinguisticComponent;
 import sk.bednarik.nlp.tagger.spring.POSTaggerComponent;
-import sk.bednarik.nl
+import sk.bednarik.nlp.tokenizer.spring.TokenizerComponent;
+
+@Service
+@Import({TokenizerComponent.class, SSplitLinguisticComponent.class, FSTLemmaComponent.class, FSTLemmaKeepNotLemmatizedComponent.class, POSLemmaComponent.class,
+    POSTaggerComponent.class})
+public class LemmaService {
+
+  private final TokenizerComponent tokenizerComponent;
+  private final SSplitLinguisticComponent splitLinguisticComponent;
+  private final FSTLemmaComponent fstLemmaComponent;
+  private final FSTLemmaKeepNotLemmatizedComponent fstLemmaKeepNotLemmatizedComponent;
+  private final POSLemmaComponent posLemmaComponent;
+  private f
