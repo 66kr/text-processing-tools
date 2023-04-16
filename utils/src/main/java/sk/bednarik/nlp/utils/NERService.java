@@ -18,4 +18,15 @@ import sk.bednarik.nlp.tokenizer.spring.TokenizerComponent;
     SVKNumberComponent.class, NERLinguisticPipeline.class, StemmerComponent.class, NERHybridPipeline.class})
 public class NERService {
 
-  private final Tokenize
+  private final TokenizerComponent tokenizerComponent;
+  private final SSplitLinguisticComponent splitLinguisticComponent;
+  private final FSTLemmaComponent fstLemmaComponent;
+  private final StemmerComponent stemmerComponent;
+  private final POSTaggerComponent posTaggerComponent;
+  private final SVKNumberComponent svkNumberComponent;
+  private final NERLinguisticPipeline nerLinguisticPipeline;
+  private final NERHybridPipeline nerHybridPipeline;
+
+  public NERService(TokenizerComponent tokenizerComponent,
+      SSplitLinguisticComponent splitLinguisticComponent,
+      FSTLemmaComponent fstLemmaCompo
