@@ -41,4 +41,17 @@ public class NERService {
     this.stemmerComponent = stemmerComponent;
     this.posTaggerComponent = posTaggerComponent;
     this.svkNumberComponent = svkNumberComponent;
-    this.nerLinguisticPipeline = nerLinguist
+    this.nerLinguisticPipeline = nerLinguisticPipeline;
+    this.nerHybridPipeline = nerHybridPipeline;
+  }
+
+  public List<CoreMap> lingNER(String input) {
+    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, fstLemmaComponent,
+        stemmerComponent, posTaggerComponent, svkNumberComponent, nerLinguisticPipeline);
+  }
+
+  public List<CoreMap> hybridNER(String input) {
+    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, fstLemmaComponent,
+        posTaggerComponent, svkNumberComponent, nerHybridPipeline);
+  }
+}
