@@ -29,4 +29,16 @@ public class NERService {
 
   public NERService(TokenizerComponent tokenizerComponent,
       SSplitLinguisticComponent splitLinguisticComponent,
-      FSTLemmaComponent fstLemmaCompo
+      FSTLemmaComponent fstLemmaComponent,
+      StemmerComponent stemmerComponent,
+      POSTaggerComponent posTaggerComponent,
+      SVKNumberComponent svkNumberComponent,
+      NERLinguisticPipeline nerLinguisticPipeline,
+      NERHybridPipeline nerHybridPipeline) {
+    this.tokenizerComponent = tokenizerComponent;
+    this.splitLinguisticComponent = splitLinguisticComponent;
+    this.fstLemmaComponent = fstLemmaComponent;
+    this.stemmerComponent = stemmerComponent;
+    this.posTaggerComponent = posTaggerComponent;
+    this.svkNumberComponent = svkNumberComponent;
+    this.nerLinguisticPipeline = nerLinguist
