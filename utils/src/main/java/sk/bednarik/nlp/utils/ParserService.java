@@ -26,4 +26,17 @@ public class ParserService {
   public ParserService(TokenizerComponent tokenizerComponent,
       SSplitLinguisticComponent splitLinguisticComponent,
       POSTaggerComponent posTaggerComponent,
-      POSLemmaComponent posLemmaCompo
+      POSLemmaComponent posLemmaComponent,
+      DependencyParserComponent dependencyParserComponent,
+      ConlluComponent conlluComponent) {
+    this.tokenizerComponent = tokenizerComponent;
+    this.splitLinguisticComponent = splitLinguisticComponent;
+    this.posTaggerComponent = posTaggerComponent;
+    this.posLemmaComponent = posLemmaComponent;
+    this.dependencyParserComponent = dependencyParserComponent;
+    this.conlluComponent = conlluComponent;
+  }
+
+  public List<CoreMap> parse(String input) {
+    return AnnotatorsUtils
+        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent, posLe
