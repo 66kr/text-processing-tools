@@ -14,4 +14,16 @@ import sk.bednarik.nlp.tokenizer.spring.TokenizerComponent;
 @Service
 @Import({TokenizerComponent.class, SSplitLinguisticComponent.class, POSTaggerComponent.class, POSLemmaComponent.class,
     DependencyParserComponent.class, ConlluComponent.class})
-publ
+public class ParserService {
+
+  private final TokenizerComponent tokenizerComponent;
+  private final SSplitLinguisticComponent splitLinguisticComponent;
+  private final POSTaggerComponent posTaggerComponent;
+  private final POSLemmaComponent posLemmaComponent;
+  private final DependencyParserComponent dependencyParserComponent;
+  private final ConlluComponent conlluComponent;
+
+  public ParserService(TokenizerComponent tokenizerComponent,
+      SSplitLinguisticComponent splitLinguisticComponent,
+      POSTaggerComponent posTaggerComponent,
+      POSLemmaComponent posLemmaCompo
