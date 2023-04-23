@@ -39,4 +39,14 @@ public class ParserService {
 
   public List<CoreMap> parse(String input) {
     return AnnotatorsUtils
-        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent, posLe
+        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent, posLemmaComponent,
+            dependencyParserComponent);
+  }
+
+  public List<CoreMap> parseWithConllu(String input) {
+    return AnnotatorsUtils
+        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent, posLemmaComponent,
+            dependencyParserComponent, conlluComponent);
+  }
+
+}
