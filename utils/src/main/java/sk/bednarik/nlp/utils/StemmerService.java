@@ -19,4 +19,14 @@ public class StemmerService {
   private final StemmerComponent stemmerComponent;
 
   public StemmerService(TokenizerComponent tokenizerComponent,
-      SSplitLinguisticComponent splitLinguisticCom
+      SSplitLinguisticComponent splitLinguisticComponent,
+      StemmerComponent stemmerComponent) {
+    this.tokenizerComponent = tokenizerComponent;
+    this.splitLinguisticComponent = splitLinguisticComponent;
+    this.stemmerComponent = stemmerComponent;
+  }
+
+  public List<CoreMap> stem(String input) {
+    return AnnotatorsUtils.annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, stemmerComponent);
+  }
+}
