@@ -16,4 +16,15 @@ import sk.bednarik.nlp.tokenizer.spring.TokenizerComponent;
     DependencyParserComponent.class, SynonymsComponent.class})
 public class SynonymsService {
 
-  private final
+  private final TokenizerComponent tokenizerComponent;
+  private final SSplitLinguisticComponent splitLinguisticComponent;
+  private final POSTaggerComponent posTaggerComponent;
+  private final POSLemmaComponent posLemmaComponent;
+  private final DependencyParserComponent dependencyParserComponent;
+  private final SynonymsComponent synonymsComponent;
+
+  public SynonymsService(TokenizerComponent tokenizerComponent,
+      SSplitLinguisticComponent splitLinguisticComponent,
+      POSTaggerComponent posTaggerComponent,
+      POSLemmaComponent posLemmaComponent,
+      De
