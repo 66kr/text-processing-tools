@@ -39,4 +39,7 @@ public class SynonymsService {
 
   public List<CoreMap> findSynonyms(String input) {
     return AnnotatorsUtils
-        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent, po
+        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent, posLemmaComponent,
+            dependencyParserComponent, synonymsComponent);
+  }
+}
