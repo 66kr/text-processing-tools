@@ -11,4 +11,16 @@ import sk.bednarik.nlp.tagger.spring.POSTaggerComponent;
 import sk.bednarik.nlp.tokenizer.spring.TokenizerComponent;
 
 @Service
-@Import({TokenizerComp
+@Import({TokenizerComponent.class, SSplitLinguisticComponent.class, POSTaggerComponent.class})
+public class TaggerService {
+
+  private final TokenizerComponent tokenizerComponent;
+  private final SSplitLinguisticComponent splitLinguisticComponent;
+  private final POSTaggerComponent posTaggerComponent;
+
+  public TaggerService(TokenizerComponent tokenizerComponent,
+      SSplitLinguisticComponent splitLinguisticComponent,
+      POSTaggerComponent posTaggerComponent) {
+    this.tokenizerComponent = tokenizerComponent;
+    this.splitLinguisticComponent = splitLinguisticComponent;
+    this.posTaggerComponent = posTaggerC
