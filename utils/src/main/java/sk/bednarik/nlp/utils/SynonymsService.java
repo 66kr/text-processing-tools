@@ -27,4 +27,16 @@ public class SynonymsService {
       SSplitLinguisticComponent splitLinguisticComponent,
       POSTaggerComponent posTaggerComponent,
       POSLemmaComponent posLemmaComponent,
-      De
+      DependencyParserComponent dependencyParserComponent,
+      SynonymsComponent synonymsComponent) {
+    this.tokenizerComponent = tokenizerComponent;
+    this.splitLinguisticComponent = splitLinguisticComponent;
+    this.posTaggerComponent = posTaggerComponent;
+    this.posLemmaComponent = posLemmaComponent;
+    this.dependencyParserComponent = dependencyParserComponent;
+    this.synonymsComponent = synonymsComponent;
+  }
+
+  public List<CoreMap> findSynonyms(String input) {
+    return AnnotatorsUtils
+        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent, po
