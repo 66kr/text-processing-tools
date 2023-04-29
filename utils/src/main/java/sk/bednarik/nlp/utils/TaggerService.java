@@ -23,4 +23,15 @@ public class TaggerService {
       POSTaggerComponent posTaggerComponent) {
     this.tokenizerComponent = tokenizerComponent;
     this.splitLinguisticComponent = splitLinguisticComponent;
-    this.posTaggerComponent = posTaggerC
+    this.posTaggerComponent = posTaggerComponent;
+  }
+
+  public List<CoreMap> tag(String input) {
+    return AnnotatorsUtils
+        .annotateToSentences(input, tokenizerComponent, splitLinguisticComponent, posTaggerComponent);
+  }
+
+  public AnnotationPipeline buildLinguisticPipeline() {
+    return AnnUtils.buildPipeline(tokenizerComponent, splitLinguisticComponent, posTaggerComponent);
+  }
+}
