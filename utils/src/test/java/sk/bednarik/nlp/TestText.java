@@ -25,4 +25,10 @@ public class TestText {
       +
       "\n" +
       "             Navrhovaná činnosť „Výkup železných a neželezných kovov, papiera “, ktorej účelom je výkup železných a neželezných kovov, papiera, ich dočasné zhromaždenie a uskladnenie, navrhovaná  v zastavanom území Mesta Kremnica,   na pozemkoch C KN par. č. 1878/1, 1878/2 a 1878/4\n"
-     
+      +
+      "                                       s a     n e b u d e    p o s u d z o v a ť  \n" +
+      "\n" +
+      "podľa  zákona.  Pre uvedenú činnosť  je možné požiadať o povolenie podľa osobitných predpisov. Pre realizáciu sa navrhuje variant č. A pre ktorý sa stanovujú tieto  podmienky.  \n"
+      +
+      "\n" +
+      "        Pri príprave dokumentácie stavby k stavebnému konaniu a v procese konania o povolení  činnosti podľa osobitných predpisov je potrebné zohľadniť v plnej miere  rešpektovať pripomienky, ktoré vyplynuli 
