@@ -45,4 +45,6 @@ public class TestText {
       "4. Pri realizácií zámeru a prevádzkovaní navrhovanej činnosti vykonať opatrenia na ochranu existujúcich drevín na pozemku par. č. 1878//4 v zmysle § 47 zákona č. 543/2002 Z. z. o ochrane prírody a krajiny. \n"
       +
       "                                           O d ô v o d n e n i e\n" +
-      "             Navrhovateľ, Anita Hrmová – AEM zberné suroviny, Veternícka 169/66, 967 01 Kremnica,  IČO 00321125 požiadala   dňa 17.04.2015 Okresný úrad 
+      "             Navrhovateľ, Anita Hrmová – AEM zberné suroviny, Veternícka 169/66, 967 01 Kremnica,  IČO 00321125 požiadala   dňa 17.04.2015 Okresný úrad Žiar nad Hronom, odbor starostlivosti o životné prostredie, o  prerokovania zámeru „ Výkup a skladovanie železných  a neželezných  kovov, papiera “   v k. ú. Kremnica  na pozemkoch parcelné č. 1878/1, 1878/2\n"
+      +
+      "a 1878/4.  Nakoľko predmetné podanie nespĺňalo náležitosti  podľa ustanovení § 22 ods. 3 a 4 zákona, príslušný orgán vyzval  navrhovateľa o doplnenie zámeru činnosti v súlade s ustanoveniam § 22 ods. 3 a 4 zákona a nakoľko zámer činnosti nebol doplnený v stanovenom termíne, príslušný orgán rozhodnutím pod č. s. : OU-ZH-OSZP- 2015/004740  ( č. záznamu: 2015/0
