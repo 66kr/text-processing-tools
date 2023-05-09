@@ -50,4 +50,14 @@ public class TestText {
       "a 1878/4.  Nakoľko predmetné podanie nespĺňalo náležitosti  podľa ustanovení § 22 ods. 3 a 4 zákona, príslušný orgán vyzval  navrhovateľa o doplnenie zámeru činnosti v súlade s ustanoveniam § 22 ods. 3 a 4 zákona a nakoľko zámer činnosti nebol doplnený v stanovenom termíne, príslušný orgán rozhodnutím pod č. s. : OU-ZH-OSZP- 2015/004740  ( č. záznamu: 2015/0018401 )  dňa 02.06.2015 v danej veci prerušil správne konanie.  Dňa 29.06.2015 navrhovateľ doplnil zámer činnosti v súlade s ustanoveniami § 22 zákona a požiadal o vykonanie zisťovacieho konania podľa zákona. \n"
       +
       "\n" +
-      "          Navrhovaná činnosť, ktorú  vypracoval  Ing. Vladimír Slančík, Jabloňová 1355/16, 960 01 Zvolen  v  06/2015  je  podľa  prílohy   č. 8  k zákona je zaradená  do kapitoly 9. Infraštruktúra, pol. č. 10 Zhromažďovanie odpadov zo železných kovov, z neželezných kovov alebo starých vozidiel  v časti B zisťovacie konanie  je bez limitu  v zmysle § 18 
+      "          Navrhovaná činnosť, ktorú  vypracoval  Ing. Vladimír Slančík, Jabloňová 1355/16, 960 01 Zvolen  v  06/2015  je  podľa  prílohy   č. 8  k zákona je zaradená  do kapitoly 9. Infraštruktúra, pol. č. 10 Zhromažďovanie odpadov zo železných kovov, z neželezných kovov alebo starých vozidiel  v časti B zisťovacie konanie  je bez limitu  v zmysle § 18 ods. 2 písm. b) zákona o posudzovaní podlieha  zisťovaciemu konaniu podľa § 29 zákona.     \n"
+      +
+      "\n" +
+      "               \n" +
+      "P o u č e n i e\n" +
+      "\n" +
+      "Proti tomuto rozhodnutiu možno podať odvolanie podľa § 53 a § 54 zákona č. 71/1967 Zb. o správnom konaní (správny poriadok) v znení neskorších predpisov na Okresnom úrade Žiar \n"
+      +
+      "\n" +
+      "nad Hronom, odbor starostlivosti o životné prostredie v lehote do 15 dní odo dňa doručenia \n" +
+      "rozhodnutia účastníkovi konania. V prípade verejnosti podľa § 24 ods. 4 zákona sa 
