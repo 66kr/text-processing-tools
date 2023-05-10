@@ -60,4 +60,13 @@ public class TestText {
       +
       "\n" +
       "nad Hronom, odbor starostlivosti o životné prostredie v lehote do 15 dní odo dňa doručenia \n" +
-      "rozhodnutia účastníkovi konania. V prípade verejnosti podľa § 24 ods. 4 zákona sa 
+      "rozhodnutia účastníkovi konania. V prípade verejnosti podľa § 24 ods. 4 zákona sa za deň doručenia rozhodnutia považuje 15. deň  zverejnenia rozhodnutia vydaného v zisťovacom konaní podľa § 29 ods. 15 zákona.  Toto rozhodnutie je preskúmateľné súdom podľa zákona č. 99/1963 Zb.  Občiansky súdny poriadok v znení neskorších predpisov až po vyčerpaní riadnych opravných prostriedkov. \n"
+      +
+      "                                                                                                             Ing. Dušan Berkeš  \n"
+      +
+      "\n" +
+      "\n" +
+      "\n" +
+      "                        \n" +
+      "\n" +
+      "                              vedúci odboru\n
