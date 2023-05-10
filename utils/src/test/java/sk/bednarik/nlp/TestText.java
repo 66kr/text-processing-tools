@@ -69,4 +69,13 @@ public class TestText {
       "\n" +
       "                        \n" +
       "\n" +
-      "                              vedúci odboru\n
+      "                              vedúci odboru\n" +
+      "Doručuje sa:\n" +
+      "\n" +
+      "1.  Anita Hrmová – AEM zberné suroviny, Veternícka 169/66,  967 01 Kremnica \n" +
+      "2.  Ministerstvo životného prostredia SR, Nám. Ľ. Štúra 1, 827 15 Bratislava \n" +
+      "3.  Mesto Kremnica, Štefánikovo námestie 1/1, 967 01 Kremnica   \n" +
+      "4.  Krajský pamiatkový úrad Banská Bystrica, Lazovná ulica č. 8, 975 65 Banská Bystrica  \n" +
+      "\n" +
+      "5.  Obvodný banský úrad  Banská Bystrica, ul. 9. Mája 2, 975 65 Banská Bystrica\n" +
+      "6.  Regionálny úrad verejného zdravotníctva, Sládkovičova 484/9,965 24 Žiar nad Hronom
