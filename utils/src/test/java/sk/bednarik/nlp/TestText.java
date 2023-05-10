@@ -78,4 +78,16 @@ public class TestText {
       "4.  Krajský pamiatkový úrad Banská Bystrica, Lazovná ulica č. 8, 975 65 Banská Bystrica  \n" +
       "\n" +
       "5.  Obvodný banský úrad  Banská Bystrica, ul. 9. Mája 2, 975 65 Banská Bystrica\n" +
-      "6.  Regionálny úrad verejného zdravotníctva, Sládkovičova 484/9,965 24 Žiar nad Hronom
+      "6.  Regionálny úrad verejného zdravotníctva, Sládkovičova 484/9,965 24 Žiar nad Hronom  \n" +
+      "\n" +
+      "7.  Okresné riaditeľstvo hasičského  a záchranného  zboru v Žiari nad Hronom, Ul.  \n" +
+      "\n" +
+      "     Priemyselná 12, 965 01 Žiar nad Hronom                                                                                                       \n"
+      +
+      "\n" +
+      "8.  Okresný úrad Žiar nad Hronom, odbor krízového riadenia, Nám. M. Slovenskej č.8, 965 01\n" +
+      "\n" +
+      "      Žiar nad Hronom \n" +
+      "9.  Okresný úrad Žiar nad Hronom, pozemkový a lesný odbor, Nám. M. Slovenskej č.8,\n" +
+      "\n" +
+      "  
