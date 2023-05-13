@@ -103,4 +103,6 @@ public class TestText {
       "Pre uvedenú činnosť je možné požiadať o povolenie podľa osobitných predpisov.",
       "Pre realizáciu sa navrhuje variant č.",
       "A pre ktorý sa stanovujú tieto podmienky.",
-      "Pri príprave dokumentácie stavby k stavebnému konaniu a v procese konania o povolení činnosti podľa osobitných predpisov je potrebné zohľadniť v plnej miere rešpektovať pripomienky, ktoré vyplynuli zo stanovísk doručených k zámeru a 
+      "Pri príprave dokumentácie stavby k stavebnému konaniu a v procese konania o povolení činnosti podľa osobitných predpisov je potrebné zohľadniť v plnej miere rešpektovať pripomienky, ktoré vyplynuli zo stanovísk doručených k zámeru a z opatrení navrhnutých v zámere: \n\n1. Dodržať a realizovať opatrenia na zmiernenie nepriaznivých vplyvov navrhovanej činnosti na životné prostredie počas prevádzky navrhnuté v kapitole 10. Zámeru.",
+      "2. V žiadosti o vydanie súhlasu povoľujúcim orgánom stanoviť kapacitu zariadenia a vymedziť jednotlivé druhy odpadov podľa katalógových čísiel s ktorými bude nakladané v navrhovanom zariadení v zmysle platných právnych predpisov.",
+      "3. Prevádzkou činnosti nesmú byť prekročené prípustné hodnoty určujúcich veličín hluku vo vonkajšom prostredí uvedené vo Vyhláške MZ SR č.549
