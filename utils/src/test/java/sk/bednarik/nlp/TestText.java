@@ -116,4 +116,10 @@ public class TestText {
       "Ing. Dušan Berkeš \n\n\n\n \n\n vedúci odboru\nDoručuje sa:\n\n1. Anita Hrmová – AEM zberné suroviny, Veternícka 169/66, 967 01 Kremnica \n2. Ministerstvo životného prostredia SR, Nám. Ľ. Štúra 1, 827 15 Bratislava \n3. Mesto Kremnica, Štefánikovo námestie 1/1, 967 01 Kremnica \n4. Krajský pamiatkový úrad Banská Bystrica, Lazovná ulica č. 8, 975 65 Banská Bystrica \n\n5. Obvodný banský úrad Banská Bystrica, ul. 9. Mája 2, 975 65 Banská Bystrica\n6. Regionálny úrad verejného zdravotníctva, Sládkovičova 484/9,965 24 Žiar nad Hronom \n\n7. Okresné riaditeľstvo hasičského a záchranného zboru v Žiari nad Hronom, Ul. \n\n Priemyselná 12, 965 01 Žiar nad Hronom \n\n8. Okresný úrad Žiar nad Hronom, odbor krízového riadenia, Nám. M. Slovenskej č.8, 965 01\n\n Žiar nad Hronom \n9. Okresný úrad Žiar nad Hronom, pozemkový a lesný odbor, Nám. M. Slovenskej č.8,\n\n 965 01 Žiar nad Hronom\n\n10. Okresný úrad Žiar nad Hronom, odbor starostlivosti o životné prostredie - štátna vodná \n správa, štátna správa ochrany prírody a krajiny, štátna správa odpadového hospodárstva, \n štátna správa ochrany ovzdušia \n11. Združenie domových samospráv, P.O.BOX 218, 850 00 Bratislava - Petržalka");
 
   private static final List<String> tokens1 = Arrays
-      .asList("ROZHODNUTIE", "Okresný", 
+      .asList("ROZHODNUTIE", "Okresný", "úrad", "Žiar", "nad", "Hronom", ",", "odbor", "starostlivosti", "o", "životné",
+          "prostredie", ",", "ako", "príslušný", "orgán", "štátnej", "správy", "na", "úseku", "posudzovania", "vplyvov",
+          "na", "životné", "prostredie", "podľa", "§", "56", "písm.", "b)", "zákona", "č.", "24/2006", "Z.",
+          "z.",
+          "o", "posudzovaní", "vplyvov", "na", "životné", "prostredie", "a", "o", "zmene", "a", "doplnení",
+          "niektorých", "zákonov", "v", "znení", "neskorších", "predpisov", ",", "v", "súlade", "s", "§", "2", "ods.",
+          "
