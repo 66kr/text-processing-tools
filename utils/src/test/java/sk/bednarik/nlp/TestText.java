@@ -127,4 +127,9 @@ public class TestText {
           "a", "podľa", "§", "5", "ods.", "1", "zákona", "NR", "SR", "č.", "525/2003", "Z.", "z.", "o", "štátnej",
           "správe", "starostlivosti", "o", "životné", "prostredie", "v", "znení", "neskorších", "predpisov", ",", "ako",
           "príslušný", "orgán", "štátnej", "správy", "na", "základe", "predloženého", "zámeru", "navrhovanej",
-          "činnosti", "``", "Výkup", "železných", "a", "neželeznýc
+          "činnosti", "``", "Výkup", "železných", "a", "neželezných", "kovov", ",", "papiera", "``", ",", "ktorý",
+          "predložila", "navrhovateľka", "Anita", "Hrmová", "--", "AEM", "zberné", "suroviny", ",", "Veternícka",
+          "169/66", ",", "967", "01", "Kremnica", ",", "IČO", "00321125", ",", "vykonal", "zisťovacie", "konanie",
+          "podľa", "§", "29", "ods.", "1", "zákona", "NR", "SR", "č.", "24/2006", "Z.", "z.", "o", "posudzovaní",
+          "vplyvov", "na", "životné", "prostredie", "v", "znení", "neskorších", "predpisov", "-LRB-", "ďalej", "len",
+          "``", "zákon", "``", "-RRB-
