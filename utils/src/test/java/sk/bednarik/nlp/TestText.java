@@ -132,4 +132,10 @@ public class TestText {
           "169/66", ",", "967", "01", "Kremnica", ",", "IČO", "00321125", ",", "vykonal", "zisťovacie", "konanie",
           "podľa", "§", "29", "ods.", "1", "zákona", "NR", "SR", "č.", "24/2006", "Z.", "z.", "o", "posudzovaní",
           "vplyvov", "na", "životné", "prostredie", "v", "znení", "neskorších", "predpisov", "-LRB-", "ďalej", "len",
-          "``", "zákon", "``", "-RRB-
+          "``", "zákon", "``", "-RRB-", "vydáva", "podľa", "§", "29", "zákona", "toto", "rozhodnutie", ":",
+          "Navrhovaná", "činnosť",
+          "``", "Výkup", "železných", "a", "neželezných", "kovov", ",", "papiera", "``", ",", "ktorej", "účelom", "je",
+          "výkup", "železných", "a", "neželezných", "kovov", ",", "papiera", ",", "ich", "dočasné", "zhromaždenie", "a",
+          "uskladnenie", ",", "navrhovaná", "v", "zastavanom", "území", "Mesta", "Kremnica", ",", "na", "pozemkoch",
+          "C", "KN", "par.", "č.", "1878/1", ",", "1878/2", "a", "1878/4", "sa", "nebude", "posudzovať", "podľa",
+          "zákona", ".", 
