@@ -164,4 +164,9 @@ public class TestText {
           "podanie", "nespĺňalo", "náležitosti", "podľa", "ustanovení", "§", "22", "ods.", "3", "a", "4", "zákona", ",",
           "príslušný", "orgán", "vyzval", "navrhovateľa", "o", "doplnenie", "zámeru", "činnosti", "v", "súlade", "s",
           "ustanoveniam", "§", "22", "ods.", "3", "a", "4", "zákona", "a", "nakoľko", "zámer", "činnosti", "nebol",
-          "doplnený", "v", "stanovenom", "termíne", ",", "prí
+          "doplnený", "v", "stanovenom", "termíne", ",", "príslušný", "orgán", "rozhodnutím", "pod", "č.", "s.", ":",
+          "OU-ZH-OSZP", "-", "2015/004740", "-LRB-", "č.", "záznamu", ":", "2015/0018401", "-RRB-", "dňa", "02.06.2015",
+          "v", "danej", "veci", "prerušil", "správne", "konanie", ".", "Dňa", "29.06.2015", "navrhovateľ", "doplnil",
+          "zámer", "činnosti", "v", "súlade", "s", "ustanoveniami", "§", "22", "zákona", "a", "požiadal", "o",
+          "vykonanie", "zisťovacieho", "konania", "podľa", "zákona", ".", "Navrhovaná", "činnosť", ",", "ktorú",
+          "vypracoval", "Ing.", "Vladimír", "Slančík", ",", "Jabloňová", "1355/16
