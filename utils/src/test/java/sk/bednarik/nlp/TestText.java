@@ -174,4 +174,9 @@ public class TestText {
           "Infraštruktúra", ",", "pol.", "č.", "10", "Zhromažďovanie", "odpadov", "zo", "železných", "kovov", ",", "z",
           "neželezných", "kovov", "alebo", "starých", "vozidiel", "v", "časti", "B", "zisťovacie", "konanie", "je",
           "bez", "limitu", "v", "zmysle", "§", "18", "ods.", "2", "písm.", "b)", "zákona", "o", "posudzovaní",
-          "podlieha", "zisťovaciemu", "konaniu", "podľa", "§", "29", "zá
+          "podlieha", "zisťovaciemu", "konaniu", "podľa", "§", "29", "zákona", ".", "Poučenie", "Proti", "tomuto",
+          "rozhodnutiu", "možno", "podať", "odvolanie", "podľa", "§", "53", "a", "§", "54", "zákona", "č.", "71/1967",
+          "Zb.", "o", "správnom", "konaní", "-LRB-", "správny", "poriadok", "-RRB-", "v", "znení", "neskorších",
+          "predpisov", "na", "Okresnom", "úrade", "Žiar", "nad", "Hronom", ",", "odbor", "starostlivosti", "o",
+          "životné", "prostredie", "v", "lehote", "do", "15", "dní", "odo", "dňa", "doručenia", "rozhodnutia",
+          "účastníkovi", "konania", ".", "V", "prípade", "verejnosti", "podľa", "§", "24
