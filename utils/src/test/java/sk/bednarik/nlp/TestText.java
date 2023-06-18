@@ -143,4 +143,9 @@ public class TestText {
           "ktorý", "sa", "stanovujú", "tieto", "podmienky", ".", "Pri", "príprave", "dokumentácie", "stavby", "k",
           "stavebnému", "konaniu", "a", "v", "procese", "konania", "o", "povolení", "činnosti", "podľa", "osobitných",
           "predpisov", "je", "potrebné", "zohľadniť", "v", "plnej", "miere", "rešpektovať", "pripomienky", ",", "ktoré",
-          "vyplynuli", "zo", "stanovísk", "doručených
+          "vyplynuli", "zo", "stanovísk", "doručených", "k", "zámeru", "a", "z", "opatrení", "navrhnutých", "v",
+          "zámere", ":", "1.", "Dodržať", "a", "realizovať", "opatrenia", "na", "zmiernenie", "nepriaznivých",
+          "vplyvov", "navrhovanej", "činnosti", "na", "životné", "prostredie", "počas", "prevádzky", "navrhnuté", "v",
+          "kapitole", "10.", "Zámeru", ".", "2.", "V", "žiadosti", "o", "vydanie", "súhlasu", "povoľujúcim", "orgánom",
+          "stanoviť", "kapacitu", "zariadenia", "a", "vymedziť", "jednotlivé", "druhy", "odpadov", "podľa",
+          "katalógových", "čísiel", "s", "ktorými", "bude", "nakladané
