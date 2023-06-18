@@ -159,4 +159,9 @@ public class TestText {
           "--", "AEM", "zberné", "suroviny", ",", "Veternícka", "169/66", ",", "967", "01", "Kremnica", ",", "IČO",
           "00321125", "požiadala", "dňa", "17.04.2015", "Okresný", "úrad", "Žiar", "nad", "Hronom", ",", "odbor",
           "starostlivosti", "o", "životné", "prostredie", ",", "o", "prerokovania", "zámeru", "``", "Výkup", "a",
-          "skladovanie", "železných", "a", "neželezných", "kovov", ","
+          "skladovanie", "železných", "a", "neželezných", "kovov", ",", "papiera", "``", "v", "k.", "ú.", "Kremnica",
+          "na", "pozemkoch", "parcelné", "č.", "1878/1", ",", "1878/2", "a", "1878/4", ".", "Nakoľko", "predmetné",
+          "podanie", "nespĺňalo", "náležitosti", "podľa", "ustanovení", "§", "22", "ods.", "3", "a", "4", "zákona", ",",
+          "príslušný", "orgán", "vyzval", "navrhovateľa", "o", "doplnenie", "zámeru", "činnosti", "v", "súlade", "s",
+          "ustanoveniam", "§", "22", "ods.", "3", "a", "4", "zákona", "a", "nakoľko", "zámer", "činnosti", "nebol",
+          "doplnený", "v", "stanovenom", "termíne", ",", "prí
