@@ -169,4 +169,9 @@ public class TestText {
           "v", "danej", "veci", "prerušil", "správne", "konanie", ".", "Dňa", "29.06.2015", "navrhovateľ", "doplnil",
           "zámer", "činnosti", "v", "súlade", "s", "ustanoveniami", "§", "22", "zákona", "a", "požiadal", "o",
           "vykonanie", "zisťovacieho", "konania", "podľa", "zákona", ".", "Navrhovaná", "činnosť", ",", "ktorú",
-          "vypracoval", "Ing.", "Vladimír", "Slančík", ",", "Jabloňová", "1355/16
+          "vypracoval", "Ing.", "Vladimír", "Slančík", ",", "Jabloňová", "1355/16", ",", "960", "01", "Zvolen", "v",
+          "06/2015", "je", "podľa", "prílohy", "č.", "8", "k", "zákona", "je", "zaradená", "do", "kapitoly", "9.",
+          "Infraštruktúra", ",", "pol.", "č.", "10", "Zhromažďovanie", "odpadov", "zo", "železných", "kovov", ",", "z",
+          "neželezných", "kovov", "alebo", "starých", "vozidiel", "v", "časti", "B", "zisťovacie", "konanie", "je",
+          "bez", "limitu", "v", "zmysle", "§", "18", "ods.", "2", "písm.", "b)", "zákona", "o", "posudzovaní",
+          "podlieha", "zisťovaciemu", "konaniu", "podľa", "§", "29", "zá
