@@ -148,4 +148,9 @@ public class TestText {
           "vplyvov", "navrhovanej", "činnosti", "na", "životné", "prostredie", "počas", "prevádzky", "navrhnuté", "v",
           "kapitole", "10.", "Zámeru", ".", "2.", "V", "žiadosti", "o", "vydanie", "súhlasu", "povoľujúcim", "orgánom",
           "stanoviť", "kapacitu", "zariadenia", "a", "vymedziť", "jednotlivé", "druhy", "odpadov", "podľa",
-          "katalógových", "čísiel", "s", "ktorými", "bude", "nakladané
+          "katalógových", "čísiel", "s", "ktorými", "bude", "nakladané", "v", "navrhovanom", "zariadení", "v", "zmysle",
+          "platných", "právnych", "predpisov", ".", "3.", "Prevádzkou", "činnosti", "nesmú", "byť", "prekročené",
+          "prípustné", "hodnoty", "určujúcich", "veličín", "hluku", "vo", "vonkajšom", "prostredí", "uvedené", "vo",
+          "Vyhláške", "MZ", "SR", "č.", "549/2007", "Z.", "z.", ",", "4.", "Pri", "realizácií", "zámeru", "a",
+          "prevádzkovaní", "navrhovanej", "činnosti", "vykonať", "opatrenia", "na", "ochranu", "existujúcich", "drevín",
+          "na", "pozemku", "par.", "č.", "1878", "/", "/", "4", "v", "zmysle", "§
