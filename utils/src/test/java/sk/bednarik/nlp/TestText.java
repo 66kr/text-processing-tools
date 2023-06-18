@@ -153,4 +153,10 @@ public class TestText {
           "prípustné", "hodnoty", "určujúcich", "veličín", "hluku", "vo", "vonkajšom", "prostredí", "uvedené", "vo",
           "Vyhláške", "MZ", "SR", "č.", "549/2007", "Z.", "z.", ",", "4.", "Pri", "realizácií", "zámeru", "a",
           "prevádzkovaní", "navrhovanej", "činnosti", "vykonať", "opatrenia", "na", "ochranu", "existujúcich", "drevín",
-          "na", "pozemku", "par.", "č.", "1878", "/", "/", "4", "v", "zmysle", "§
+          "na", "pozemku", "par.", "č.", "1878", "/", "/", "4", "v", "zmysle", "§", "47", "zákona", "č.", "543/2002",
+          "Z.", "z.", "o", "ochrane", "prírody", "a", "krajiny", ".", "Odôvodnenie", "Navrhovateľ", ",", "Anita",
+          "Hrmová",
+          "--", "AEM", "zberné", "suroviny", ",", "Veternícka", "169/66", ",", "967", "01", "Kremnica", ",", "IČO",
+          "00321125", "požiadala", "dňa", "17.04.2015", "Okresný", "úrad", "Žiar", "nad", "Hronom", ",", "odbor",
+          "starostlivosti", "o", "životné", "prostredie", ",", "o", "prerokovania", "zámeru", "``", "Výkup", "a",
+          "skladovanie", "železných", "a", "neželezných", "kovov", ","
