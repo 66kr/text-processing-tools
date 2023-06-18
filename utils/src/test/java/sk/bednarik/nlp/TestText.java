@@ -138,4 +138,9 @@ public class TestText {
           "výkup", "železných", "a", "neželezných", "kovov", ",", "papiera", ",", "ich", "dočasné", "zhromaždenie", "a",
           "uskladnenie", ",", "navrhovaná", "v", "zastavanom", "území", "Mesta", "Kremnica", ",", "na", "pozemkoch",
           "C", "KN", "par.", "č.", "1878/1", ",", "1878/2", "a", "1878/4", "sa", "nebude", "posudzovať", "podľa",
-          "zákona", ".", 
+          "zákona", ".", "Pre", "uvedenú", "činnosť", "je", "možné", "požiadať", "o", "povolenie", "podľa",
+          "osobitných", "predpisov", ".", "Pre", "realizáciu", "sa", "navrhuje", "variant", "č", ".", "A", "pre",
+          "ktorý", "sa", "stanovujú", "tieto", "podmienky", ".", "Pri", "príprave", "dokumentácie", "stavby", "k",
+          "stavebnému", "konaniu", "a", "v", "procese", "konania", "o", "povolení", "činnosti", "podľa", "osobitných",
+          "predpisov", "je", "potrebné", "zohľadniť", "v", "plnej", "miere", "rešpektovať", "pripomienky", ",", "ktoré",
+          "vyplynuli", "zo", "stanovísk", "doručených
