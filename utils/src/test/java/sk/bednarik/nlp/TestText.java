@@ -184,4 +184,9 @@ public class TestText {
           "v", "zisťovacom", "konaní", "podľa", "§", "29", "ods.", "15", "zákona", ".", "Toto", "rozhodnutie", "je",
           "preskúmateľné", "súdom", "podľa", "zákona", "č.", "99/1963", "Zb.", "Občiansky", "súdny", "poriadok", "v",
           "znení", "neskorších", "predpisov", "až", "po", "vyčerpaní", "riadnych", "opravných", "prostriedkov", ".",
-          "Ing.", "Dušan", "Berkeš", "vedúci", "odboru", "Doru
+          "Ing.", "Dušan", "Berkeš", "vedúci", "odboru", "Doručuje", "sa", ":", "1.", "Anita", "Hrmová", "--", "AEM",
+          "zberné", "suroviny", ",", "Veternícka", "169/66", ",", "967", "01", "Kremnica", "2.", "Ministerstvo",
+          "životného", "prostredia", "SR", ",", "Nám.", "Ľ.", "Štúra", "1", ",", "827", "15", "Bratislava", "3.",
+          "Mesto", "Kremnica", ",", "Štefánikovo", "námestie", "1/1", ",", "967", "01", "Kremnica", "4.", "Krajský",
+          "pamiatkový", "úrad", "Banská", "Bystrica", ",", "Lazovná", "ulica", "č.", "8", ",", "975", "65", "Banská",
+          "Bystrica", "5.", "Obvodný", "banský", "úrad",
