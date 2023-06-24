@@ -189,4 +189,9 @@ public class TestText {
           "životného", "prostredia", "SR", ",", "Nám.", "Ľ.", "Štúra", "1", ",", "827", "15", "Bratislava", "3.",
           "Mesto", "Kremnica", ",", "Štefánikovo", "námestie", "1/1", ",", "967", "01", "Kremnica", "4.", "Krajský",
           "pamiatkový", "úrad", "Banská", "Bystrica", ",", "Lazovná", "ulica", "č.", "8", ",", "975", "65", "Banská",
-          "Bystrica", "5.", "Obvodný", "banský", "úrad",
+          "Bystrica", "5.", "Obvodný", "banský", "úrad", "Banská", "Bystrica", ",", "ul.", "9.", "Mája", "2", ",",
+          "975", "65", "Banská", "Bystrica", "6.", "Regionálny", "úrad", "verejného", "zdravotníctva", ",",
+          "Sládkovičova", "484/9", ",965", "24", "Žiar", "nad", "Hronom", "7.", "Okresné", "riaditeľstvo", "hasičského",
+          "a", "záchranného", "zboru", "v", "Žiari", "nad", "Hronom", ",", "Ul.", "Priemyselná", "12", ",", "965", "01",
+          "Žiar", "nad", "Hronom", "8.", "Okresný", "úrad", "Žiar", "nad", "Hronom", ",", "odbor", "krízového",
+          "riadenia", ",", "Nám.", "M.", "Slovenskej", "č.", "8", ",", "965"
