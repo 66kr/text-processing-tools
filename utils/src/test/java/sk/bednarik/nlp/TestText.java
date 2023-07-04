@@ -200,4 +200,16 @@ public class TestText {
           "Hronom", ",", "odbor", "starostlivosti", "o", "životné", "prostredie", "-", "štátna", "vodná", "správa", ",",
           "štátna", "správa", "ochrany", "prírody", "a", "krajiny", ",", "štátna", "správa", "odpadového",
           "hospodárstva", ",", "štátna", "správa", "ochrany", "ovzdušia", "11.", "Združenie", "domových", "samospráv",
-          ",
+          ",", "P.O.BOX", "218", ",", "850", "00", "Bratislava", "-", "Petržalka");
+
+  public static final TestText text1 = new TestText(in1, sentences1, tokens1);
+
+  private static final String in2 = "Súd:\tOkresný súd Košice I\n"
+      + "Spisová značka:\t6T/81/2018\n"
+      + "Identifikačné číslo súdneho spisu:\t7118015486\n"
+      + "Dátum vydania rozhodnutia:\t14. 01. 2019\n"
+      + "Meno a priezvisko sudcu, VSÚ:\tJUDr. Martin Baločko\n"
+      + "ECLI:\tECLI:SK:OSKE1:2019:7118015486.1\n"
+      + "ROZSUDOK V MENE\n"
+      + "SLOVENSKEJ REPUBLIKY\n"
+      + "
