@@ -194,4 +194,10 @@ public class TestText {
           "Sládkovičova", "484/9", ",965", "24", "Žiar", "nad", "Hronom", "7.", "Okresné", "riaditeľstvo", "hasičského",
           "a", "záchranného", "zboru", "v", "Žiari", "nad", "Hronom", ",", "Ul.", "Priemyselná", "12", ",", "965", "01",
           "Žiar", "nad", "Hronom", "8.", "Okresný", "úrad", "Žiar", "nad", "Hronom", ",", "odbor", "krízového",
-          "riadenia", ",", "Nám.", "M.", "Slovenskej", "č.", "8", ",", "965"
+          "riadenia", ",", "Nám.", "M.", "Slovenskej", "č.", "8", ",", "965", "01", "Žiar", "nad", "Hronom", "9.",
+          "Okresný", "úrad", "Žiar", "nad", "Hronom", ",", "pozemkový", "a", "lesný", "odbor", ",", "Nám.", "M.",
+          "Slovenskej", "č.", "8", ",", "965", "01", "Žiar", "nad", "Hronom", "10.", "Okresný", "úrad", "Žiar", "nad",
+          "Hronom", ",", "odbor", "starostlivosti", "o", "životné", "prostredie", "-", "štátna", "vodná", "správa", ",",
+          "štátna", "správa", "ochrany", "prírody", "a", "krajiny", ",", "štátna", "správa", "odpadového",
+          "hospodárstva", ",", "štátna", "správa", "ochrany", "ovzdušia", "11.", "Združenie", "domových", "samospráv",
+          ",
