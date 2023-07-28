@@ -242,4 +242,9 @@ public class TestText {
       + "h/ Či sa dobrovoľne priznal a uznal vinu za spáchaný skutok, ktorý sa v návrhu dohody o vine a treste kvalifikuje ako určitý trestný čin, odpoveď obvineného: Áno.\n"
       + "i/ Či súhlasí s navrhovaným trestom, trest prijíma a v stanovených lehotách sa podradí výkonu trestu, odpoveď obvineného: Áno.\n"
       + "j/ Či si uvedomuje, že ak súd prijme návrh na dohodu o vine a treste a vynesie rozsudok, ktorý nadobudne právoplatnosť vyhlásením, nebude možné proti tomuto rozsudku podať odvolanie, odpoveď obvineného: Áno.\n"
-      + "Nakoľko obvinený odpovedal na všetky otázky „Áno“, mohol predseda senátu rozhodovať o skutku, jeho právnej kvalifikácii a primeranosti trestu. Uzavretú dohodu predseda senátu na verejnom zasadnutí vyhodnotil ako primeranú a spravodlivú, preto rozsudkom podľa § 334 ods. 4 Tr. por. predloženú dohodu schválil a rozho
+      + "Nakoľko obvinený odpovedal na všetky otázky „Áno“, mohol predseda senátu rozhodovať o skutku, jeho právnej kvalifikácii a primeranosti trestu. Uzavretú dohodu predseda senátu na verejnom zasadnutí vyhodnotil ako primeranú a spravodlivú, preto rozsudkom podľa § 334 ods. 4 Tr. por. predloženú dohodu schválil a rozhodol tak, ako je to uvedené vo výrokovej časti tohto rozsudku.\n"
+      + "Poučenie:\n"
+      + "Proti tomuto rozsudku nie je podľa § 334 ods. 4 Tr. por. prípustné odvolanie  ani dovolanie, okrem dovolania podľa § 371 ods. 1 písm. c/, ods. 2 Tr. por.\n";
+
+  private static final List<String> sentences2 = Arrays.asList(
+      "Súd:	Okresný súd Košice I\nSpisová značka:	6T/81/2018\nIdentifikačné číslo súdneho spisu:	7118015486\nDátum vydania rozhodnutia:	14. 01. 2019\nMeno a priezvisko sudcu, VSÚ:	JUDr. Martin Baločko\nECLI:	ECLI:SK:OSKE1:2019:7118015486.1\nROZSUDOK V MENE\nSLOVEN
