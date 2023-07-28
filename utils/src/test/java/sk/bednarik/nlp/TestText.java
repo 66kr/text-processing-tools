@@ -212,4 +212,9 @@ public class TestText {
       + "ECLI:\tECLI:SK:OSKE1:2019:7118015486.1\n"
       + "ROZSUDOK V MENE\n"
       + "SLOVENSKEJ REPUBLIKY\n"
-      + "
+      + "Predseda senátu Okresného súdu Košice I JUDr. Martin Baločko v senáte zloženom z prísediacich JUDr. Jozefa Šušku a Jána Szabóa na verejnom zasadnutí konanom dňa 14.01.2018, v trestnej veci proti obv. Eugen Gál pre prečin nebezpečného vyhrážania podľa § 360 ods.1, ods. X písm.a/, písm.e/ Tr. zákona a iné po schválení dohody o vine a treste takto\n"
+      + "r o z h o d o l :\n"
+      + "Obvinený  :\n"
+      + "Eugen Gál,   nar. 13.07.1945 v Martine, trvale bytom Uhrova č. 567/12A, Bratislava staré mesto\n"
+      + "j e     v i n n ý ,   ž e\n"
+  
