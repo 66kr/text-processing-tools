@@ -231,4 +231,8 @@ public class TestText {
       + "Podľa § 50 ods. 1 Tr. zák. súd určuje skúšobnú dobu v trvaní dvanásť mesiacov.\n"
       + "o d ô v o d n e n i e :\n"
       + "Dňa 11.12.2018 podal prokurátor Okresnej prokuratúry Košice I na tunajší súd obžalobu pod sp. zn. 2 Pv 220/18 v trestnej veci obvineného E. G.,  ktorú Okresný súd Košice I obdržal dňa 21.12.2018.\n"
-      + "Na verejnom zasadnutí konanom dňa 14.01.2019 prokurátor súhlasil s návrhom na schválenie dohody o vine a treste pod vyššie uvedenou spisovou značkou a tak obvinený na verejnom zasadnutí po poučení o svojich právach na otázky predsedu senátu,
+      + "Na verejnom zasadnutí konanom dňa 14.01.2019 prokurátor súhlasil s návrhom na schválenie dohody o vine a treste pod vyššie uvedenou spisovou značkou a tak obvinený na verejnom zasadnutí po poučení o svojich právach na otázky predsedu senátu, uvedené v ustanovení §-u 333 ods. 3 písm. a/ až j/ odpovedal:\n"
+      + "a/ Či rozumie podanému návrhu dohody o vine a treste, odpoveď obvineného: Áno.\n"
+      + "b/ Či súhlasí, aby sa  trestná vec prejednala touto skrátenou formou, čím sa vzdáva práva na verejný súdny proces, odpoveď obvineného: Áno.\n"
+      + "c/ Či rozumie, čo tvorí podstatu skutku, ktorý sa mu kladie za vinu, odpoveď obvineného: Áno.\n"
+      + "d/ Či bol ako obvinený poučený o svojich právach, najmä o práve na obhajobu, či mu bola daná možnosť na slobodnú voľbu obhajcu a či sa s obhajcom mohol radiť o spôsobe obhajoby, odpov
