@@ -227,4 +227,8 @@ public class TestText {
       + "-\tprečin výtržníctva podľa § 364 ods. 1 písm. a/ Tr. zákona- prečin ublíženia na zdraví podľa § 156 ods. 1 Tr. zákona\n"
       + "Z a    t o  mu   súd  ukladá\n"
       + "podľa § 360 ods. 2 Tr. zák. , § 41 ods. 1 Tr. zák. s použitím § 38 ods. 2 , § 36 písm. l/, § 37 písm. h/ Tr. zák.,  § 39 ods. 2 písm. d/, ods. 4 Tr. zák. úhrnný trest odňatia slobody vo výmere štyroch mesiacov.\n"
-      + "Podľa § 49 ods. 1 písm. a/ Tr. zák. súd výkon uloženého trestu odňatia slobody podmiene
+      + "Podľa § 49 ods. 1 písm. a/ Tr. zák. súd výkon uloženého trestu odňatia slobody podmienečne odkladá.\n"
+      + "Podľa § 50 ods. 1 Tr. zák. súd určuje skúšobnú dobu v trvaní dvanásť mesiacov.\n"
+      + "o d ô v o d n e n i e :\n"
+      + "Dňa 11.12.2018 podal prokurátor Okresnej prokuratúry Košice I na tunajší súd obžalobu pod sp. zn. 2 Pv 220/18 v trestnej veci obvineného E. G.,  ktorú Okresný súd Košice I obdržal dňa 21.12.2018.\n"
+      + "Na verejnom zasadnutí konanom dňa 14.01.2019 prokurátor súhlasil s návrhom na schválenie dohody o vine a treste pod vyššie uvedenou spisovou značkou a tak obvinený na verejnom zasadnutí po poučení o svojich právach na otázky predsedu senátu,
