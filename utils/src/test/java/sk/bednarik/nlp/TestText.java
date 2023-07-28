@@ -221,4 +221,10 @@ public class TestText {
       + "-inému úmyselne ublížil na zdraví,\n"
       + "-inému sa vyhrážal smrťou takým spôsobom, že to mohlo vzbudiť dôvodnú obavu a čin spáchal závažnejším spôsobom konania - so zbraňou a verejne,\n"
       + "-dopustil sa slovne a fyzicky, verejne a na mieste verejnosti prístupnom hrubej neslušnosti a výtržnosti tým, že napadol iného,\n"
-      + "t ý
+      + "t ý m        s p á c h a l\n"
+      + "6T/81/2018-219\n"
+      + "-\tprečin nebezpečného vyhrážania podľa § 360 ods. 1, ods. 2 písm. a/, písem. e/ Tr. zákona\n"
+      + "-\tprečin výtržníctva podľa § 364 ods. 1 písm. a/ Tr. zákona- prečin ublíženia na zdraví podľa § 156 ods. 1 Tr. zákona\n"
+      + "Z a    t o  mu   súd  ukladá\n"
+      + "podľa § 360 ods. 2 Tr. zák. , § 41 ods. 1 Tr. zák. s použitím § 38 ods. 2 , § 36 písm. l/, § 37 písm. h/ Tr. zák.,  § 39 ods. 2 písm. d/, ods. 4 Tr. zák. úhrnný trest odňatia slobody vo výmere štyroch mesiacov.\n"
+      + "Podľa § 49 ods. 1 písm. a/ Tr. zák. súd výkon uloženého trestu odňatia slobody podmiene
