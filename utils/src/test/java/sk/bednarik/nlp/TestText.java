@@ -256,4 +256,8 @@ public class TestText {
       "c) Či rozumie, čo tvorí podstatu skutku, ktorý sa mu kladie za vinu, odpoveď obvineného: Áno.",
       "d) Či bol ako obvinený poučený o svojich právach, najmä o práve na obhajobu, či mu bola daná možnosť na slobodnú voľbu obhajcu a či sa s obhajcom mohol radiť o spôsobe obhajoby, odpoveď obvineného: Áno.",
       "e) Či rozumie podstate konania o návrhu na dohodu o vine a treste, odpoveď obvineného: Áno.",
-      "f) Či rozumie právnej kvalifikácii skutku ako tres
+      "f) Či rozumie právnej kvalifikácii skutku ako trestného činu, odpoveď obvineného: Áno.",
+      "g) Či bol oboznámený s trestnými sadzbami, ktoré zákon ustanovuje za trestné činy kladené mu za vinu, odpoveď obvineného: Áno.",
+      "h) Či sa dobrovoľne priznal a uznal vinu za spáchaný skutok, ktorý sa v návrhu dohody o vine a treste kvalifikuje ako určitý trestný čin, odpoveď obvineného: Áno.",
+      "i) Či súhlasí s navrhovaným trestom, trest prijíma a v stanovených lehotách sa podradí výkonu trestu, odpoveď obvineného: Áno.",
+      "j) Či si uvedomuje, že ak súd prijme návrh na dohodu o vine a treste a vynesie rozsudok, ktorý nadobudne právoplatnosť vyhlásením, nebude možné proti
