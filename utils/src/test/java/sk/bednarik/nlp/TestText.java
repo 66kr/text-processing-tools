@@ -260,4 +260,7 @@ public class TestText {
       "g) Či bol oboznámený s trestnými sadzbami, ktoré zákon ustanovuje za trestné činy kladené mu za vinu, odpoveď obvineného: Áno.",
       "h) Či sa dobrovoľne priznal a uznal vinu za spáchaný skutok, ktorý sa v návrhu dohody o vine a treste kvalifikuje ako určitý trestný čin, odpoveď obvineného: Áno.",
       "i) Či súhlasí s navrhovaným trestom, trest prijíma a v stanovených lehotách sa podradí výkonu trestu, odpoveď obvineného: Áno.",
-      "j) Či si uvedomuje, že ak súd prijme návrh na dohodu o vine a treste a vynesie rozsudok, ktorý nadobudne právoplatnosť vyhlásením, nebude možné proti
+      "j) Či si uvedomuje, že ak súd prijme návrh na dohodu o vine a treste a vynesie rozsudok, ktorý nadobudne právoplatnosť vyhlásením, nebude možné proti tomuto rozsudku podať odvolanie, odpoveď obvineného: Áno.",
+      "Nakoľko obvinený odpovedal na všetky otázky „Áno“, mohol predseda senátu rozhodovať o skutku, jeho právnej kvalifikácii a primeranosti trestu.",
+      "Uzavretú dohodu predseda senátu na verejnom zasadnutí vyhodnotil ako primeranú a spravodlivú, preto rozsudkom podľa § 334 ods. 4 Tr. por. predloženú dohodu schválil a rozhodol tak, ako je to uvedené vo výrokovej časti tohto rozsudku.",
+      "Poučenie:\nProti tomuto rozsudku nie je podľa § 334 ods. 4 Tr. por. prípustné odvolanie ani dovolanie, o
