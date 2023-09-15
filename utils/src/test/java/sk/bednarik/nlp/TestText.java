@@ -270,4 +270,9 @@ public class TestText {
           "číslo", "súdneho", "spisu", ":", "7118015486", "Dátum", "vydania", "rozhodnutia", ":", "14. 01. 2019",
           "Meno", "a", "priezvisko", "sudcu", ",", "VSÚ", ":", "JUDr.", "Martin", "Baločko", "ECLI", ":", "ECLI", ":",
           "SK", ":", "OSKE1", ":", "2019:7118015486.1", "ROZSUDOK", "V", "MENE", "SLOVENSKEJ", "REPUBLIKY", "Predseda",
-          "senátu", "Okresného
+          "senátu", "Okresného", "súdu", "Košice", "I", "JUDr.", "Martin", "Baločko", "v", "senáte", "zloženom", "z",
+          "prísediacich", "JUDr.", "Jozefa", "Šušku", "a", "Jána", "Szabóa", "na", "verejnom", "zasadnutí", "konanom",
+          "dňa", "14.01.2018", ",", "v", "trestnej", "veci", "proti", "obv.", "Eugen", "Gál", "pre", "prečin",
+          "nebezpečného", "vyhrážania", "podľa", "§", "360", "ods.", "1", ",", "ods.", "X", "písm.", "a)", ",",
+          "písm.", "e)", "Tr.", "zákona", "a", "iné", "po", "schválení", "dohody", "o", "vine", "a", "treste",
+          "takto", "rozhodol", ":", "Obvinený", ":", "Eugen"
