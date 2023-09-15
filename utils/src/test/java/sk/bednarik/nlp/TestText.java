@@ -263,4 +263,11 @@ public class TestText {
       "j) Či si uvedomuje, že ak súd prijme návrh na dohodu o vine a treste a vynesie rozsudok, ktorý nadobudne právoplatnosť vyhlásením, nebude možné proti tomuto rozsudku podať odvolanie, odpoveď obvineného: Áno.",
       "Nakoľko obvinený odpovedal na všetky otázky „Áno“, mohol predseda senátu rozhodovať o skutku, jeho právnej kvalifikácii a primeranosti trestu.",
       "Uzavretú dohodu predseda senátu na verejnom zasadnutí vyhodnotil ako primeranú a spravodlivú, preto rozsudkom podľa § 334 ods. 4 Tr. por. predloženú dohodu schválil a rozhodol tak, ako je to uvedené vo výrokovej časti tohto rozsudku.",
-      "Poučenie:\nProti tomuto rozsudku nie je podľa § 334 ods. 4 Tr. por. prípustné odvolanie ani dovolanie, o
+      "Poučenie:\nProti tomuto rozsudku nie je podľa § 334 ods. 4 Tr. por. prípustné odvolanie ani dovolanie, okrem dovolania podľa § 371 ods. 1 písm. c), ods. 2 Tr. por.");
+
+  private static final List<String> tokens2 = Arrays
+      .asList("Súd", ":", "Okresný", "súd", "Košice", "I", "Spisová", "značka", ":", "6T/81/2018", "Identifikačné",
+          "číslo", "súdneho", "spisu", ":", "7118015486", "Dátum", "vydania", "rozhodnutia", ":", "14. 01. 2019",
+          "Meno", "a", "priezvisko", "sudcu", ",", "VSÚ", ":", "JUDr.", "Martin", "Baločko", "ECLI", ":", "ECLI", ":",
+          "SK", ":", "OSKE1", ":", "2019:7118015486.1", "ROZSUDOK", "V", "MENE", "SLOVENSKEJ", "REPUBLIKY", "Predseda",
+          "senátu", "Okresného
