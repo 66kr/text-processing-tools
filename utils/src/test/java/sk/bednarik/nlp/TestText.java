@@ -275,4 +275,9 @@ public class TestText {
           "dňa", "14.01.2018", ",", "v", "trestnej", "veci", "proti", "obv.", "Eugen", "Gál", "pre", "prečin",
           "nebezpečného", "vyhrážania", "podľa", "§", "360", "ods.", "1", ",", "ods.", "X", "písm.", "a)", ",",
           "písm.", "e)", "Tr.", "zákona", "a", "iné", "po", "schválení", "dohody", "o", "vine", "a", "treste",
-          "takto", "rozhodol", ":", "Obvinený", ":", "Eugen"
+          "takto", "rozhodol", ":", "Obvinený", ":", "Eugen", "Gál", ",", "nar.", "13.07.1945", "v", "Martine", ",",
+          "trvale", "bytom", "Uhrova", "č.", "567/12A", ",", "Bratislava", "staré", "mesto", "je", "vinný", ",", "že",
+          "v", "M.", "na", "ul.", "Mäsiarskej", "pred", "barom", "CUBANO", ",", "dňa", "01.06.2018", "okolo", "23.34",
+          "hod.", "z", "doposiaľ", "nezistených", "príčin", ",", "na", "mieste", "verejnosti", "prístupnom", "a", "v",
+          "prítomnosti", "piatich", "osôb", ",", "úmyselne", "fyzicky", "napadol", "poškodeného", "Rudolfa", "Ursíniho",
+          ",", "nar.", "07.07.1955", ",", "trvale", "by
