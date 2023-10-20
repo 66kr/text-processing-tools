@@ -290,4 +290,9 @@ public class TestText {
           "pokúšal", "sa", "odtlačiť", "jeho", "ruku", "s", "nožom", "od", "svojho", "tela", ",", "čím", "došlo", "k",
           "zraneniu", "poškodeného", "a", "to", "k", "rezným", "ranám", "na", "palci", "pravej", "ruky", "s", "dobou",
           "liečenia", "do", "14", "dní", ",", "teda", "-", "inému", "úmyselne", "ublížil", "na", "zdraví", ",", "-",
-          "inému", "sa", "vyhrážal", "smrťou", "takým", "spôsobom", ",", "ž
+          "inému", "sa", "vyhrážal", "smrťou", "takým", "spôsobom", ",", "že", "to", "mohlo", "vzbudiť", "dôvodnú",
+          "obavu", "a", "čin", "spáchal", "závažnejším", "spôsobom", "konania", "-", "so", "zbraňou", "a", "verejne",
+          ",", "-", "dopustil", "sa", "slovne", "a", "fyzicky", ",", "verejne", "a", "na", "mieste", "verejnosti",
+          "prístupnom", "hrubej", "neslušnosti", "a", "výtržnosti", "tým", ",", "že", "napadol", "iného", ",", "tým",
+          "spáchal", "6T/81/2018", "-", "219", "-", "prečin", "nebezpečného", "vyhrážania", "podľa", "§", "360", "ods.",
+          "1", ",", "ods.",
