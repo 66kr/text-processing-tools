@@ -295,4 +295,10 @@ public class TestText {
           ",", "-", "dopustil", "sa", "slovne", "a", "fyzicky", ",", "verejne", "a", "na", "mieste", "verejnosti",
           "prístupnom", "hrubej", "neslušnosti", "a", "výtržnosti", "tým", ",", "že", "napadol", "iného", ",", "tým",
           "spáchal", "6T/81/2018", "-", "219", "-", "prečin", "nebezpečného", "vyhrážania", "podľa", "§", "360", "ods.",
-          "1", ",", "ods.",
+          "1", ",", "ods.", "2", "písm.", "a)", ",", "písem", ".", "e)", "Tr.", "zákona", "-", "prečin",
+          "výtržníctva", "podľa", "§", "364", "ods.", "1", "písm.", "a)", "Tr.", "zákona", "-", "prečin",
+          "ublíženia", "na", "zdraví", "podľa", "§", "156", "ods.", "1", "Tr.", "zákona", "Za", "to", "mu", "súd",
+          "ukladá", "podľa", "§", "360", "ods.", "2", "Tr.", "zák.", ",", "§", "41", "ods.", "1", "Tr.", "zák.", "s",
+          "použitím", "§", "38", "ods.", "2", ",", "§", "36", "písm.", "l)", ",", "§", "37", "písm.", "h)",
+          "Tr.", "zák.", ",", "§", "39", "ods.", "2", "písm.", "d)", ",", "ods.", "4", "Tr.", "zák.", "úhrnný",
+          "t
