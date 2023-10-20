@@ -280,4 +280,9 @@ public class TestText {
           "v", "M.", "na", "ul.", "Mäsiarskej", "pred", "barom", "CUBANO", ",", "dňa", "01.06.2018", "okolo", "23.34",
           "hod.", "z", "doposiaľ", "nezistených", "príčin", ",", "na", "mieste", "verejnosti", "prístupnom", "a", "v",
           "prítomnosti", "piatich", "osôb", ",", "úmyselne", "fyzicky", "napadol", "poškodeného", "Rudolfa", "Ursíniho",
-          ",", "nar.", "07.07.1955", ",", "trvale", "by
+          ",", "nar.", "07.07.1955", ",", "trvale", "bytom", "Bratislava", ",", "ul.", "Kostlivého", "č.", "5", "a",
+          "to", "tak", ",", "že", "pristúpil", "k", "poškodenému", ",", "pravou", "rukou", "ho", "chytil", "v",
+          "oblasti", "krku", "a", "so", "slovami", "``", "zabijem", "ťa", "``", "ľavou", "rukou", "vytiahol", "z",
+          "ľavého", "vrecka", "nohavíc", "vyskakovací", "nôž", ",", "ktorý", "otvoril", "a", "namieril", "s", "ním",
+          "smerom", "k", "telu", "poškodeného", ",", "čo", "u", "poškodeného", "vzbudilo", "dôvodnú", "obavu", "o",
+          "jeho", "život", ",", "na", "čo", "poškodený", "svojou", "ľavou
