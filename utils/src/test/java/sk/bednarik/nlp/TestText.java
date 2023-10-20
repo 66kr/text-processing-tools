@@ -301,4 +301,9 @@ public class TestText {
           "ukladá", "podľa", "§", "360", "ods.", "2", "Tr.", "zák.", ",", "§", "41", "ods.", "1", "Tr.", "zák.", "s",
           "použitím", "§", "38", "ods.", "2", ",", "§", "36", "písm.", "l)", ",", "§", "37", "písm.", "h)",
           "Tr.", "zák.", ",", "§", "39", "ods.", "2", "písm.", "d)", ",", "ods.", "4", "Tr.", "zák.", "úhrnný",
-          "t
+          "trestodňatia", "slobody", "vo", "výmere", "štyroch", "mesiacov", ".", "Podľa", "§", "49", "ods.", "1",
+          "písm.", "a)", "Tr.", "zák.", "súd", "výkon", "uloženého", "trestu", "odňatia", "slobody", "podmienečne",
+          "odkladá", ".", "Podľa", "§", "50", "ods.", "1", "Tr.", "zák.", "súd", "určuje", "skúšobnú", "dobu", "v",
+          "trvaní", "dvanásť", "mesiacov", ".", "odôvodnenie", ":", "Dňa", "11.12.2018", "podal", "prokurátor",
+          "Okresnej", "prokuratúry", "Košice", "I", "na", "tunajší", "súd", "obžalobu", "pod", "sp.", "zn.", "2", "Pv",
+          "220/18", "v", "trestnej", "v
