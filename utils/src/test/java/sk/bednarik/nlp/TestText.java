@@ -285,4 +285,9 @@ public class TestText {
           "oblasti", "krku", "a", "so", "slovami", "``", "zabijem", "ťa", "``", "ľavou", "rukou", "vytiahol", "z",
           "ľavého", "vrecka", "nohavíc", "vyskakovací", "nôž", ",", "ktorý", "otvoril", "a", "namieril", "s", "ním",
           "smerom", "k", "telu", "poškodeného", ",", "čo", "u", "poškodeného", "vzbudilo", "dôvodnú", "obavu", "o",
-          "jeho", "život", ",", "na", "čo", "poškodený", "svojou", "ľavou
+          "jeho", "život", ",", "na", "čo", "poškodený", "svojou", "ľavou", "rukou", "zadržal", "ľavú", "ruku",
+          "páchateľa", "v", "oblasti", "zápästia", ",", "následne", "pravou", "rukou", "zachytil", "čepeľ", "noža", "a",
+          "pokúšal", "sa", "odtlačiť", "jeho", "ruku", "s", "nožom", "od", "svojho", "tela", ",", "čím", "došlo", "k",
+          "zraneniu", "poškodeného", "a", "to", "k", "rezným", "ranám", "na", "palci", "pravej", "ruky", "s", "dobou",
+          "liečenia", "do", "14", "dní", ",", "teda", "-", "inému", "úmyselne", "ublížil", "na", "zdraví", ",", "-",
+          "inému", "sa", "vyhrážal", "smrťou", "takým", "spôsobom", ",", "ž
