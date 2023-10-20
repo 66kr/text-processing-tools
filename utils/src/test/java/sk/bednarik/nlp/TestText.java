@@ -306,4 +306,9 @@ public class TestText {
           "odkladá", ".", "Podľa", "§", "50", "ods.", "1", "Tr.", "zák.", "súd", "určuje", "skúšobnú", "dobu", "v",
           "trvaní", "dvanásť", "mesiacov", ".", "odôvodnenie", ":", "Dňa", "11.12.2018", "podal", "prokurátor",
           "Okresnej", "prokuratúry", "Košice", "I", "na", "tunajší", "súd", "obžalobu", "pod", "sp.", "zn.", "2", "Pv",
-          "220/18", "v", "trestnej", "v
+          "220/18", "v", "trestnej", "veci", "obvineného", "E.", "G.", ",", "ktorú", "Okresný", "súd", "Košice", "I",
+          "obdržal", "dňa", "21.12.2018.", "Na", "verejnom", "zasadnutí", "konanom", "dňa", "14.01.2019", "prokurátor",
+          "súhlasil", "s", "návrhom", "na", "schválenie", "dohody", "o", "vine", "a", "treste", "pod", "vyššie",
+          "uvedenou", "spisovou", "značkou", "a", "tak", "obvinený", "na", "verejnom", "zasadnutí", "po", "poučení",
+          "o", "svojich", "právach", "na", "otázky", "predsedu", "senátu", ",", "uvedené", "v", "ustanovení", "§", "-",
+          "u", "333", "ods.", "3", 
