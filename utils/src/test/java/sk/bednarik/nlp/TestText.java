@@ -326,4 +326,9 @@ public class TestText {
           "trestnými", "sadzbami", ",", "ktoré", "zákon", "ustanovuje", "za", "trestné", "činy", "kladené", "mu", "za",
           "vinu", ",", "odpoveď", "obvineného", ":", "Áno", ".", "h)", "Či", "sa", "dobrovoľne", "priznal", "a",
           "uznal", "vinu", "za", "spáchaný", "skutok", ",", "ktorý", "sa", "v", "návrhu", "dohody", "o", "vine", "a",
-          "treste", "kvalifikuje", "ako", "určitý", "trestný", "čin", ",", "odpoveď", "
+          "treste", "kvalifikuje", "ako", "určitý", "trestný", "čin", ",", "odpoveď", "obvineného", ":", "Áno", ".",
+          "i)", "Či", "súhlasí", "s", "navrhovaným", "trestom", ",", "trest", "prijíma", "a", "v", "stanovených",
+          "lehotách", "sa", "podradí", "výkonu", "trestu", ",", "odpoveď", "obvineného", ":", "Áno", ".", "j)",
+          "Či", "si", "uvedomuje", ",", "že", "ak", "súd", "prijme", "návrh", "na", "dohodu", "o", "vine", "a",
+          "treste", "a", "vynesie", "rozsudok", ",", "ktorý", "nadobudne", "právoplatnosť", "vyhlásením", ",", "nebude",
+          "možné", "proti", "tomut
