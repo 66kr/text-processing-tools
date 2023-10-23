@@ -331,4 +331,9 @@ public class TestText {
           "lehotách", "sa", "podradí", "výkonu", "trestu", ",", "odpoveď", "obvineného", ":", "Áno", ".", "j)",
           "Či", "si", "uvedomuje", ",", "že", "ak", "súd", "prijme", "návrh", "na", "dohodu", "o", "vine", "a",
           "treste", "a", "vynesie", "rozsudok", ",", "ktorý", "nadobudne", "právoplatnosť", "vyhlásením", ",", "nebude",
-          "možné", "proti", "tomut
+          "možné", "proti", "tomuto", "rozsudku", "podať", "odvolanie", ",", "odpoveď", "obvineného", ":", "Áno", ".",
+          "Nakoľko", "obvinený", "odpovedal", "na", "všetky", "otázky", "``", "Áno", "``", ",", "mohol", "predseda",
+          "senátu", "rozhodovať", "o", "skutku", ",", "jeho", "právnej", "kvalifikácii", "a", "primeranosti", "trestu",
+          ".", "Uzavretú", "dohodu", "predseda", "senátu", "na", "verejnom", "zasadnutí", "vyhodnotil", "ako",
+          "primeranú", "a", "spravodlivú", ",", "preto", "rozsudkom", "podľa", "§", "334", "ods.", "4", "Tr.", "por.",
+          "predloženú", "
