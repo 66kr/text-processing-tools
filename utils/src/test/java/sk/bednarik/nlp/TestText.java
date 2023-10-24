@@ -336,4 +336,11 @@ public class TestText {
           "senátu", "rozhodovať", "o", "skutku", ",", "jeho", "právnej", "kvalifikácii", "a", "primeranosti", "trestu",
           ".", "Uzavretú", "dohodu", "predseda", "senátu", "na", "verejnom", "zasadnutí", "vyhodnotil", "ako",
           "primeranú", "a", "spravodlivú", ",", "preto", "rozsudkom", "podľa", "§", "334", "ods.", "4", "Tr.", "por.",
-          "predloženú", "
+          "predloženú", "dohodu", "schválil", "a", "rozhodol", "tak", ",", "ako", "je", "to", "uvedené", "vo",
+          "výrokovej", "časti", "tohto", "rozsudku", ".", "Poučenie", ":", "Proti", "tomuto", "rozsudku", "nie", "je",
+          "podľa", "§", "334", "ods.", "4", "Tr.", "por.", "prípustné", "odvolanie", "ani", "dovolanie", ",", "okrem",
+          "dovolania", "podľa", "§", "371", "ods.", "1", "písm.", "c)", ",", "ods.", "2", "Tr.", "por.", ".");
+
+  public static final TestText text2 = new TestText(in2, sentences2, tokens2);
+
+  public static void findFirstWrongString(List<String> expe
