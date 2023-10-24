@@ -343,4 +343,14 @@ public class TestText {
 
   public static final TestText text2 = new TestText(in2, sentences2, tokens2);
 
-  public static void findFirstWrongString(List<String> expe
+  public static void findFirstWrongString(List<String> expected, List<String> actual) {
+    for (int i = 0; i < expected.size(); i++) {
+      if (!expected.get(i).equals(actual.get(i))) {
+        System.out.println(
+            "on place " + i + " wrong token '" +actual.get(i) + "' expected '" + expected.get(i)
+                + "'");
+      }
+    }
+  }
+
+}
