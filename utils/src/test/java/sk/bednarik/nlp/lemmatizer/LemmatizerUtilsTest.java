@@ -35,4 +35,12 @@ public class LemmatizerUtilsTest {
   private static final Pattern pattern = Pattern.compile("\\d+|[.,:\"“„;§'()-]|[A-Za-z]\\)");
   private static final String filename_300_2005 = "2005_300.txt";
   private static final String filename_301_2005 = "2005_301.txt";
-  private stati
+  private static final String goldOutput_not_lemma_300_2005 = "goldOutput_not_lemma_300_2005.txt";
+  private static final String goldOutput_not_lemma_301_2005 = "goldOutput_not_lemma_301_2005.txt";
+
+  private String input = "Testovacia veta je smiešna lebo pri stole boli nohy. V uvedenej stratégii boli z hľadiska rozhlasového vysielania popísané predovšetkým hlavné ciele a zásady prechodu a bol navrhnutý technický a časový plán prechodu z pozemského analógového na pozemské digitálne rozhlasové vysielanie.";
+
+  @Test
+  public void test1() {
+    List<String> goldOutput = Lists
+        .
