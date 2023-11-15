@@ -43,4 +43,11 @@ public class LemmatizerUtilsTest {
   @Test
   public void test1() {
     List<String> goldOutput = Lists
-        .
+        .newArrayList("Testovacia", "veta", "byť", "smiešny", "lebo", "pri", "stôl", "byť", "noha", ".", "V", "uvedený",
+            "stratégia", "byť", "z", "hľadisko", "rozhlasový", "vysielanie", "popísaný", "predovšetkým", "hlavná",
+            "cieľ", "a", "zásada", "prechod", "a", "bola", "navrhnutý", "technický", "a", "časový", "plán", "prechod",
+            "z", "pozemský", "analógový", "na", "pozemský", "digitálne", "rozhlasový", "vysielanie", ".");
+    List<CoreMap> labels = lemmaService.lemmatize(input);
+    List<String> output = labels
+        .stream()
+     
