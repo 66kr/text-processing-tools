@@ -66,4 +66,18 @@ public class LemmatizerUtilsTest {
     List<String> output = labels
         .stream()
         .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
-        
+        .flatMap(Collection::stream)
+        .filter(coreLabel -> coreLabel.lemma() == null)
+        .map(CoreLabel::word)
+        .collect(Collectors.toList());
+    System.out.println(output);
+  }
+
+  @Test
+  public void findNotLematizedTokensInFile() throws IOException {
+    String goldOutput = IOUtils.toString(
+        Objects
+            .requireNonNull(TextStatistics.class.getClassLoader().getResourceAsStream(goldOutput_not_lemma_301_2005)),
+        StandardCharsets.UTF_8);
+    String input = IOUtils.toString(
+        Objects.requireNonNull(TextStatistics.class.getClassLoade
