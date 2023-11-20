@@ -50,4 +50,20 @@ public class LemmatizerUtilsTest {
     List<CoreMap> labels = lemmaService.lemmatize(input);
     List<String> output = labels
         .stream()
-     
+        .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
+        .flatMap(Collection::stream)
+        .map(CoreLabel::lemma)
+        .collect(Collectors.toList());
+    Assert.assertEquals(goldOutput, output);
+  }
+
+  /**
+   * keepOriginal must be set false in {@link sk.bednarik.nlp.spring.FSTLemmaComponent}
+   */
+  @Test
+  public void findNotLematizedTokens() {
+    List<CoreMap> labels = lemmaService.lemmatizeKeepNotLemmatized(input);
+    List<String> output = labels
+        .stream()
+        .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
+        
