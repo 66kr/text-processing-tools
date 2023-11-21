@@ -94,3 +94,11 @@ public class LemmatizerUtilsTest {
         .map(t -> t.originalText().toLowerCase())
         .collect(Collectors.toList());
     output.forEach(count::add);
+
+    System.out.println(output);
+
+    System.out.println(count);
+    Assert.assertEquals(goldOutput, count.toString());
+    System.out.println(count.getSortedByValue());
+  }
+}
