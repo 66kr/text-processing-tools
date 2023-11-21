@@ -80,4 +80,17 @@ public class LemmatizerUtilsTest {
             .requireNonNull(TextStatistics.class.getClassLoader().getResourceAsStream(goldOutput_not_lemma_301_2005)),
         StandardCharsets.UTF_8);
     String input = IOUtils.toString(
-        Objects.requireNonNull(TextStatistics.class.getClassLoade
+        Objects.requireNonNull(TextStatistics.class.getClassLoader().getResourceAsStream(filename_301_2005)),
+        StandardCharsets.UTF_8);
+
+    List<CoreMap> labels = lemmaService.lemmatizeKeepNotLemmatized(input);
+    MapCounter count = new MapCounter();
+    List<String> output = labels
+        .stream()
+        .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
+        .flatMap(Collection::stream)
+        .filter(coreLabel -> coreLabel.lemma() == null)
+        .filter(c -> !pattern.matcher(c.originalText()).find())
+        .map(t -> t.originalText().toLowerCase())
+        .collect(Collectors.toList());
+    output.forEach(count::add);
