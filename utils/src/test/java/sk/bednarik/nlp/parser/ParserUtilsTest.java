@@ -23,4 +23,11 @@ public class ParserUtilsTest {
   public void testParser() {
     List<CoreMap> sentencesMap = parserService.parseWithConllu("Nie je potrebné hľadať dôvod.");
     List<String> output = sentencesMap
-        
+        .stream()
+        .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
+        .flatMap(Collection::stream)
+        .map(token -> token.get(CoreAnnotations.CoNLLDepTypeAnnotation.class))
+        .collect(Collectors.toList());
+    System.out.println(output);
+  }
+}
