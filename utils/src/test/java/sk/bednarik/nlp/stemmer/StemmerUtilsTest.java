@@ -19,4 +19,21 @@ import sk.bednarik.nlp.utils.StemmerService;
 public class StemmerUtilsTest {
 
   @Autowired
-  private Stemm
+  private StemmerService stemmerService;
+
+  private String input = "Testovacia veta je smiešna.";
+
+  @Test
+  public void test2() {
+    List<String> goldOutput = Lists.newArrayList("Testovak", "vet", "je", "smiešn", ".");
+    List<CoreMap> labels = stemmerService.stem(input);
+    List<String> output = labels
+        .stream()
+        .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
+        .flatMap(Collection::stream)
+        .map(label -> label.get(CoreAnnotations.StemAnnotation.class))
+        .collect(Collectors.toList());
+    Assert.assertEquals(goldOutput, output);
+  }
+
+  @
