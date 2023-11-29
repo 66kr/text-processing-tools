@@ -18,4 +18,27 @@ public class MapCounter {
   private final Map<String, Integer> tokens = new TreeMap<>();
 
   public void add(String token) {
-    this.toke
+    this.tokens.merge(token.toLowerCase(), 1, (a, b) -> a + b);
+  }
+
+  public Set<String> getAllTokens() {
+    return this.tokens.keySet();
+  }
+
+  public Integer getCount(String token) {
+    return this.tokens.get(token);
+  }
+
+  public String toString() {
+    return "" + this.tokens.toString();
+  }
+
+  public void removeToken(String token) {
+    this.tokens.remove(token);
+  }
+
+  public Map<String, Integer> getSortedByValue() {
+    List<Entry<String, Integer>> list = new ArrayList<>(tokens.entrySet());
+    list.sort(Entry.comparingByValue());
+
+    Map<String, Integer> result = new LinkedHashMa
