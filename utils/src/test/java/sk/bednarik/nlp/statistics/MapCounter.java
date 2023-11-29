@@ -41,4 +41,11 @@ public class MapCounter {
     List<Entry<String, Integer>> list = new ArrayList<>(tokens.entrySet());
     list.sort(Entry.comparingByValue());
 
-    Map<String, Integer> result = new LinkedHashMa
+    Map<String, Integer> result = new LinkedHashMap<>();
+    for (Entry<String, Integer> entry : list) {
+      result.put(entry.getKey(), entry.getValue());
+    }
+
+    return result;
+  }
+}
