@@ -36,4 +36,17 @@ public class StemmerUtilsTest {
     Assert.assertEquals(goldOutput, output);
   }
 
-  @
+  @Test
+  public void test3() {
+    String input2 = "fazuľa\n" +
+        "fazúľ\n";
+    List<CoreMap> labels = stemmerService.stem(input2);
+    List<String> output = labels
+        .stream()
+        .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
+        .flatMap(Collection::stream)
+        .map(label -> label.get(CoreAnnotations.StemAnnotation.class))
+        .collect(Collectors.toList());
+    System.out.println(output);
+  }
+}
