@@ -26,4 +26,16 @@ public class SutimeTest {
   @Autowired
   private TimesService timesService;
   //    private static String text = "Špecializovaný trestný súd na verejnom zasadnutí konanom dnes a 15. 01. 2019 v Pezinku pred samosudcom Mgr. Ivanom Matelom, po schválení dohody o vine a treste podľa § 334 ods. 4 Trestného poriadku";
-  private static String text = "Od zajtra do pondelka 27. januára 2016. Dnes je 26. jan. 2016 a zajtra 27. marca 2016 bude nedeľa. Máj je lásky čas. Čo s tým? Neviem. Včera som sa sprchoval a potom 
+  private static String text = "Od zajtra do pondelka 27. januára 2016. Dnes je 26. jan. 2016 a zajtra 27. marca 2016 bude nedeľa. Máj je lásky čas. Čo s tým? Neviem. Včera som sa sprchoval a potom mi bolo zle. Pozajtra už nebude mlieko. V sobotu pôjdem na pivo z 5. storočia.";
+  //TODO: What about ordinals?
+  //TODO: Add MONEY and and TIME to test
+  private static List<String> goldOutput = Lists
+      .newArrayList("zajtra", "pondelka 27. januára 2016", "pondelka 27. januára 2016", "Dnes", "26. jan. 2016", "zajtra 27. marca 2016",
+          "zajtra 27. marca 2016", "nedeľa", "Máj", "Včera", "sobotu", "5. storočia");
+
+  @Test
+  public void test1() {
+
+    Annotation annotation = timesService.annotateTimes(text, "2019-01-01");
+
+    annotation.get(CoreAnnotations.TokensAnno
