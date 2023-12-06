@@ -38,4 +38,15 @@ public class SutimeTest {
 
     Annotation annotation = timesService.annotateTimes(text, "2019-01-01");
 
-    annotation.get(CoreAnnotations.TokensAnno
+    annotation.get(CoreAnnotations.TokensAnnotation.class).stream().forEach(System.out::println);
+
+    List<String> output = annotation.get(CoreAnnotations.SentencesAnnotation.class).stream()
+            .map(sentence -> sentence.get(CoreAnnotations.NumerizedTokensAnnotation.class))
+            .flatMap(List::stream)
+            .map(t -> t.get(TimeAnnotations.TimexAnnotation.class))
+            .filter(Objects::nonNull)
+            .map(timex -> timex.text())
+            .collect(Collectors.toList());
+    Assert.assertEquals(goldOutput, output);
+  }
+}
