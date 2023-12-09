@@ -45,4 +45,6 @@ public class SynonymsUtilsTest {
     List<CoreMap> sentencesMap = synonymsService.findSynonyms("Pozriem si ešte jeden film.");
     assertThat(sentencesMap.get(0).get(AsurAnnotations.PhraseAnnotation.class))
         .flatExtracting(phrase -> phrase.get(AsurAnnotations.Synonyms.class))
-        .contains
+        .contains("pohliadnuť", "ďalší");
+  }
+}
