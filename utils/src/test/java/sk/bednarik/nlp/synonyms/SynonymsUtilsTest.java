@@ -14,4 +14,22 @@ import sk.bednarik.nlp.commons.AsurAnnotations;
 import sk.bednarik.nlp.utils.SynonymsService;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes =
+@ContextConfiguration(classes = {SynonymsServiceConfig.class})
+public class SynonymsUtilsTest {
+
+  @Autowired
+  private SynonymsService synonymsService;
+
+  @Test
+  @Ignore
+  public void testSynonyms1() {
+    List<CoreMap> sentencesMap = synonymsService.findSynonyms("Nie je potrebné hľadať dôvod.");
+    assertThat(sentencesMap.get(0).get(AsurAnnotations.PhraseAnnotation.class))
+        .flatExtracting(phrase -> phrase.get(AsurAnnotations.Synonyms.class))
+        .contains("nepotrebný", "súrny", "príčina");
+  }
+
+  @Test
+  @Ignore
+  public void testSynonyms2() {
+    List<CoreMap> sentencesMap = synonymsService
