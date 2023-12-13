@@ -40,3 +40,17 @@ public class FileExtractor {
     parser.parse(stream, handler, metadata, context);
     return handler.toString();
   }
+
+  public static void writeToFile(String fileName, String content) throws IOException {
+    BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+    writer.write(content);
+
+    writer.close();
+  }
+
+  public static void main(String[] args) throws TikaException, IOException, SAXException {
+    String content = extractContentUsingParser("ZZ_2005_301_20190201_TLAC.pdf");
+    writeToFile("ouput_tlac_2005_301.txt", content);
+  }
+
+} 
