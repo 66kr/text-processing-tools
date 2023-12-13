@@ -22,4 +22,19 @@ public class TaggerUtilsTest  {
   @Autowired
   private TaggerService taggerService;
 
-  private String input = "Vláda Kanady a Európske spoločenstvo pre atómovú
+  private String input = "Vláda Kanady a Európske spoločenstvo pre atómovú energiu.";
+  private List<String> goldOutput = Lists
+      .newArrayList("SSfs1", "SSfs2", "O", "AAns1x", "SSns1", "Eu4", "AAfs4x", "SSfs4", "Z");
+
+  @Test//(enabled = false)
+  public void test1() {
+    List<CoreMap> labels = taggerService.tag(input);
+    List<String> output = labels
+        .stream()
+        .map(sentences -> sentences.get(CoreAnnotations.TokensAnnotation.class))
+        .flatMap(Collection::stream)
+        .map(CoreLabel::tag)
+        .collect(Collectors.toList());
+    Assert.assertEquals(goldOutput, output);
+  }
+}
