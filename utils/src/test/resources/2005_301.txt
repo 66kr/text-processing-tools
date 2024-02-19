@@ -4993,3 +4993,622 @@ by poskytnutím takej informácie mohol byť zmarený účel trestného konania.
 
 Ustanovenia odsekov 1 až 10 sa rovnako vzťahujú na údaje, ktoré sú v reálnom čase
 prenášané prostredníctvom počítačového systému.
+
+§ 116  Oznámenie údajov o telekomunikačnej prevádzke
+
+
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(1)
+
+V trestnom konaní pre úmyselný trestný čin, za ktorý zákon ustanovuje trest odňatia
+slobody, ktorého horná hranica je najmenej tri roky, pre trestný čin ochrany súkromia v
+obydlí podľa § 194a, podvodu podľa § 221, nebezpečného vyhrážania podľa § 360,
+nebezpečného prenasledovania podľa § 360a, šírenia poplašnej správy podľa § 361,
+podnecovania podľa § 337, schvaľovania trestného činu podľa § 338, pre trestný čin,
+ktorým bola spôsobená ťažká ujma na zdraví alebo smrť alebo pre iný úmyselný trestný
+čin, pri ktorom na konanie zaväzuje medzinárodná zmluva, možno vydať príkaz na
+zistenie a oznámenie údajov o telekomunikačnej prevádzke, ktoré sú predmetom
+telekomunikačného tajomstva, alebo na ktoré sa vzťahuje ochrana osobných údajov, ktoré
+sú nevyhnutné na objasnenie skutočností dôležitých pre trestné konanie. Príkaz možno
+vydať, ak nemožno sledovaný účel dosiahnuť inak alebo ak by bolo jeho dosiahnutie
+iným spôsobom podstatne sťažené.
+
+Príkaz na zistenie a oznámenie údajov o telekomunikačnej prevádzke vydáva predseda
+senátu a pred začatím trestného stíhania alebo v prípravnom konaní sudca pre prípravné
+konanie na návrh prokurátora, ktorý musí byť písomný a odôvodnený aj skutkovými
+okolnosťami. Príkaz na zistenie a oznámenie údajov o telekomunikačnej prevádzke sa
+musí vydať písomne a odôvodniť; súčasťou príkazu je aj spôsob, rozsah a lehota
+oznámenia údajov. Ak sa príkaz týka konkrétneho používateľa, musí byť v ňom uvedená
+jeho totožnosť, ak je známa. Ak nejde o zistenie a oznámenie údajov o uskutočnenej
+telekomunikačnej prevádzke, zisťovanie a oznamovanie týchto údajov môže trvať najviac
+šesť mesiacov; tento čas môže v prípravnom konaní na písomný a odôvodnený návrh
+prokurátora sudca pre prípravné konanie predĺžiť vždy o ďalšie dva mesiace, a to aj
+opakovane. Príkaz na zistenie a oznámenie údajov o telekomunikačnej prevádzke sa
+doručuje podniku poskytujúcemu verejné siete alebo služby.
+
+Ak údajom získaným postupom podľa odsekov 1 a 2 neboli zistené skutočnosti
+významné pre trestné konanie, orgán, ktorého rozhodnutím sa vec právoplatne skončila,
+údaj bezodkladne zničí; policajt údaj zničí po predchádzajúcom písomnom súhlase
+prokurátora. Zápisnica o zničení údaja sa založí do spisu.
+
+O zničení údajov o telekomunikačnej prevádzke písomne informuje osobu podľa odseku
+2, ak je známa, policajt alebo prokurátor, ktorého rozhodnutím sa vec právoplatne
+skončila, a v konaní pred súdom predseda senátu súdu prvého stupňa po právoplatnom
+skončení veci. Informácia obsahuje označenie súdu, ktorý vydal príkaz na zistenie a
+oznámenie údajov o telekomunikačnej prevádzke, a údaj o lehote, počas ktorej sa tento
+príkaz vykonával. Súčasťou informácie je poučenie o práve podať v lehote dvoch
+mesiacov od jej doručenia návrh na preskúmanie zákonnosti príkazu na zistenie a
+oznámenie údajov o telekomunikačnej prevádzke najvyššiemu súdu. Informáciu podá
+orgán, ktorého rozhodnutím sa vec právoplatne skončila, a v konaní pred súdom predseda
+senátu súdu prvého stupňa do troch rokov od právoplatného skončenia trestného stíhania
+v danej veci.
+
+Informáciu podľa odseku 4 predseda senátu, policajt alebo prokurátor nepodá, ak ide o
+osobu, ktorá má možnosť nazerať do spisu podľa tohto zákona alebo v konaní o obzvlášť
+závažnom zločine alebo zločine spáchanom organizovanou skupinou, zločineckou
+skupinou alebo teroristickou skupinou, alebo ak sa na trestnom čine podieľalo viac osôb a
+vo vzťahu aspoň k jednému z nich nebolo trestné stíhanie právoplatne skončené, alebo ak
+by poskytnutím takej informácie mohol byť zmarený účel trestného konania.
+
+Ustanovenia odsekov 1 až 5 sa rovnako vzťahujú na údaje prenášané prostredníctvom
+počítačového systému.
+
+§ 117  Agent
+
+Na odhaľovanie, zisťovanie a usvedčovanie páchateľov zločinov, korupcie, trestných
+činov extrémizmu, trestného činu zneužívania právomoci verejného činiteľa alebo
+trestného činu legalizácie príjmu z trestnej činnosti možno použiť agenta. Jeho použitie je
+
+
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+(8)
+
+(9)
+
+(10)
+
+(11)
+
+prípustné len vtedy, ak odhaľovanie, zisťovanie a usvedčovanie páchateľov uvedených
+trestných činov by bolo iným spôsobom podstatne sťažené a získané poznatky
+odôvodňujú podozrenie, že bol spáchaný trestný čin alebo má byť spáchaný taký trestný
+čin.
+
+Konanie agenta musí byť v súlade s účelom tohto zákona a musí byť úmerné
+protiprávnosti konania, na odhaľovaní, zisťovaní alebo usvedčovaní ktorého sa
+zúčastňuje. Agent nesmie iniciatívne navádzať na spáchanie trestného činu; to neplatí, ak
+ide o korupciu verejného činiteľa alebo zahraničného verejného činiteľa a zistené
+skutočnosti nasvedčujú, že páchateľ by spáchal taký trestný čin aj vtedy, ak by príkaz na
+použitie agenta nebol vydaný.
+
+Agent koná pod dočasnou alebo trvalou legendou alebo bez legendy. Legenda je súhrn
+krycích údajov o osobe agenta, najmä o jeho totožnosti, rodinnom stave, vzdelaní a
+zamestnaní.
+
+Ak je to na vytvorenie alebo zachovanie legendy nevyhnutné, možno za podmienok
+uvedených v osobitnom zákone vydať, vyhotoviť a používať krycie doklady.
+
+Príkaz na použitie agenta vydáva predseda senátu, pred začatím trestného stíhania alebo v
+prípravnom konaní sudca pre prípravné konanie na návrh prokurátora, ktorý musí byť
+odôvodnený aj skutkovými okolnosťami.
+
+Ak ide o vec, ktorá nestrpí odklad, môže prokurátor, ak použitie agenta nie je spojené so
+vstupom do obydlia iného, príkaz uvedený v odseku 5 vydať pred začatím trestného
+stíhania alebo v prípravnom konaní predbežne aj ústne. Taký príkaz však v písomnej
+podobe musí najneskôr do 72 hodín od vydania príkazu potvrdiť sudca pre prípravné
+konanie, inak stráca platnosť. To neplatí pre postup podľa odseku 2, keď príkaz na
+použitie agenta môže vydať len sudca pre prípravné konanie.
+
+Príkaz podľa odsekov 5 a 6 musí byť písomný a musí byť v ňom určený čas, počas
+ktorého bude agent použitý. Čas použitia agenta nesmie trvať dlhšie ako šesť mesiacov.
+Tento čas môže predseda senátu a v prípravnom konaní na návrh prokurátora sudca pre
+prípravné konanie predĺžiť vždy o ďalšie dva mesiace, a to aj opakovane.
+
+Písomnosti týkajúce sa použitia agenta sa do spisu založia len vtedy, ak prokurátor v
+obžalobe navrhne vykonanie dôkazu skutočnosťami zistenými agentom.
+
+Agent môže pri použití svojej legendy so súhlasom oprávnenej osoby vstúpiť do obydlia.
+Taký súhlas sa však nesmie získať na základe predstieraného práva vstupu.
+
+Pravá totožnosť agenta vystupujúceho pod legendou musí byť aj po skončení jeho
+použitia utajená. Prokurátorovi alebo sudcovi pre prípravné konanie, ktorí sú príslušní
+rozhodovať podľa odsekov 5 a 6, ako aj predsedovi senátu v konaní pred súdom musí sa
+na ich žiadosť oznámiť pravá totožnosť agenta.
+
+O skutočnostiach dôležitých pre trestné konanie môže agenta v prípravnom konaní
+vypočuť prokurátor pri primeranom použití ustanovenia § 134 ods. 1 tak, aby jeho
+totožnosť nemohla byť odhalená; agent môže byť výnimočne vypočúvaný na súde iba pri
+primeranom použití ustanovení § 134 ods. 1, § 136 a § 262, aby jeho totožnosť nemohla
+byť odhalená. Na súdne konanie sa agent predvoláva prostredníctvom Prezídia
+Policajného zboru. Doručenie predvolania agentovi zabezpečí príslušník Policajného
+zboru poverený prezidentom Policajného zboru. Ak je agentom iná osoba ako príslušník
+Policajného zboru alebo príslušník polície iného štátu a súhlasí s tým, aby bola jeho
+totožnosť odhalená, použijú sa na ďalšie konanie ustanovenia § 127 až 134 o svedkovi.
+
+
+
+(12)
+
+(13)
+
+(14)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+(8)
+
+Skutočnosti týkajúce sa trestných činov nesúvisiacich s vecou, v ktorej bol agent použitý,
+môžu sa v inom konaní použiť ako dôkaz iba vtedy, ak ide o zločin, korupciu, trestný čin
+zneužívania právomoci verejného činiteľa alebo trestný čin legalizácie príjmu z trestnej
+činnosti.
+
+Pri postupe podľa odseku 1 možno použiť informačno-technické prostriedky. Pritom sa
+primerane postupuje podľa odseku 8.
+
+Agent môže plniť svoje úlohy i na území iného štátu. O jeho vyslaní do zahraničia po
+predchádzajúcom súhlase príslušných orgánov štátu, na ktorého území má pôsobiť, a na
+základe príkazu podľa odseku 5 rozhoduje prezident Policajného zboru, ak medzinárodná
+zmluva neustanovuje iný postup. Rovnako sa postupuje, ak má na území Slovenskej
+republiky pôsobiť ako agent príslušník iného štátu.
+
+§ 118  Porovnávanie údajov v informačných systémoch
+
+V trestnom konaní pre úmyselný trestný čin, na ktorý zákon ustanovuje trest odňatia
+slobody s hornou hranicou trestnej sadzby prevyšujúcou tri roky, korupciu alebo pre iný
+úmyselný trestný čin, o ktorom na konanie zaväzuje medzinárodná zmluva, možno
+vykonať porovnávanie údajov v informačných systémoch, ktoré obsahujú
+charakteristické, prípadne vylučujúce znaky týkajúce sa osôb alebo vecí dôležitých pre
+trestné konanie, s údajmi v iných informačných systémoch, ak je to nevyhnutné pre
+objasnenie trestného činu.
+
+Príkaz na porovnávanie údajov v informačných systémoch vydáva písomne predseda
+senátu, pred začatím trestného stíhania alebo v prípravnom konaní prokurátor.
+
+Príkaz podľa odseku 1 musí obsahovať označenie prevádzkovateľa informačného
+systému, ktorý je povinný poskytnúť údaje, a vymedzenie údajov a skúšobných znakov
+potrebných na porovnanie.
+
+Osoba podľa odseku 3 je povinná poskytnúť údaje potrebné na porovnávanie. Ak
+nemožno požadované údaje oddeliť od iných údajov, poskytnú sa aj iné údaje. Tieto iné
+údaje nemožno použiť ako dôkaz.
+
+Ak boli údaje poskytnuté na nosičoch informácií, musia sa tieto po ukončení
+porovnávania bez meškania vrátiť. Údaje, ktoré sa prenášali na iné nosiče údajov, musí
+bez meškania vymazať orgán činný v trestnom konaní, súd alebo príslušník Policajného
+zboru, ktorý porovnávanie vykonal, ak už pre trestné konanie nie sú potrebné.
+
+Ak sa má záznam z porovnávania údajov použiť ako dôkaz, postupuje sa primerane
+podľa § 115 ods. 6.
+
+V inej trestnej veci, ako je tá, v ktorej sa vykonalo porovnanie údajov, možno záznam ako
+dôkaz použiť len vtedy, ak sa súčasne aj v tejto veci vedie trestné konanie pre trestný čin
+uvedený v odseku 1.
+
+Ak sa pri porovnávaní údajov nezistili skutočnosti významné pre trestné konanie, orgán
+činný v trestnom konaní, súd alebo príslušník Policajného zboru, ktorý vykonával
+porovnávanie, musí získané záznamy predpísaným spôsobom bez meškania zničiť.
+
+ŠIESTA HLAVA
+DOKAZOVANIE
+
+Prvý diel
+
+
+
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+
+f)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+Dokazovanie
+
+§ 119  Všeobecné ustanovenia
+
+V trestnom konaní treba dokazovať najmä
+či sa stal skutok a či má znaky trestného činu,
+
+kto tento skutok spáchal a z akých pohnútok,
+
+závažnosť činu vrátane príčin a podmienok jeho spáchania,
+
+osobné pomery páchateľa v rozsahu potrebnom na určenie druhu a výmery trestu a
+uloženie ochranného opatrenia a iné rozhodnutia,
+
+následok a výšku škody spôsobenú trestným činom,
+
+príjmy z trestnej činnosti a prostriedky na jej spáchanie, ich umiestnenie, povahu, stav
+a cenu.
+
+Za dôkaz môže slúžiť všetko, čo môže prispieť na náležité objasnenie veci a čo sa získalo
+z dôkazných prostriedkov podľa tohto zákona alebo podľa osobitného zákona.
+Dôkaznými prostriedkami sú najmä výsluch obvineného, svedkov, znalcov, posudky a
+odborné vyjadrenia, previerka výpovede na mieste, rekognícia, rekonštrukcia, vyšetrovací
+pokus, obhliadka, veci a listiny dôležité pre trestné konanie, oznámenie, informácie
+získané použitím informačno-technických prostriedkov alebo prostriedkov operatívno-
+pátracej činnosti.
+
+Dôkazy môžu obstarávať aj strany na vlastné náklady. V prípade oslobodenia spod
+obžaloby podľa § 285 písm. a), b) alebo c) nahradí účelne vynaložené náklady
+obvinenému štát.
+
+Dôkaz získaný nezákonným donútením alebo hrozbou takého donútenia sa nesmie použiť
+v konaní okrem prípadu, keď sa použije ako dôkaz proti osobe, ktorá také donútenie
+alebo hrozbu donútenia použila.
+
+§ 120  Predvolanie a predvedenie obvineného
+
+Ak sa obvinený, ktorý bol riadne a včas predvolaný na výsluch alebo iný úkon, bez
+dostatočného ospravedlnenia nedostaví, možno ho na tento úkon predviesť. Na to, ako aj
+na ďalšie následky nedostavenia sa musí byť obvinený v predvolaní upozornený.
+
+V prípade ospravedlnenej neúčasti obvineného na úkone orgánu činného v trestnom
+konaní alebo súdu zo zdravotných dôvodov je obvinený povinný predložiť vyjadrenie
+ošetrujúceho lekára, že mu jeho zdravotný stav neumožňuje účasť na úkone, na ktorý bol
+predvolaný, bez ohrozenia života alebo závažného zhoršenia zdravotného stavu alebo z
+dôvodu nebezpečenstva rozšírenia nebezpečnej nákazlivej ľudskej choroby.
+
+Obvinený môže byť predvedený aj bez predchádzajúceho predvolania, ak je to potrebné
+na úspešné vykonanie úkonu, najmä ak sa skrýva, nemá trvalé bydlisko, ak mu nie je
+možné doručiť predvolanie na adrese, ktorú uviedol.
+
+O predvedenie obvineného požiada orgán činný v trestnom konaní alebo súd útvar
+Policajného zboru. O predvedenie vojaka alebo príslušníka ozbrojeného zboru požiada
+orgán činný v trestnom konaní alebo súd jeho nadriadeného.
+
+Výsluch obvineného
+
+§ 121
+
+
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(1)
+
+(2)
+
+(3)
+
+(1)
+
+Výsluch obvineného vykonáva orgán činný v trestnom konaní alebo súd tak, aby zistil
+podstatné skutočnosti dôležité pre trestné konanie. K výpovedi ani k priznaniu nesmie
+byť obvinený nijakým nezákonným spôsobom donucovaný a pri výsluchu treba
+rešpektovať jeho osobnosť.
+
+Pred výsluchom musí byť obvinený poučený: „Ako obvinený máte právo vypovedať
+alebo odoprieť vypovedať. K priznaniu vás nikto nesmie nútiť. Máte právo zvoliť si
+obhajcu. Ak nemáte prostriedky na zaplatenie obhajcu, máte právo žiadať, aby vám
+bol obhajca ustanovený. Máte právo žiadať, aby sa obhajca zúčastnil na vašom
+výsluchu a bez jeho prítomnosti nevypovedať.“.
+
+Obvineného vzhľadom na konkrétne okolnosti prípadu treba poučiť aj o možnosti a
+podmienkach podmienečného zastavenia trestného stíhania, uzavretia zmieru a
+zastavenia trestného stíhania, o konaní o dohode o vine a treste, ako aj o podmienkach
+uloženia trestu prepadnutia majetku, ak bude vznesené obvinenie za niektorý z
+trestných činov uvedených v § 58 ods. 2 Trestného zákona.
+
+Obvinený, ktorému je poskytovaná ochrana a pomoc podľa osobitného predpisu o
+ochrane svedka, môže byť vypočúvaný prostredníctvom technických zariadení
+určených na prenos zvuku a obrazu.
+
+Ak je ako obvinený vypočúvaná osoba mladšia ako 18 rokov, orgány činné v trestnom
+konaní vykonajú výsluch s využitím technických zariadení určených na záznam zvuku
+a obrazu, ak je to primerané vzhľadom na okolnosti prípadu, najmä ak je pochybnosť,
+či je táto osoba schopná pochopiť obsah výsluchu, pričom sa zohľadňujú jej najlepšie
+záujmy, a ak tomu nebránia závažné technické dôvody, ktoré je orgán činný v trestnom
+konaní povinný uviesť v zápisnici.
+
+§ 122
+
+Pred prvým výsluchom treba vždy zistiť totožnosť obvineného, jeho osobné, rodinné,
+majetkové a zárobkové pomery a predchádzajúce trestné stíhania a tresty, ktoré mu
+boli uložené. Poučenie uvedené v § 121 ods. 2 sa mu prečíta a v prípade potreby ešte aj
+primerane vysvetlí a obvinený podpisom potvrdí, že poučeniu porozumel. Treba ho
+poučiť aj o ďalších právach obvineného uvedených v § 34 ods. 1 až 3 a tiež o
+podmienkach doručovania písomností a následkoch s tým spojených. Potom treba
+obvineného oboznámiť so skutkom, ktorý sa mu kladie za vinu, a s jeho právnou
+kvalifikáciou.
+
+Obvinenému musí byť daná možnosť podrobne sa k obvineniu vyjadriť, najmä súvisle
+opísať skutočnosti, ktoré sú predmetom obvinenia, uviesť skutočnosti, ktoré obvinenie
+zoslabujú alebo vyvracajú, a ponúknuť o nich dôkazy.
+
+Obvinenému sa môžu klásť otázky na doplnenie výpovede alebo na objasnenie
+neúplností, nejasností alebo rozporov. Otázky sa musia klásť ohľaduplne a
+zrozumiteľne. Obvinenému sa však nesmú klásť otázky, v ktorých je obsiahnuté, ako
+na otázku odpovedať, otázky klamlivé ani otázky, ktoré by obsahovali skutočnosti,
+ktoré sa majú zistiť až z jeho výpovede. Otázky nesmú neodôvodnene zasahovať do
+súkromia vypočúvaného okrem zisťovania pohnútky činu.
+
+§ 123
+
+Obvinenému možno dovoliť, aby skôr, než odpovie, nazrel do svojich poznámok. Táto
+okolnosť sa musí v zápisnici poznamenať.
+
+
+
+
+(2)
+
+(1)
+
+(2)
+
+(3)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(1)
+
+(2)
+
+Ak treba zistiť pravosť rukopisu, možno obvineného vyzvať, aby napísal potrebný
+počet určených slov. Ak treba identifikovať hlas obvineného, možno ho vyzvať, aby
+poskytol hlasovú vzorku. K tomu ho však nemožno nijakým spôsobom donucovať.
+Obvinený je však povinný strpieť úkony potrebné na zistenie totožnosti.
+
+§ 124
+
+Výpoveď obvineného sa do zápisnice zapíše spravidla podľa diktátu vypočúvajúceho v
+priamej reči a pokiaľ možno doslova.
+
+Ak nejde o zápisnicu o hlavnom pojednávaní alebo o verejnom zasadaní, musí sa
+zápisnica po skončení výsluchu predložiť obvinenému na prečítanie, alebo ak o to
+požiada, musí sa mu prečítať. Obvinený má právo žiadať, aby bola zápisnica doplnená
+alebo aby sa v nej vykonali opravy v súlade s jeho výpoveďou. O tom treba
+obvineného poučiť.
+
+Zápisnicu o výsluchu, ktorý sa vykonal bez pribratia zapisovateľa, treba obvinenému
+pred podpisom prečítať alebo na prečítanie predložiť v prítomnosti nezúčastnenej
+osoby. Ak má obvinený proti obsahu zápisnice námietky, treba ich prejednať v
+prítomnosti pribranej osoby a výsledok prejednania zahrnúť do zápisnice.
+
+§ 125  Konfrontácia
+
+Ak výpoveď obvineného v závažných okolnostiach nesúhlasí s výpoveďou
+spoluobvineného alebo svedka a rozpor nemožno vyjasniť inak, môže byť obvinený
+postavený tejto osobe tvárou v tvár.
+
+Osoby postavené tvárou v tvár si môžu klásť navzájom otázky len so súhlasom
+vypočúvajúceho.
+
+Ustanovenia odsekov 1 a 2 sa nepoužijú v prípade agenta, ohrozeného svedka,
+chráneného svedka, svedka, ktorého totožnosť je utajená a svedka v trestnom konaní
+vedenom pre trestné činy terorizmu; to neplatí v prípade agenta, ktorý súhlasil s
+odhalením svojej totožnosti.
+
+Použitie ustanovení odsekov 1 a 2 nie je možné, ak ide o svedka mladšieho ako 18
+rokov.
+
+V trestnom konaní o trestných činoch proti ľudskej dôstojnosti, o trestnom čine týrania
+blízkej osoby a zverenej osoby alebo o trestnom čine obchodovania s ľuďmi sa
+ustanovenia odsekov 1 a 2 nepoužijú, ak ide o svedka, na ktorom bol takýto trestný čin
+spáchaný. Ustanovenie odsekov 1 a 2 sa nepoužijú ani v prípade svedka, na ktorom bol
+spáchaný trestný čin násilím alebo hrozbou násilia, ak hrozí nebezpečenstvo
+spôsobenia druhotnej viktimizácie alebo opakovanej viktimizácie, najmä s ohľadom na
+vek, pohlavie, sexuálnu orientáciu, rasu, národnosť, náboženské vyznanie, rozumovú
+vyspelosť alebo na vzťah k páchateľovi trestného činu alebo závislosti na ňom.
+
+§ 126  Rekognícia
+
+Ak sa má výsluchom zistiť totožnosť nejakej osoby alebo veci, vyzve sa obvinený, aby
+ju opísal. Až potom sa mu má osoba alebo vec ukázať, a to medzi viacerými osobami
+podobného zovňajšku alebo vecami toho istého druhu.
+
+Rekogníciu možno vykonať aj podľa fotografií, prípadne s použitím technických
+prostriedkov.
+
+
+
+(3)
+
+(1)
+
+(2)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(1)
+
+(2)
+
+(3)
+
+(1)
+
+K rekognícii treba vždy pribrať nezúčastnenú osobu.
+Druhý diel
+
+Svedkovia
+
+§ 127  Povinnosť svedčiť
+
+Každý je povinný dostaviť sa na predvolanie orgánov činných v trestnom konaní a súdu a
+vypovedať ako svedok o tom, čo mu je známe o trestnom čine a o páchateľovi alebo o
+okolnostiach dôležitých pre trestné konanie.
+
+Každý je povinný napomáhať splnenie tejto povinnosti.
+
+§ 128  Predvolanie, predvedenie a zabezpečenie svedka
+
+Svedok, ktorý bol riadne predvolaný a bez dostatočného ospravedlnenia sa k úkonu
+neustanoví, môže byť predvedený. V konaní pred súdom na základe uznesenia súdu môže
+byť svedok zabezpečený spôsobom uvedeným v § 88, ak sú splnené podmienky pre taký
+postup. Na následky nedostavenia sa musí v predvolaní upozorniť.
+
+V prípade ospravedlnenej neúčasti svedka na úkone orgánu činného v trestnom konaní
+alebo súdu zo zdravotných dôvodov je svedok povinný predložiť vyjadrenie ošetrujúceho
+lekára, že mu jeho zdravotný stav neumožňuje účasť na úkone, na ktorý bol predvolaný,
+bez ohrozenia života alebo závažného zhoršenia zdravotného stavu alebo z dôvodu
+nebezpečenstva rozšírenia nebezpečnej nákazlivej ľudskej choroby.
+
+Ak sa nedostaví príslušník ozbrojených síl alebo ozbrojeného zboru, požiada orgán činný
+v trestnom konaní alebo súd jeho nadriadeného, aby oznámil dôvod, prečo sa predvolaný
+nedostavil, prípadne aby ho dal predviesť alebo ho zabezpečil. V ostatných prípadoch
+požiada orgán činný v trestnom konaní alebo súd o predvedenie alebo zabezpečenie
+svedka útvar Policajného zboru.
+
+Ak je ako svedok predvolaný zástupca orgánu sociálnoprávnej ochrany detí a sociálnej
+kurately, adresou na doručovanie predvolania je adresa sídla orgánu sociálnoprávnej
+ochrany detí a sociálnej kurately.
+
+§ 129  Zákaz výsluchu svedka
+
+Svedok nesmie byť vypočúvaný o okolnostiach, ktoré tvoria utajovanú skutočnosť,
+okrem prípadu, že bol od tejto povinnosti príslušným orgánom oslobodený. Oslobodenie
+možno odoprieť len vtedy, keby bola ohrozená obrana alebo bezpečnosť štátu alebo
+hrozila iná rovnako vážna škoda; dôvody na odopretie oslobodenia treba vždy uviesť.
+
+Svedok nesmie byť vypočúvaný ani vtedy, keby svojou výpoveďou porušil zákonom
+alebo medzinárodnou zmluvou uloženú alebo uznanú povinnosť mlčanlivosti okrem
+prípadu, že by bol od tejto povinnosti oslobodený príslušným orgánom alebo tým, v
+ktorého záujme má túto povinnosť.
+
+Zákaz výsluchu podľa odseku 2 sa nevzťahuje na svedeckú povinnosť týkajúcu sa
+trestného činu, ktorý má svedok povinnosť prekaziť podľa Trestného zákona.
+
+§ 130  Právo svedka odoprieť výpoveď
+
+Právo odoprieť výpoveď ako svedok má príbuzný obvineného v priamom rade, jeho
+súrodenec, osvojiteľ, osvojenec, manžel a druh. Ak je obvinených viac a svedok je v
+uvedenom pomere len k niektorému z nich, má právo odoprieť výpoveď ohľadne iných
+
+
+
+
+(2)
+
+(1)
+
+(2)
+
+(3)
+
+(1)
+
+(2)
+
+(1)
+
+(2)
+
+(1)
+
+obvinených len vtedy, keď nemožno oddeliť výpoveď, ktorá sa ich týka, od výpovede
+týkajúcej sa obvineného, s ktorým je svedok v tomto pomere.
+
+Svedok je oprávnený odoprieť vypovedať, ak by výpoveďou spôsobil nebezpečenstvo
+trestného stíhania sebe, svojmu príbuznému v priamom rade, svojmu súrodencovi,
+osvojiteľovi, osvojencovi, manželovi alebo druhovi, alebo iným osobám v rodinnom
+alebo obdobnom pomere, ktorých ujmu by právom pociťoval ako vlastnú ujmu. Svedok
+je oprávnený odoprieť vypovedať aj vtedy, ak by výpoveďou porušil spovedné tajomstvo
+alebo tajomstvo informácie, ktorá mu bola zverená ústne alebo písomne pod podmienkou
+mlčanlivosti ako osobe poverenej pastoračnou starostlivosťou.
+
+Výsluch svedka
+
+§ 131
+
+Pred výsluchom svedka treba vždy zistiť jeho totožnosť a pomer k obvinenému, poučiť
+ho o význame svedeckej výpovede a o práve odoprieť výpoveď, a ak treba, aj o zákaze
+výsluchu; svedka treba poučiť aj o možnosti a podmienkach poskytnutia ochrany pred
+neoprávneným postihom v pracovnoprávnom vzťahu podľa osobitného predpisu.
+Svedok musí byť vždy poučený o tom, že je povinný vypovedať pravdu, nič
+nezamlčať, a o trestných následkoch krivej výpovede.
+
+Ak sa vypočúva ako svedok prezidentom Policajného zboru poverený príslušník
+Policajného zboru o skutočnostiach získaných agentom, súd do zápisnice uvedie
+príslušné krycie údaje agenta a meno, priezvisko a pracovisko povereného príslušníka
+Policajného zboru.
+
+Pri výsluchu na hlavnom pojednávaní alebo verejnom zasadaní je svedok povinný
+zložiť prísahu s výnimkou výsluchu svedka podľa odseku 2.
+
+§ 132
+
+Na začiatku výsluchu sa treba svedka opýtať na jeho pomer k prerokovávanej veci, ako
+aj k stranám a podľa potreby aj na iné okolnosti potrebné na zistenie jeho nezaujatosti
+a hodnovernosti. Svedkovi sa musí dať možnosť, aby súvisle vypovedal všetko, čo sám
+o veci vie, a odkiaľ sa dozvedel ním uvádzané skutočnosti.
