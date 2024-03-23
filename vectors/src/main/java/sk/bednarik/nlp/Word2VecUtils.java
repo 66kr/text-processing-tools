@@ -34,4 +34,20 @@ public class Word2VecUtils {
   }
 
   public static Collection<String> wordsNearest(String word) {
-    return 
+    return wordsNearest(word, 10);
+  }
+
+  public static Collection<String> wordsNearest(String word, int top) {
+    return word2Vec.wordsNearest(word, top);
+
+  }
+
+  public static Collection<String> analogy(String positiveToQuestion, String positiveToAnswer,
+      String negativeToQuestion) {
+    return analogy(positiveToQuestion, positiveToAnswer, negativeToQuestion, 10);
+  }
+
+  // wordPositive-wordNegative+wordPositive=?
+  public static Collection<String> analogy(String positiveToQuestion, String positiveToAnswer,
+      String negativeToQuestion, int top) {
+    retu
