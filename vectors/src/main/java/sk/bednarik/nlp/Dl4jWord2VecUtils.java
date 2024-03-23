@@ -162,3 +162,62 @@ public class Dl4jWord2VecUtils {
       size = Integer.parseInt(WordVectorSerializer.readString(dis));
       syn0 = Nd4j.create(words, size);
       cache = new AbstractCache<>();
+
+      lookupTable = (InMemoryLookupTable<VocabWord>) new InMemoryLookupTable.Builder<VocabWord>().cache(cache)
+          .useHierarchicSoftmax(false).vectorLength(size).build();
+
+      int cnt = 0;
+      String word;
+      float[] vector = new float[size];
+      for (int i = 0; i < words; i++) {
+
+        word = WordVectorSerializer.readString(dis);
+        log.trace("Loading " + word + " with word " + i);
+
+        for (int j = 0; j < size; j++) {
+          vector[j] = WordVectorSerializer.readFloat(dis);
+        }
+
+        if (cache.containsWord(word)) {
+          throw new ND4JIllegalStateException("Tried to add existing word. Probably time to switch linebreaks mode?");
+        }
+
+        syn0.putRow(i, normalize ? Transforms.unitVec(Nd4j.create(vector)) : Nd4j.create(vector));
+
+        VocabWord vw = new VocabWord(1.0, word);
+        vw.setIndex(cache.numWords());
+
+        cache.addToken(vw);
+        cache.addWordToIndex(vw.getIndex(), vw.getLabel());
+
+        cache.putVocabWord(word);
+
+        if (linebreaks) {
+          dis.readByte(); // line break
+        }
+
+        Nd4j.getMemoryManager().invokeGcOccasionally();
+      }
+    } finally {
+      if (originalPeriodic) {
+        Nd4j.getMemoryManager().togglePeriodicGc(true);
+      }
+
+      Nd4j.getMemoryManager().setOccasionalGcFrequency(originalFreq);
+    }
+
+    lookupTable.setSyn0(syn0);
+
+    Word2Vec ret = new Word2Vec.Builder().useHierarchicSoftmax(false).resetModel(false).layerSize(syn0.columns())
+        .allowParallelTokenization(true).elementsLearningAlgorithm(new SkipGram<VocabWord>())
+        .learningRate(0.025).windowSize(5).workers(1).build();
+
+    ret.setVocab(cache);
+    ret.setLookupTable(lookupTable);
+
+    return ret;
+
+  }
+
+
+}
