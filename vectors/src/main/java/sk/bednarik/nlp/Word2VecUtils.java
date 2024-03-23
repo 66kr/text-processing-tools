@@ -19,4 +19,19 @@ public class Word2VecUtils {
     initLemma();
   }
 
-  public static void initFul
+  public static void initFull() throws IOException {
+    String filename = "sk.essentialdata.nlp/vectors/embeddings.txt.gz";
+    word2Vec = Dl4jWord2VecUtils.readTextModel(
+        Word2VecUtils.class.getClassLoader().getResourceAsStream(filename),
+        filename);
+  }
+
+  public static void initLemma() throws IOException {
+    String filename = "sk.essentialdata.nlp/vectors/vec-sk-skipgram-lemma.bin";
+    word2Vec = Dl4jWord2VecUtils.readBinaryModel(
+        Word2VecUtils.class.getClassLoader().getResourceAsStream(filename),
+        filename, true, false);
+  }
+
+  public static Collection<String> wordsNearest(String word) {
+    return 
