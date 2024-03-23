@@ -50,4 +50,16 @@ public class Word2VecUtils {
   // wordPositive-wordNegative+wordPositive=?
   public static Collection<String> analogy(String positiveToQuestion, String positiveToAnswer,
       String negativeToQuestion, int top) {
-    retu
+    return word2Vec
+        .wordsNearest(ImmutableList.of(positiveToAnswer, positiveToQuestion), ImmutableList.of(negativeToQuestion),
+            top);
+  }
+
+  public static Collection<String> wordsNearest(List<String> positive, List<String> negative, int top) {
+    return word2Vec.wordsNearest(positive, negative, top);
+  }
+
+  public static Map<String, Double> accuracy(List<String> questions) {
+    return word2Vec.accuracy(questions);
+  }
+}
